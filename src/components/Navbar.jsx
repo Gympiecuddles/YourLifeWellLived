@@ -55,11 +55,11 @@ export default function Navbar() {
         <LogoLink to="/" whileHover={{ color: "#a8a8a8"}} >Your Life Well Lived</LogoLink>
         <span>
             <StyledLink to="/" whileHover={{ color: "#a8a8a8"}}>Home</StyledLink>
-            <StyledLink to="/" whileHover={{ color: "#a8a8a8"}}>Retreats</StyledLink>
-            <StyledLink to="/" whileHover={{ color: "#a8a8a8"}}>FAQs</StyledLink>
-            <StyledLink to="/" whileHover={{ color: "#a8a8a8"}}>Resources</StyledLink>
-            <StyledLink to="/" whileHover={{ color: "#a8a8a8"}}>About me</StyledLink>
-            <StyledLink to="/" whileHover={{ color: "#a8a8a8"}}>Contact</StyledLink>
+            <StyledLink to="/retreats" whileHover={{ color: "#a8a8a8"}}>Retreats</StyledLink>
+            <StyledLink to="/faqs" whileHover={{ color: "#a8a8a8"}}>FAQs</StyledLink>
+            <StyledLink to="/resources" whileHover={{ color: "#a8a8a8"}}>Resources</StyledLink>
+            <StyledLink to="/about" whileHover={{ color: "#a8a8a8"}}>About me</StyledLink>
+            <StyledLink to="/contact" whileHover={{ color: "#a8a8a8"}}>Contact</StyledLink>
         </span>
     </NavBox>
   )

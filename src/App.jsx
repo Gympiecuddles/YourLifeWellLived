@@ -1,7 +1,5 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
-
-import Navbar from './components/Navbar'
+import { motion, useTransform, useScroll } from 'framer-motion'
 
 import one from './assets/one.jpg'
 import two from './assets/two.jpg'
@@ -16,17 +14,14 @@ const TrackingDots = styled.div`
 
 `;
 
-const ImgLayer = styled.div`
+const ImgLayer = styled(motion.img)`
   position: fixed;
   width: 100%;
   height: 100vh;
   background-color: #00000000;
-  z-index: -1;
-  img {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-  }
+  object-fit: cover;
+  object-position: 0% 0%;
+  z-index: 0;
 `;
 
 const HeaderSection = styled.section`
@@ -35,9 +30,9 @@ const HeaderSection = styled.section`
   justify-content: start;
   align-items: flex-start;
   width: 100%;
-  height: 80vh;
+  height: 900px;
   background-color: #00000000;
-  z-index: 0;
+  z-index: 1;
   h2 {
     margin-left: 82px;
     margin-bottom: 25px;
@@ -66,6 +61,7 @@ const AboutBox = styled.section`
   justify-content: center;
   align-items: center;
   background-color: white;
+  z-index: 1;
   div {
     width: 29%;
     display: flex;
@@ -120,6 +116,7 @@ const ServicesBox = styled.section`
   justify-content: center;
   align-items: center;
   background-color: white;
+  z-index: 1;
   div {
     margin: 5%;
     margin-top: 10%;
@@ -162,6 +159,7 @@ const ExplainBox = styled.section`
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
+  z-index: 1;
   h3 {
     margin-top: 160px;
   }
@@ -198,17 +196,17 @@ const ExplainBox = styled.section`
 `;
 
 function App() {
+  const { scrollYProgress } = useScroll();
+  const height = useTransform(scrollYProgress, [0, 0.4, 1], [1600, 0, 0])
+
   return (
     <>
-      <Navbar />
       <TrackingDots>
 
       </TrackingDots>
       <HomePage>
-        <ImgLayer>
-          <img src={one} />
-          <img src={two} />
-        </ImgLayer>
+        <ImgLayer src={one} style={{height}} />
+        <ImgLayer src={two} style={{zIndex: -1}} />
         <HeaderSection style={{height: "89vh", marginTop: "150px"}}>
           <h2>welcome</h2>
           <p>We are glad you found your way here.</p>

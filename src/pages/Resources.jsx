@@ -20,7 +20,7 @@ const HeaderSection = styled.div`
   justify-content: start;
   align-items: flex-start;
   width: 100%;
-  height: 450px;
+  height: 405px;
   background-color: #00000000;
   z-index: 1;
   h2 {
@@ -55,6 +55,7 @@ const LinkBox = styled.section`
   background-color: #ffffff;
   h3 {
     margin: 8px;
+    margin-top: 50px;
     font-size: 1.4em;
     font-weight: 800;
     letter-spacing: 1px;

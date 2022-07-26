@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+import Carousel from '../components/Carousel';
+
 import one from '../assets/one.jpg'
 import two from '../assets/two.jpg'
+import three from '../assets/three.jpg'
 import six from '../assets/six.jpg'
 
 const RetreatPage = styled.div`
@@ -11,15 +14,19 @@ const RetreatPage = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const ImgLayer = styled(motion.img)`
+const ImgLayer = styled(motion.div)`
   position: fixed;
   width: 100%;
   height: 100vh;
   background-color: #00000000;
-  filter: brightness(65%);
-  object-fit: cover;
-  object-position: 0% 0%;
   z-index: 0;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 0%;
+    filter: brightness(65%);
+  }
 `;
 
 const HeaderSection = styled.section`
@@ -197,12 +204,53 @@ const PastRetreats = styled.section`
 
 export default function Retreats() {
   const { scrollYProgress } = useScroll();
-  const height = useTransform(scrollYProgress, [0, 0.4, 1], [1600, 0, 0])
+  const height = useTransform(scrollYProgress, [0, 0.5, 1], [1600, 0, 0]);
+  const y = useTransform(scrollYProgress, [0, 0.4, 1], [0, -400, -200]);
+
+
+  const text = {
+    dolphin: {
+      Head: "Swim with the dolphins",
+      Text1: "When we experience painful events and the trust in our relationships seem compromised, it can feel like the ground is taken from under our feet. From the bottom of the hill, the journey upward can feel steep and daunting. It takes courage to reach out and find a supportive and experienced therapist who can help you restore your life.",
+      Text2: "Our team is committed to walking alongside you or your family to overcome stressful experiences and gain a deeper understanding of yourself and others. We will work towards helping you build secure and fulfilling relationships so you do not need to journey alone.",
+      Img: one,
+    },
+    dining: {
+      Head: "Dine with 5 star chefs",
+      Text1: "A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
+      Text2: "Another productive way to use this tool to begin a daily writing routine. One way is to generate a random paragraph with the intention to try to rewrite it while still keeping the original meaning. The purpose here is to just get the writing started so that when the writer goes onto their day's writing projects, words are already flowing from their fingers.",
+      Img: two,
+    },
+    spa: {
+      Head: "Relax in our spas",
+      Text1: "When we experience painful events and the trust in our relationships seem compromised, it can feel like the ground is taken from under our feet. From the bottom of the hill, the journey upward can feel steep and daunting. It takes courage to reach out and find a supportive and experienced therapist who can help you restore your life.",
+      Text2: "Our team is committed to walking alongside you or your family to overcome stressful experiences and gain a deeper understanding of yourself and others. We will work towards helping you build secure and fulfilling relationships so you do not need to journey alone.",
+      Img: three,
+    },
+    rooms: {
+      Head: "Enjoy our top of the line hotels",
+      Text1: "When we experience painful events and the trust in our relationships seem compromised, it can feel like the ground is taken from under our feet. From the bottom of the hill, the journey upward can feel steep and daunting. It takes courage to reach out and find a supportive and experienced therapist who can help you restore your life.",
+      Text2: "Our team is committed to walking alongside you or your family to overcome stressful experiences and gain a deeper understanding of yourself and others. We will work towards helping you build secure and fulfilling relationships so you do not need to journey alone.",
+      Img: two,
+    },
+    events: {
+      Head: "Check out all of our events",
+      Text1: "When we experience painful events and the trust in our relationships seem compromised, it can feel like the ground is taken from under our feet. From the bottom of the hill, the journey upward can feel steep and daunting. It takes courage to reach out and find a supportive and experienced therapist who can help you restore your life.",
+      Text2: "Our team is committed to walking alongside you or your family to overcome stressful experiences and gain a deeper understanding of yourself and others. We will work towards helping you build secure and fulfilling relationships so you do not need to journey alone.",
+      Img: two,
+    },
+  };
+
+  const [Info, setInfo] = useState(text.dolphin);
 
   return (
     <RetreatPage>
-      <ImgLayer src={six} style={{height}} />
-      <ImgLayer src={two} style={{zIndex: -1}} />
+      <ImgLayer style={{height, y}}>
+        <img src={six} alt="" />
+      </ImgLayer>
+      <ImgLayer style={{zIndex: -1}}>
+        <Carousel imgs={[one, two, three]} />
+      </ImgLayer>
       <HeaderSection style={{ marginTop: "150px"}}>
         <h2>Nayara Springs</h2>
         <p>Costa Rica</p>
@@ -228,20 +276,20 @@ export default function Retreats() {
       </HeaderSection>
       <CurrentRetreats>
         <div style={{ width: "100px" }}>
-          <button>Dolphins</button>
-          <button>Dining</button>
-          <button>Spa</button>
-          <button>Rooms</button>
-          <button>Events</button>
+          <motion.button onClick={() => setInfo(text.dolphin)} whileHover={{ color: "#a8a8a8"}}>Dolphins</motion.button>
+          <motion.button onClick={() => setInfo(text.dining)} whileHover={{ color: "#a8a8a8"}}>Dining</motion.button>
+          <motion.button onClick={() => setInfo(text.spa)} whileHover={{ color: "#a8a8a8"}}>Spa</motion.button>
+          <motion.button onClick={() => setInfo(text.rooms)} whileHover={{ color: "#a8a8a8"}}>Rooms</motion.button>
+          <motion.button onClick={() => setInfo(text.events)} whileHover={{ color: "#a8a8a8"}}>Events</motion.button>
         </div>
         <div>
-          <h4>relationships are the foundation of life.</h4>
-          <p>When we experience painful events and the trust in our relationships seem compromised, it can feel like the ground is taken from under our feet. From the bottom of the hill, the journey upward can feel steep and daunting. It takes courage to reach out and find a supportive and experienced therapist who can help you restore your life.</p>
-          <p>Our team is committed to walking alongside you or your family to overcome stressful experiences and gain a deeper understanding of yourself and others. We will work towards helping you build secure and fulfilling relationships so you do not need to journey alone.</p>
+          <h4>{Info.Head}</h4>
+          <p>{Info.Text1}</p>
+          <p>{Info.Text2}</p>
           <p>- Michelle Harwell, Owner</p>
         </div>
         <div>
-          <img src={one} alt="" />
+          <img src={Info.Img} alt="" />
         </div>  
       </CurrentRetreats>
       <HeaderSection>
@@ -267,10 +315,10 @@ export default function Retreats() {
             <p>Michelle completed her doctorate in Psychoanalysis from The Institute of Contemporary Psychoanalysis in Los Angeles. She received her BA in English Literature from University of Oklahoma, MA in Theology from Fuller Theological Seminary, and MS in Marriage and Family Therapy from the Fuller Graduate School of Psychology. </p>
             <p>Visit drmichelleharwell.com for more information. </p>
           </div>
-          <img src={one} alt="Jeanne Teleia speaking" />
+          <img src={two} alt="Jeanne Teleia speaking" />
         </article>
         <article>
-          <img src={one} alt="Jeanne Teleia speaking" />
+          <img src={three} alt="Jeanne Teleia speaking" />
           <div>
             <h3><b>San Juan del Sur</b>, Nicaragua</h3>
             <p>Michelle Harwell, PsyD, LMFT #50732 is an expert trainer, respected speaker, and licensed therapist in trauma, development, and attachment. She is a certified yoga instructor and seeks to help her clients better understand how the body is often the first speaker to life's experiences: joy, stress, or even trauma. She is noted for her specialization in areas of development, attachment, trauma, and neuroscience, and her ability to communicate complex topics with clarity and humor.</p>

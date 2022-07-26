@@ -20,7 +20,7 @@ const HeaderSection = styled.div`
   justify-content: start;
   align-items: flex-start;
   width: 100%;
-  height: 450px;
+  height: 405px;
   background-color: #00000000;
   z-index: 1;
   h2 {
@@ -34,7 +34,6 @@ const HeaderSection = styled.div`
     font-weight: 400;
     letter-spacing: 6px;
     background-color: #ffffff;
-    text-transform: uppercase;
   }
   p {
     margin-left: 82px;
@@ -53,13 +52,13 @@ const ContactForm = styled.div`
   align-items: center;
   background-color: #ffffff;
   div {
-    margin: 200px;
+    margin: 150px;
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     h3 {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       width: 95%;
       font-size: .9em;
       font-weight: 400;
@@ -79,12 +78,14 @@ const ContactForm = styled.div`
         height: 45px;
         border: 1px solid #c5c5c5;
         border-radius: 2px;
+        font-size: 1.3em;
         background-color: #fafafa;
       }
       textarea {
         margin-top: 10px;
         border: 1px solid #c5c5c5;
         border-radius: 2px;
+        font-size: 1em;
         background-color: #fafafa;
       }
       span {

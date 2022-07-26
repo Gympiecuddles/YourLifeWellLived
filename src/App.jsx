@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 import { motion, useTransform, useScroll } from 'framer-motion'
 
+import Carousel from './components/Carousel'
+import Newsletter from './components/Newsletter'
+
 import one from './assets/one.jpg'
 import two from './assets/two.jpg'
+import three from './assets/three.jpg'
 
 const HomePage = styled.div`
   width: 100%;
@@ -10,18 +14,18 @@ const HomePage = styled.div`
   flex-direction: column;
 `;
 
-const TrackingDots = styled.div`
-
-`;
-
-const ImgLayer = styled(motion.img)`
+const ImgLayer = styled(motion.div)`
   position: fixed;
   width: 100%;
   height: 100vh;
   background-color: #00000000;
-  object-fit: cover;
-  object-position: 0% 0%;
   z-index: 0;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 0%;
+  }
 `;
 
 const HeaderSection = styled.section`
@@ -111,7 +115,7 @@ const AboutBox = styled.section`
 
 const ServicesBox = styled.section`
   width: 100%;
-  height: 46vh;
+  height: 49vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,21 +199,39 @@ const ExplainBox = styled.section`
   }
 `;
 
+const Arrow = styled.div`
+  position: absolute;
+  bottom: 3%;
+  left: 49%;
+  box-sizing: border-box;
+  height: 25px;
+  width: 25px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0px 2px 2px 0px;
+  transform: rotate(45deg);
+`;
+
+
 function App() {
   const { scrollYProgress } = useScroll();
-  const height = useTransform(scrollYProgress, [0, 0.4, 1], [1600, 0, 0])
+  const height = useTransform(scrollYProgress, [0, 0.6, 1], [1600, 0, 0]);
+  const y = useTransform(scrollYProgress, [0, 0.4, 1], [0, -400, -200]);
 
   return (
     <>
-      <TrackingDots>
-
-      </TrackingDots>
+      <Newsletter />
       <HomePage>
-        <ImgLayer src={one} style={{height}} />
-        <ImgLayer src={two} style={{zIndex: -1}} />
+        <ImgLayer style={{height, y}}>
+          <Carousel imgs={[one, two, three]} />
+        </ImgLayer>
+        <ImgLayer style={{zIndex: -1}}>
+          <img src={two} alt="" />
+        </ImgLayer>
         <HeaderSection style={{height: "89vh", marginTop: "150px"}}>
           <h2>welcome</h2>
           <p>We are glad you found your way here.</p>
+          <Arrow />
         </HeaderSection>
         <AboutBox>
           <div>
@@ -236,9 +258,9 @@ function App() {
             <h4>Therapy/Coaching</h4>
             <p>We take lessons from the dolphins and work holistically with the breath, using yoga and other techniques to sharpen our awareness, relax, unwind and fill our bodies with a natural sense of wellbeing.</p>
             <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
+              <li>Focus is on the present</li>
+              <li>The coach is seen as an equal</li>
+              <li>Can be done from anywhere</li>
             </ul>
           </div>
           <div>
@@ -246,9 +268,9 @@ function App() {
             <h4>Retreats</h4>
             <p>We invite you to come and enjoy these magnificent sentient beings in their own home, on their own terms and to share the mutual joy of being together in the crystal clear, warm waters off the Bimini coast.</p>
             <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
+              <li>Focus is on the present</li>
+              <li>The coach is seen as an equal</li>
+              <li>Can be done from anywhere</li>
             </ul>
           </div>
         </ServicesBox>
@@ -278,6 +300,7 @@ function App() {
           </div>
           <motion.button whileHover={{ backgroundColor: "#444444" }}>Let's get started</motion.button>
         </ExplainBox>
+        
       </HomePage>
     </>
   )

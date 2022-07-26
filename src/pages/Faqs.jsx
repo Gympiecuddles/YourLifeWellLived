@@ -20,7 +20,7 @@ const HeaderSection = styled.div`
   justify-content: start;
   align-items: flex-start;
   width: 100%;
-  height: 450px;
+  height: 405px;
   background-color: #00000000;
   z-index: 1;
   h2 {

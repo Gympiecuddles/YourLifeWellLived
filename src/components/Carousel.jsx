@@ -7,13 +7,14 @@ const Img = styled(motion.img)`
    height: 100%;
    object-fit: cover;
    object-position: 0% 0%;
+   filter: brightness(65%);
 `;
 
 export default function Carousel(props) {
   const [image, setImage] = useState(0);
 
   useEffect(()=> {
-    const timer = setInterval(intervalMech, 3000);
+    const timer = setInterval(intervalMech, 5000);
 
     return () => {
         clearInterval(timer);

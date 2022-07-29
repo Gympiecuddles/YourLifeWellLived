@@ -24,7 +24,7 @@ const HeaderSection = styled.div`
   background-color: #00000000;
   z-index: 1;
   h2 {
-    margin-top: 150px;
+    margin-top: 180px;
     margin-left: 82px;
     margin-bottom: 25px;
     padding: 9px;
@@ -33,7 +33,7 @@ const HeaderSection = styled.div`
     font-size: 2.5em;
     font-weight: 400;
     letter-spacing: 6px;
-    background-color: #ffffff;
+    color: #ffffff;
   }
   p {
     margin-left: 82px;
@@ -41,7 +41,7 @@ const HeaderSection = styled.div`
     padding: 19px;
     font-size: 1em;
     letter-spacing: 1.25px;
-    background-color: #ffffff;
+    color: #ffffff;
   }
 `;
 

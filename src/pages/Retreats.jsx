@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion'
 
-import Carousel from '../components/Carousel';
+import Carousel from '../components/Carousel'
+import TextSwap from '../components/TextSwap'
 
 import one from '../assets/one.jpg'
 import two from '../assets/two.jpg'
@@ -47,7 +48,7 @@ const HeaderSection = styled.section`
     font-size: 3em;
     font-weight: 400;
     letter-spacing: 6px;
-    background-color: #ffffff;
+    color: #ffffff;
   }
   p {
     margin-left: 82px;
@@ -55,7 +56,7 @@ const HeaderSection = styled.section`
     padding: 19px;
     font-size: 1em;
     letter-spacing: 1.25px;
-    background-color: #ffffff;
+    color: #ffffff;
   }
   div {
     align-self: center;
@@ -251,29 +252,7 @@ export default function Retreats() {
       <ImgLayer style={{zIndex: -1}}>
         <Carousel imgs={[one, two, three]} />
       </ImgLayer>
-      <HeaderSection style={{ marginTop: "150px"}}>
-        <h2>Nayara Springs</h2>
-        <p>Costa Rica</p>
-        <div>
-          <h3>A SECLUDED PLACE OF UNDERSTATED LUXURY</h3>
-          <p>Arenal Volcano National Park, Costa Rica</p>
-          <span>
-            <div>
-              <h4>Travel & leisure</h4>
-              <p>Top 2 Hotel in the World</p>
-            </div>
-            <div>
-              <h4>Conde nast traveller</h4>
-              <p>Best Hotel spa in the World</p>
-            </div>
-            <div>
-              <h4>Tripadvisor</h4>
-              <p>Nº1 luxury Hotel in the World</p>
-            </div>
-          </span>
-          <b>start your nayara journey</b>
-        </div>
-      </HeaderSection>
+      <TextSwap />
       <CurrentRetreats>
         <div style={{ width: "100px" }}>
           <motion.button onClick={() => setInfo(text.dolphin)} whileHover={{ color: "#a8a8a8"}}>Dolphins</motion.button>

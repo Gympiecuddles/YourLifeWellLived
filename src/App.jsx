@@ -26,6 +26,8 @@ const ImgLayer = styled(motion.div)`
     height: 100%;
     object-fit: cover;
     object-position: 0% 0%;
+    z-index: -1;
+    filter: brightness(65%);
   }
 `;
 
@@ -47,7 +49,7 @@ const HeaderSection = styled.section`
     font-size: 3em;
     font-weight: 400;
     letter-spacing: 6px;
-    background-color: #ffffff;
+    color: #ffffff;
   }
   p {
     margin-left: 82px;
@@ -55,7 +57,7 @@ const HeaderSection = styled.section`
     padding: 19px;
     font-size: 1em;
     letter-spacing: 1.25px;
-    background-color: #ffffff;
+    color: #ffffff;
   }
 `;
 
@@ -257,6 +259,7 @@ function App() {
   const { scrollYProgress } = useScroll();
   const height = useTransform(scrollYProgress, [0, 0.6, 1], [1600, 0, 0]);
   const y = useTransform(scrollYProgress, [0, 0.4, 1], [0, -400, -200]);
+  const opacity = useTransform(scrollYProgress, [0, 0.4, 1], [0, 1, 1]);
 
   const [explainText, setExplainText] = useState(false);
 
@@ -267,7 +270,7 @@ function App() {
         <ImgLayer style={{height, y}}>
           <Carousel imgs={[one, two, three]} />
         </ImgLayer>
-        <ImgLayer style={{zIndex: -1}}>
+        <ImgLayer style={{opacity, zIndex: -1}}>
           <img src={two} alt="" />
         </ImgLayer>
         <HeaderSection style={{height: "89vh", marginTop: "150px"}}>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Img = styled(motion.img)`
    width: 100%;
@@ -13,9 +13,9 @@ export default function Carousel(props) {
   const [image, setImage] = useState(0);
 
   useEffect(()=> {
-    const timer = setInterval(intervalMech, 3000);
+    const timer = setInterval(intervalMech, 2000);
 
-    return () => {
+    return function stopTimer() {
         clearInterval(timer);
     }
   }, [image])
@@ -28,18 +28,10 @@ export default function Carousel(props) {
         setImage(0)
     }
   };
-  console.log(image);
 
   return (
-    <AnimatePresence exitBeforeEnter>
-        <Img 
-          key={image}
-          src={props.imgs[image]} 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0}}
-          transition={{ duration: 1 }}
-          />
-    </AnimatePresence>
+    <>
+        <Img src={props.imgs[image]} alt="" />
+    </>
   )
 }

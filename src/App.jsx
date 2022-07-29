@@ -7,6 +7,7 @@ import Newsletter from './components/Newsletter'
 import one from './assets/one.jpg'
 import two from './assets/two.jpg'
 import three from './assets/three.jpg'
+import { useState } from 'react'
 
 const HomePage = styled.div`
   width: 100%;
@@ -115,16 +116,16 @@ const AboutBox = styled.section`
 
 const ServicesBox = styled.section`
   width: 100%;
-  height: 49vh;
+  height: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #ffffff;
   z-index: 1;
   div {
-    margin: 5%;
-    margin-top: 10%;
+    margin: 110px;
     width: 17%;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,6 +158,31 @@ const ServicesBox = styled.section`
   }
 `;
 
+const ServiceBox2 = styled(ServicesBox)`
+  height: 650px;
+  div {
+    height: 600px;
+  }
+`;
+
+const ServiceBullets = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    li {
+      margin-top: 10px;
+    }
+  }
+`
+
 const ExplainBox = styled.section`
   width: 100%;
   display: flex;
@@ -165,14 +191,19 @@ const ExplainBox = styled.section`
   background-color: #ffffff;
   z-index: 1;
   h3 {
-    margin-top: 160px;
+    margin: 115px;
+    padding: 5px;
+    border: solid 1px #000000;
+    cursor: pointer;
   }
   div {
+    margin-bottom: 20px;
     width: 50%;
     display: flex;
     justify-content: center;
     article {
-      margin: 60px;
+      margin-left: 20px;
+      margin-right: 20px;
       width: 40%;
       h4 {
         margin: 10px;
@@ -185,6 +216,15 @@ const ExplainBox = styled.section`
       }
     }  
   }
+`;
+
+const ButtonBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+
   button {
     margin: 40px;
     margin-bottom: 70px;
@@ -197,7 +237,7 @@ const ExplainBox = styled.section`
     background-color: #000000;
     text-transform: uppercase;
   }
-`;
+`
 
 const Arrow = styled.div`
   position: absolute;
@@ -217,6 +257,8 @@ function App() {
   const { scrollYProgress } = useScroll();
   const height = useTransform(scrollYProgress, [0, 0.6, 1], [1600, 0, 0]);
   const y = useTransform(scrollYProgress, [0, 0.4, 1], [0, -400, -200]);
+
+  const [explainText, setExplainText] = useState(false);
 
   return (
     <>
@@ -249,13 +291,59 @@ function App() {
           <img src={one} />
         </AboutBox>
         <HeaderSection>
-          <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >SERVICES</h2>
-          <p>We offer psychotherapy, medication consultation and management, support groups, parent consultations, workshops, and developmental assessments.</p>
+          <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >Services</h2>
+          <p>We offer Coaching, Therapy, Retreats, Supervision, and Speaches</p>
         </HeaderSection>
         <ServicesBox>
-          <div>
+          <div >
             <img src={one} />
             <h4>Therapy/Coaching</h4>
+            <p>We take lessons from the dolphins and work holistically with the breath, using yoga and other techniques to sharpen our awareness, relax, unwind and fill our bodies with a natural sense of wellbeing.</p>
+          </div>
+          <div>
+            <img src={one} />
+            <h4>Retreats</h4>
+            <p>We invite you to come and enjoy these magnificent sentient beings in their own home, on their own terms and to share the mutual joy of being together in the crystal clear, warm waters off the Bimini coast.</p>
+          </div>
+        </ServicesBox>
+        <ServiceBullets>
+          <ul>
+            <li>Focus is on the present</li>
+            <li>The coach is seen as an equal</li>
+            <li>Can be done from anywhere</li>
+          </ul>  
+        </ServiceBullets>
+        <ExplainBox>
+          <h3 onClick={() => { setExplainText(!explainText) }} >COACHING OR THERAPY?  Which is right for me?</h3>
+          {explainText && 
+            <div>
+              <article>
+                <h4>Coaching</h4>
+                <p>Focus is on the present and the future—to create what you want. There are not significant behavioral or emotional challenges but healing and transformation do occur.</p>
+                <p>Coaching uses a process of inquiry or asking questions to elicit the client’s own brilliance.</p>
+                <p>The coach is seen as an equal, a partner who will support your growth.</p>
+                <p>Coaching clients often know where they want to go; coaches help them clarify their goals and see their way more clearly. Coaches hold their clients accountable for their progress.</p>
+                <p>Can be done from anywhere—via phone, internet, or in person. Clients and coaches don’t even need to live in the same country or state.</p>
+                <p>Not covered by insurance because there is no diagnosable emotional or mental condition. Coaching is not regulated or licensed by federal or state governments.</p>
+                <p>Many people are happy to tell others they have a coach vs. a therapist.</p>
+                <p>All people can benefit from coaching at any time in the life to help them discover where they are going in order to achieve their goals, dreams and vision.</p>
+              </article>
+              <article>
+                <h4>Therapy</h4>
+                <p>Focus is often on the past, as well as the present difficulties to help discover what is holding the client back. The client or their loved ones are having significant challenges with emotions and behavior.</p>
+                <p>The therapist provides advice, education, emotional support and feedback and is often seen as having expertise that the client is seeking. </p>
+                <p>Therapy works on fixing or eliminating a problem, with a focus on healing. I also hold my clients accountable for their healing and growth.</p>
+                <p>Usually done in person or online. Clients and therapists generally live in the same state where the therapist is licensed.  Counseling/Psychoeducation and Coaching can be done worldwide.</p>
+                <p>Usually covered by insurance due to a diagnosable emotional, behavioral or mental condition (from very minor to major). Includes strong, legal, privacy protections and is regulated by legal and ethical guidelines nationally and in the state where the therapist is licensed.</p>
+                <p>Most people can benefit from therapy at some point in their lives to understand how they got to where they are now.</p>       
+              </article>
+            </div>
+          }
+        </ExplainBox>
+        <ServiceBox2>
+          <div>
+            <img src={one} />
+            <h4>Educational Lectures</h4>
             <p>We take lessons from the dolphins and work holistically with the breath, using yoga and other techniques to sharpen our awareness, relax, unwind and fill our bodies with a natural sense of wellbeing.</p>
             <ul>
               <li>Focus is on the present</li>
@@ -265,42 +353,13 @@ function App() {
           </div>
           <div>
             <img src={one} />
-            <h4>Retreats</h4>
+            <h4>Supervision</h4>
             <p>We invite you to come and enjoy these magnificent sentient beings in their own home, on their own terms and to share the mutual joy of being together in the crystal clear, warm waters off the Bimini coast.</p>
-            <ul>
-              <li>Focus is on the present</li>
-              <li>The coach is seen as an equal</li>
-              <li>Can be done from anywhere</li>
-            </ul>
           </div>
-        </ServicesBox>
-        <ExplainBox>
-          <h3>COACHING OR THERAPY?  Which is right for me?</h3>
-          <div>
-            <article>
-              <h4>Coaching</h4>
-              <p>Focus is on the present and the future—to create what you want. There are not significant behavioral or emotional challenges but healing and transformation do occur.</p>
-              <p>Coaching uses a process of inquiry or asking questions to elicit the client’s own brilliance.</p>
-              <p>The coach is seen as an equal, a partner who will support your growth.</p>
-              <p>Coaching clients often know where they want to go; coaches help them clarify their goals and see their way more clearly. Coaches hold their clients accountable for their progress.</p>
-              <p>Can be done from anywhere—via phone, internet, or in person. Clients and coaches don’t even need to live in the same country or state.</p>
-              <p>Not covered by insurance because there is no diagnosable emotional or mental condition. Coaching is not regulated or licensed by federal or state governments.</p>
-              <p>Many people are happy to tell others they have a coach vs. a therapist.</p>
-              <p>All people can benefit from coaching at any time in the life to help them discover where they are going in order to achieve their goals, dreams and vision.</p>
-            </article>
-            <article>
-              <h4>Therapy</h4>
-              <p>Focus is often on the past, as well as the present difficulties to help discover what is holding the client back. The client or their loved ones are having significant challenges with emotions and behavior.</p>
-              <p>The therapist provides advice, education, emotional support and feedback and is often seen as having expertise that the client is seeking. </p>
-              <p>Therapy works on fixing or eliminating a problem, with a focus on healing. I also hold my clients accountable for their healing and growth.</p>
-              <p>Usually done in person or online. Clients and therapists generally live in the same state where the therapist is licensed.  Counseling/Psychoeducation and Coaching can be done worldwide.</p>
-              <p>Usually covered by insurance due to a diagnosable emotional, behavioral or mental condition (from very minor to major). Includes strong, legal, privacy protections and is regulated by legal and ethical guidelines nationally and in the state where the therapist is licensed.</p>
-              <p>Most people can benefit from therapy at some point in their lives to understand how they got to where they are now.</p>       
-            </article>
-          </div>
+        </ServiceBox2>
+        <ButtonBox>
           <motion.button whileHover={{ backgroundColor: "#444444" }}>Let's get started</motion.button>
-        </ExplainBox>
-        
+        </ButtonBox>
       </HomePage>
     </>
   )

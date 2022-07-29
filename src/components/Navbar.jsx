@@ -10,7 +10,7 @@ const NavBox = styled(motion.nav)`
     left: 0;
     justify-content: space-between;
     width: 100%;
-    height: 70px;
+    height: 100px;
     color:#585858;
     background-color: #ffffff;
     z-index: 3;
@@ -18,7 +18,7 @@ const NavBox = styled(motion.nav)`
         margin-right: 80px;
         display: flex;
         justify-content: space-between;
-        width: 700px;
+        width: 820px;
         list-style: none;
     }
 `;
@@ -41,7 +41,7 @@ const LogoLink = styled(StyledLink)`
     display: flex;
     align-items: center;
     width: 400px;
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-weight: 400;
     letter-spacing: 8px;
     color: #000000;
@@ -60,6 +60,12 @@ export default function Navbar() {
             <StyledLink to="/resources" whileHover={{ color: "#a8a8a8"}}>Resources</StyledLink>
             <StyledLink to="/about" whileHover={{ color: "#a8a8a8"}}>About me</StyledLink>
             <StyledLink to="/contact" whileHover={{ color: "#a8a8a8"}}>Contact</StyledLink>
+            <StyledLink 
+                as="a" 
+                href="https://jteleia.wordpress.com/" 
+                target="_blank"
+                whileHover={{ color: "#a8a8a8"}}
+                >Blog</StyledLink>
         </span>
     </NavBox>
   )

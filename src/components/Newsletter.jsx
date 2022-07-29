@@ -6,10 +6,10 @@ import one from '../assets/one.jpg'
 
 const NewsBox = styled(motion.article)`
     position: fixed;
-    top: 85px;
-    right: -.3%;
+    top: 99px;
+    right: 0%;
     display: flex;
-    width: 350px;
+    width: 400px;
     height: 300px;
     z-index: 2;
 `;
@@ -21,7 +21,7 @@ const NewsButton = styled(motion.div)`
     border-radius: 4px;
     cursor: pointer;
     h3 {
-        padding: 12px;
+        padding: 10px;
         color: #000000;
         font-size: .9em;
         font-weight: 400;
@@ -31,8 +31,8 @@ const NewsButton = styled(motion.div)`
 `;
 
 const NewsContent = styled.div`
-    width: 305px;
-    height: 380px;
+    width: 100%;
+    height: 430px;
     background-color: #ffffff;
     border-radius: 5px;
     img {
@@ -50,8 +50,8 @@ const NewsContent = styled.div`
         content: "";
         position: absolute;
         top: 72.1%;
-        left: 18.5%;
-        width: 255px;
+        left: 16.5%;
+        width: 295px;
         height: 1px;
         border-top: 1px solid #000000;
         background-color: #000000;
@@ -91,7 +91,7 @@ const NewsContent = styled.div`
 `;
 
 const collapseVariants = {
-    closed: { x: 305 },
+    closed: { x: 365 },
     open: { x: 0 },
 }
 
@@ -108,7 +108,7 @@ export default function Newsletter() {
         <NewsContent>
             <img src={one} />
             <h4>Sign up for our newsletter!</h4>
-            <p>Every month we release our wellness newsletter to help people live better lives. Take a look at our most recent newsletter 
+            <p>Every month we release our wellness newsletter to help people live better lives. Fake text to take up space. Fake text to take up space. Fake text to take up space. Fake text to take up space. Fake text to take up space.  Take a look at our most recent newsletter 
                 <motion.a whileHover={{ color: "#5f5f5f"}} href="/" > here</motion.a>.
             </p>
             <form>

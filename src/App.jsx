@@ -1,13 +1,15 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 import { motion, useTransform, useScroll } from 'framer-motion'
+import useTimer from './hooks/useTimer'
 
 import Carousel from './components/Carousel'
+import CarouselButton from './components/CarouselButton'
 import Newsletter from './components/Newsletter'
 
 import one from './assets/one.jpg'
 import two from './assets/two.jpg'
 import three from './assets/three.jpg'
-import { useState } from 'react'
 
 const HomePage = styled.div`
   width: 100%;
@@ -263,12 +265,22 @@ function App() {
 
   const [explainText, setExplainText] = useState(false);
 
+  const CarouselText = {
+    head: ["Therapy", "Coaching", "Retreats"],
+    subhead: ["Therapy works on fixing or eliminating a problem, with a focus on healing. I also hold my clients accountable for their healing and growth.",
+  "The coach is seen as an equal, a partner who will support your growth.",
+"We invite you to come and enjoy these magnificent sentient beings in their own home"],
+    button: ["Let's get started", "Click for more", "Ready to go?"],
+  }
+
+  let counter = useTimer(3, 5);
+
   return (
     <>
       <Newsletter />
       <HomePage>
         <ImgLayer style={{height, y}}>
-          <Carousel imgs={[one, two, three]} />
+          <Carousel imgs={[one, two, three]} counter={counter} />
         </ImgLayer>
         <ImgLayer style={{opacity, zIndex: -1}}>
           <img src={two} alt="" />
@@ -276,6 +288,7 @@ function App() {
         <HeaderSection style={{height: "89vh", marginTop: "150px"}}>
           <h2>welcome</h2>
           <p>We are glad you found your way here.</p>
+          <CarouselButton innerText={CarouselText} counter={counter} />
           <Arrow />
         </HeaderSection>
         <AboutBox>

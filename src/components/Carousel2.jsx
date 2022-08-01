@@ -10,7 +10,7 @@ const Img = styled(motion.img)`
    filter: brightness(65%);
 `;
 
-export default function Carousel({imgs, counter}) {
+export default function Carousel2({imgs, counter}) {
 
   return (
     <AnimatePresence exitBeforeEnter>

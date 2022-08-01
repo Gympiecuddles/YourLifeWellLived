@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
 import { motion, useScroll, useTransform } from 'framer-motion'
+import useTimer from '../hooks/useTimer';
 
 import Carousel from '../components/Carousel'
+import Carousel2 from '../components/Carousel2';
 import TextSwap from '../components/TextSwap'
 
 import one from '../assets/one.jpg'
@@ -58,64 +60,25 @@ const HeaderSection = styled.section`
     letter-spacing: 1.25px;
     color: #ffffff;
   }
-  div {
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 250px;
-    h3 {
-      width: 500px;
-      font-size: 1.8em;
-      font-weight: 600;
-      line-height: 50px;
-      letter-spacing: 5px;
-      color: white;
-      text-align: center;
-    }
-    p {
-      margin: 0;
-      margin-bottom: 100px;
-      font-size: 1.1em;
-      color: #ffffff;
-      background-color: #00000000;
-    }
-    span {
-      width: 800px;
-      display: flex;
-      justify-content: center;
-      div {
-        margin: 10px;
-        height: 200px;
-        h4 {
-          width: 130px;
-          color: #ffffff;
-          font-size: .9em;
-          text-transform: uppercase;
-          text-align: center;
-        }
-        p {
-          width: 160px;
-          font-size: 1em;
-          font-weight: 600;
-          line-height: 25px;
-          text-transform: uppercase;
-          text-align: center;
-        }
-      }
-    }
-    b {
-      margin-top: 100px; 
-      font-size: .9em;
-      color: #ffffff;
-      text-transform: uppercase;
-    }
+`;
+const CurrentRetreatTitle = styled.div`
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .9em;
+  background-color: #ffffff;
+  z-index: 0;
+  h3 {
+    margin-top: 120px;
+    font-size: 3em;
   }
 `;
 
-const CurrentRetreats = styled.section`
+const CurrentRetreats1 = styled.section`
   width: 100%;
-  height: 46vh;
+  height: 45vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,9 +108,47 @@ const CurrentRetreats = styled.section`
   }
   img {
     margin-top: 10px;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     object-fit: cover;
+  }
+`;
+
+const CurrentRetreats2 = styled.section`
+  width: 100%;
+  height: 52vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  z-index: 1;
+  img {
+    margin-top: 10px;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    h4 {
+      margin: 20px;
+      font-size: 1.2em;
+      text-transform: uppercase;
+    }
+    p {
+      margin: 20px;
+      font-size: 1.1em;
+      line-height: 25px;
+    }
+    button {
+      margin: 7px;
+      width: 50px;
+      border: none;
+      background-color: #00000000;
+      text-align: start;
+    }
   }
 `;
 
@@ -208,6 +209,19 @@ export default function Retreats() {
   const height = useTransform(scrollYProgress, [0, 0.5, 1], [1600, 0, 0]);
   const y = useTransform(scrollYProgress, [0, 0.4, 1], [0, -400, -200]);
 
+  const carouselText = {
+    head: ["Nayera Springs", "Denver"],
+    subhead: ["Costa Rica", "Colorado"],
+    head2: ["A SECLUDED PLACE OF UNDERSTATED LUXURY", "BEAUTIFUL AND RUSTIC"],
+    subhead2: ["Arenal Volcano National Park, Costa Rica", "Someplace, Denver"],
+    row1: ["Travel & leisure", "Sites & leisure"],
+    text1: ["Top 2 Hotel in the World", "Top 1 Hotel in the World"],
+    row2: ["Conde nast traveller", "Red Rocks"],
+    text2: ["Best Hotel spa in the World", "Best Hotels resturant in the World"],
+    row3: ["Tripadvisor", "Tripadvisor"],
+    text3: ["Nº1 luxury Hotel in the World", "Nº1 luxury Hotel resturant in the World"],
+    call: ["start your nayara journey", "start your Denver journey"],
+  }
 
   const text = {
     dolphin: {
@@ -243,17 +257,24 @@ export default function Retreats() {
   };
 
   const [Info, setInfo] = useState(text.dolphin);
+  const [Info2, setInfo2] = useState(text.dolphin);
+
+  const counter = useTimer(2, 5);
+  const counter2 = useTimer(3, 5);
 
   return (
     <RetreatPage>
       <ImgLayer style={{height, y}}>
-        <img src={six} alt="" />
+        <Carousel imgs={[six, three]} counter={counter}  />
       </ImgLayer>
       <ImgLayer style={{zIndex: -1}}>
-        <Carousel imgs={[one, two, three]} />
+        <Carousel imgs={[one, two, three]} counter={counter2} />
       </ImgLayer>
-      <TextSwap />
-      <CurrentRetreats>
+      <TextSwap innerText={carouselText} counter={counter} />
+      <CurrentRetreatTitle style={{height: "200px"}}>
+        <h3>Dolphin Retreat</h3>
+      </CurrentRetreatTitle>
+      <CurrentRetreats1>
         <div style={{ width: "100px" }}>
           <motion.button onClick={() => setInfo(text.dolphin)} whileHover={{ color: "#a8a8a8"}}>Dolphins</motion.button>
           <motion.button onClick={() => setInfo(text.dining)} whileHover={{ color: "#a8a8a8"}}>Dining</motion.button>
@@ -267,10 +288,31 @@ export default function Retreats() {
           <p>{Info.Text2}</p>
           <p>- Michelle Harwell, Owner</p>
         </div>
-        <div>
+        <div style={{width: "500px"}}>
           <img src={Info.Img} alt="" />
         </div>  
-      </CurrentRetreats>
+      </CurrentRetreats1>
+      <CurrentRetreatTitle>
+        <h3>Whale Retreat</h3>
+      </CurrentRetreatTitle>
+      <CurrentRetreats2>
+        <div style={{width: "500px"}}>
+          <img src={Info2.Img} alt="" />
+        </div>  
+        <div>
+          <h4>{Info2.Head}</h4>
+          <p>{Info2.Text1}</p>
+          <p>{Info2.Text2}</p>
+          <p>- Michelle Harwell, Owner</p>
+        </div>
+        <div style={{ width: "100px" }}>
+          <motion.button onClick={() => setInfo2(text.dolphin)} whileHover={{ color: "#a8a8a8"}}>Dolphins</motion.button>
+          <motion.button onClick={() => setInfo2(text.dining)} whileHover={{ color: "#a8a8a8"}}>Dining</motion.button>
+          <motion.button onClick={() => setInfo2(text.spa)} whileHover={{ color: "#a8a8a8"}}>Spa</motion.button>
+          <motion.button onClick={() => setInfo2(text.rooms)} whileHover={{ color: "#a8a8a8"}}>Rooms</motion.button>
+          <motion.button onClick={() => setInfo2(text.events)} whileHover={{ color: "#a8a8a8"}}>Events</motion.button>
+        </div>
+      </CurrentRetreats2>
       <HeaderSection>
         <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >Past Retreats</h2>
         <p>We offer psychotherapy, medication consultation and management, support groups, parent consultations, workshops, and developmental assessments.</p>

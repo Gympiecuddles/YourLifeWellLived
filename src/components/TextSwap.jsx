@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const HeaderSection = styled.section`
   display: flex;
@@ -87,45 +87,82 @@ const HeaderSection = styled.section`
   }
 `;
 
-export default function Carousel(props) {
-  const [text, setText] = useState(false);
+const motionArgs = {
+  init: { opacity: 0, x: 500 },
+  start: { opacity: 1, x: 0, 
+      transition: { delay: 1, duration: .4 }},
+}
 
-  useEffect(()=> {
-    const timer2 = setInterval(() => setText(!text), 3000);
 
-    return () => {
-        clearInterval(timer2);
-    }
-  }, [text]);
-
-  console.log(text);
+export default function Carousel({innerText, counter}) {
+  let view = counter + 1;
   return (
-    <AnimatePresence exitBeforeEnter>
-      <HeaderSection style={{ marginTop: "150px"}}>
-        {text ? 
-        <motion.h2 initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>Nayara Springs</motion.h2> 
-        : <motion.h2 initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>Denver</motion.h2>}
-        {text ? <p>Costa Rica</p> : <p>Colorado</p>}
-        <div>
-          {text ? <h3>A SECLUDED PLACE OF UNDERSTATED LUXURY</h3> : <h3>BEAUTIFUL AND RUSTIC</h3>}
-          {text ? <p>Arenal Volcano National Park, Costa Rica</p> : <p>Someplace, Denver</p>}
-          <span>
-            <div>
-              {text ? <h4>Travel & leisure</h4> : <h4>Sites & leisure</h4>}
-              {text ? <p>Top 2 Hotel in the World</p> : <p>Top 1 Hotel in the World</p>}
-            </div>
-            <div>
-              {text ? <h4>Conde nast traveller</h4> : <h4>Red Rocks</h4>}
-              {text ? <p>Best Hotel spa in the World</p> : <p>Best Hotels resturant in the World</p>}
-            </div>
-            <div>
-              {text ? <h4>Tripadvisor</h4> : <h4>Tripadvisor</h4>}
-              {text ? <p>Nº1 luxury Hotel in the World</p> : <p>Nº1 luxury Hotel resturant in the World</p>}
-            </div>
-          </span>
-          {text ? <b>start your nayara journey</b> : <b>start your Denver journey</b>}
-        </div>
-      </HeaderSection>
-    </AnimatePresence>
+    <HeaderSection style={{ marginTop: "150px"}} initial="init" animate="start">
+      {view && <motion.h2
+                    key={counter}  
+                    variants={motionArgs}
+                    >{innerText.head[counter]}
+                </motion.h2>}
+      {view && <motion.p 
+                    key={view} 
+                    variants={motionArgs}
+                    >{innerText.subhead[counter]}
+                </motion.p>}
+                <div>
+                   {view && <motion.h3 
+                      key={counter + 1} 
+                      variants={motionArgs}
+                      >{innerText.head2[counter]}
+                    </motion.h3>}
+                    {view && <motion.p 
+                      key={view + 1} 
+                      variants={motionArgs}
+                      >{innerText.subhead2[counter]}
+                  </motion.p>}
+                  <span>
+                    <div>
+                      {view && <motion.h4 
+                        key={counter + 2} 
+                        variants={motionArgs}
+                        >{innerText.row1[counter]}
+                      </motion.h4>}
+                      {view && <motion.p 
+                        key={view + 2} 
+                        variants={motionArgs}
+                        >{innerText.text1[counter]}
+                      </motion.p>}
+                    </div>
+                    <div>
+                      {view && <motion.h4 
+                        key={counter + 3} 
+                        variants={motionArgs}
+                        >{innerText.row2[counter]}
+                      </motion.h4>}
+                      {view && <motion.p 
+                        key={view + 3} 
+                        variants={motionArgs}
+                        >{innerText.text2[counter]}
+                      </motion.p>}
+                    </div>
+                    <div>
+                      {view && <motion.h4 
+                        key={counter + 4} 
+                        variants={motionArgs}
+                        >{innerText.row3[counter]}
+                      </motion.h4>}
+                      {view && <motion.p 
+                        key={view + 4} 
+                        variants={motionArgs}
+                        >{innerText.text3[counter]}
+                      </motion.p>}
+                    </div>
+                      {view && <motion.b 
+                        key={view + 5} 
+                        variants={motionArgs}
+                        >{innerText.call[counter]}
+                      </motion.b>}
+                  </span>
+                </div>
+    </HeaderSection>
   )
 }

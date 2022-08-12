@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const Img = styled(motion.img)`
    width: 100%;
-   height: 100%;
    object-fit: cover;
    object-position: 0% 0%;
    filter: brightness(65%);

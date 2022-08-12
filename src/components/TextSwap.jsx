@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
 
-const HeaderSection = styled.section`
+import Arrow from './Arrow';
+
+const HeaderSection = styled(motion.section)`
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -18,11 +20,11 @@ const HeaderSection = styled.section`
     padding: 9px;
     padding-left: 18px;
     padding-right: 18px;
-    font-size: 3em;
+    font-size: 2.3em;
     font-weight: 400;
     letter-spacing: 6px;
     color: #ffffff;
-    opacity: 0;
+    z-index: 3;
   }
   p {
     margin-left: 82px;
@@ -88,9 +90,9 @@ const HeaderSection = styled.section`
 `;
 
 const motionArgs = {
-  init: { opacity: 0, x: 500 },
-  start: { opacity: 1, x: 0, 
-      transition: { delay: 1, duration: .4 }},
+  init: { opacity: 0 },
+  start: { opacity: 1, 
+      transition: { delay: .8, duration: .5 }},
 }
 
 
@@ -98,71 +100,87 @@ export default function Carousel({innerText, counter}) {
   let view = counter + 1;
   return (
     <HeaderSection style={{ marginTop: "150px"}} initial="init" animate="start">
-      {view && <motion.h2
-                    key={counter}  
-                    variants={motionArgs}
-                    >{innerText.head[counter]}
-                </motion.h2>}
-      {view && <motion.p 
-                    key={view} 
-                    variants={motionArgs}
-                    >{innerText.subhead[counter]}
-                </motion.p>}
-                <div>
-                   {view && <motion.h3 
-                      key={counter + 1} 
-                      variants={motionArgs}
-                      >{innerText.head2[counter]}
-                    </motion.h3>}
-                    {view && <motion.p 
-                      key={view + 1} 
-                      variants={motionArgs}
-                      >{innerText.subhead2[counter]}
-                  </motion.p>}
-                  <span>
-                    <div>
-                      {view && <motion.h4 
-                        key={counter + 2} 
-                        variants={motionArgs}
-                        >{innerText.row1[counter]}
-                      </motion.h4>}
-                      {view && <motion.p 
-                        key={view + 2} 
-                        variants={motionArgs}
-                        >{innerText.text1[counter]}
-                      </motion.p>}
-                    </div>
-                    <div>
-                      {view && <motion.h4 
-                        key={counter + 3} 
-                        variants={motionArgs}
-                        >{innerText.row2[counter]}
-                      </motion.h4>}
-                      {view && <motion.p 
-                        key={view + 3} 
-                        variants={motionArgs}
-                        >{innerText.text2[counter]}
-                      </motion.p>}
-                    </div>
-                    <div>
-                      {view && <motion.h4 
-                        key={counter + 4} 
-                        variants={motionArgs}
-                        >{innerText.row3[counter]}
-                      </motion.h4>}
-                      {view && <motion.p 
-                        key={view + 4} 
-                        variants={motionArgs}
-                        >{innerText.text3[counter]}
-                      </motion.p>}
-                    </div>
-                      {view && <motion.b 
-                        key={view + 5} 
-                        variants={motionArgs}
-                        >{innerText.call[counter]}
-                      </motion.b>}
-                  </span>
-                </div>
+      {view && 
+        <motion.h2
+          key={counter}  
+          variants={motionArgs}
+          >{innerText.head[counter]}
+        </motion.h2>
+      }
+      {view && 
+        <motion.p 
+          key={view} 
+          variants={motionArgs}
+          >{innerText.subhead[counter]}
+        </motion.p>
+      }
+      <div>
+        {view && 
+          <motion.h3 
+            key={counter + 1} 
+            variants={motionArgs}
+            >{innerText.head2[counter]}
+          </motion.h3>
+        }
+        {view && 
+          <motion.p 
+            key={view + 1} 
+            variants={motionArgs}
+            >{innerText.subhead2[counter]}
+          </motion.p>
+        }
+        <span>
+          <div>
+            {view && 
+              <motion.h4 
+                key={counter + 2} 
+                variants={motionArgs}
+                >{innerText.row1[counter]}
+              </motion.h4>}
+            {view && 
+              <motion.p 
+                key={view + 2} 
+                variants={motionArgs}
+                >{innerText.text1[counter]}
+              </motion.p>}
+          </div>
+          <div>
+            {view && 
+              <motion.h4 
+                key={counter + 3} 
+                variants={motionArgs}
+                >{innerText.row2[counter]}
+              </motion.h4>}
+            {view && 
+              <motion.p 
+                key={view + 3} 
+                variants={motionArgs}
+                >{innerText.text2[counter]}
+              </motion.p>}
+          </div>
+          <div>
+            {view && 
+              <motion.h4 
+                key={counter + 4} 
+                variants={motionArgs}
+                >{innerText.row3[counter]}
+              </motion.h4>}
+            {view && 
+              <motion.p 
+                key={view + 4} 
+                variants={motionArgs}
+                >{innerText.text3[counter]}
+              </motion.p>}
+          </div>
+        </span>
+        {view && 
+          <motion.b 
+            key={view + 5} 
+            variants={motionArgs}
+            >{innerText.call[counter]}
+          </motion.b>}
+        <Arrow position={"10%"} />
+      </div>
     </HeaderSection>
   )
 }

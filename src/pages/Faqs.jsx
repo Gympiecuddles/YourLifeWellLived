@@ -50,7 +50,7 @@ const FaqBox = styled.section`
   justify-content: center;
   width: 100%;
   height: 1000px;
-  background-color: #ffffff;
+  background-color: #cdfafc;
   article {
     margin: 50px;
     margin-top: 100px;
@@ -77,12 +77,13 @@ const FaqBox = styled.section`
 `;
 
 const ButtonBox = styled.div`
-  margin-top: 38px;
-  margin-bottom: 100px;
+  padding-bottom: 90px;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #cdfafc;
   button {
     width: 350px;
     height: 60px;

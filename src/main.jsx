@@ -10,10 +10,13 @@ import Faqs from './pages/Faqs'
 import Resources from './pages/Resources'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
   <Navbar />
+    <ScrollToTop>
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/retreats" element={<Retreats />} />
@@ -22,5 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
+    </ScrollToTop>
+    <Footer />
   </BrowserRouter>
 )

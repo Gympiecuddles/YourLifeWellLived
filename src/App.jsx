@@ -6,6 +6,7 @@ import useTimer from './hooks/useTimer'
 import Carousel from './components/Carousel'
 import CarouselButton from './components/CarouselButton'
 import Newsletter from './components/Newsletter'
+import Arrow from './components/Arrow'
 
 import one from './assets/one.jpg'
 import two from './assets/two.jpg'
@@ -25,7 +26,6 @@ const ImgLayer = styled(motion.div)`
   z-index: 0;
   img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
     object-position: 0% 0%;
     z-index: -1;
@@ -61,6 +61,11 @@ const HeaderSection = styled.section`
     letter-spacing: 1.25px;
     color: #ffffff;
   }
+  @media screen and (max-width: 1440px) {
+    h2 {
+      font-size: 2.5em;
+    } 
+  }
 `;
 
 const AboutBox = styled.section`
@@ -69,7 +74,7 @@ const AboutBox = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #cdfafc;
   z-index: 1;
   div {
     width: 29%;
@@ -124,7 +129,7 @@ const ServicesBox = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #cdfafc;
   z-index: 1;
   div {
     margin: 110px;
@@ -170,12 +175,13 @@ const ServiceBox2 = styled(ServicesBox)`
 `;
 
 const ServiceBullets = styled.div`
+  padding-bottom: 40px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #cdfafc;
   ul {
     display: flex;
     flex-direction: column;
@@ -192,12 +198,14 @@ const ExplainBox = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #0e50b9;
   z-index: 1;
   h3 {
-    margin: 115px;
+    margin: 100px;
     padding: 5px;
-    border: solid 1px #000000;
+    color: #ffff00;
+    border: solid 1px #ffff00;
     cursor: pointer;
   }
   div {
@@ -227,7 +235,7 @@ const ButtonBox = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #cdfafc;
 
   button {
     margin: 40px;
@@ -243,18 +251,7 @@ const ButtonBox = styled.div`
   }
 `
 
-const Arrow = styled.div`
-  position: absolute;
-  bottom: 3%;
-  left: 49%;
-  box-sizing: border-box;
-  height: 25px;
-  width: 25px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0px 2px 2px 0px;
-  transform: rotate(45deg);
-`;
+
 
 
 function App() {

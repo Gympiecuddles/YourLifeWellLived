@@ -11,8 +11,7 @@ const NavBox = styled(motion.nav)`
     justify-content: space-between;
     width: 100%;
     height: 100px;
-    color:#585858;
-    background-color: #ffffff;
+    background-color: #0a3a86;
     z-index: 3;
     span {
         margin-right: 80px;
@@ -31,7 +30,7 @@ const StyledLink = styled(MotionLink)`
     width: 100%;
     font-size: .9em;
     letter-spacing: 3px;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     outline: none;
 `;
@@ -44,7 +43,7 @@ const LogoLink = styled(StyledLink)`
     font-size: 1.6em;
     font-weight: 400;
     letter-spacing: 8px;
-    color: #000000;
+    color: #ffff00;
     outline: none;
 `;
 
@@ -52,7 +51,7 @@ const LogoLink = styled(StyledLink)`
 export default function Navbar() {
   return (
     <NavBox>
-        <LogoLink to="/" whileHover={{ color: "#a8a8a8"}} >Your Life Well Lived</LogoLink>
+        <LogoLink to="/" whileHover={{ color: "#dada00"}} >Your Life Well Lived</LogoLink>
         <span>
             <StyledLink to="/" whileHover={{ color: "#a8a8a8"}}>Home</StyledLink>
             <StyledLink to="/retreats" whileHover={{ color: "#a8a8a8"}}>Retreats</StyledLink>

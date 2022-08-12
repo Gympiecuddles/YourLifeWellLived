@@ -4,7 +4,6 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import useTimer from '../hooks/useTimer';
 
 import Carousel from '../components/Carousel'
-import Carousel2 from '../components/Carousel2';
 import TextSwap from '../components/TextSwap'
 
 import one from '../assets/one.jpg'
@@ -68,11 +67,11 @@ const CurrentRetreatTitle = styled.div`
   justify-content: center;
   align-items: center;
   font-size: .9em;
-  background-color: #ffffff;
+  background-color: #cdfafc;
   z-index: 0;
   h3 {
     margin-top: 120px;
-    font-size: 3em;
+    font-size: 2.8em;
   }
 `;
 
@@ -82,7 +81,7 @@ const CurrentRetreats1 = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #cdfafc;
   z-index: 1;
   div {
     display: flex;
@@ -108,8 +107,8 @@ const CurrentRetreats1 = styled.section`
   }
   img {
     margin-top: 10px;
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
   }
 `;
@@ -120,18 +119,19 @@ const CurrentRetreats2 = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #cdfafc;
   z-index: 1;
   img {
     margin-top: 10px;
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
   }
   div {
+    margin-left: 40px;
     display: flex;
     flex-direction: column;
-    width: 650px;
+    width: 660px;
     h4 {
       margin: 20px;
       font-size: 1.2em;
@@ -158,7 +158,7 @@ const PastRetreats = styled.section`
   align-items: center;
   justify-content: center;
   height: 1800px;
-  background-color: #ffffff;
+  background-color: #cdfafc;
   article {
     display: flex;
     margin-bottom: 100px;

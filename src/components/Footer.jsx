@@ -15,6 +15,7 @@ const FooterBox = styled.div`
     align-items: center;
     background-color: #0a3a86;
     color: #ffffff;
+    z-index: 1;
     a {
         align-self: flex-end;
         margin: 10px;
@@ -24,11 +25,13 @@ const FooterBox = styled.div`
         color: #ffffff;
         text-decoration: none;
         cursor: pointer;
+        z-index: 4;
     }
     div {
         margin-right: 5px;
         display: flex;
         align-items: center;
+        z-index: 3;
         a {
             align-self: center;
             margin: 0;
@@ -47,6 +50,7 @@ const ContactBox = styled(motion.div)`
         margin-left: 100px;
         display: flex;
         flex-direction: column;
+        z-index: 3;
         p {
             margin-left: 22px;
             margin-bottom: 10px;

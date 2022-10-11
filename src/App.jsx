@@ -8,9 +8,13 @@ import CarouselButton from './components/CarouselButton'
 import Newsletter from './components/Newsletter'
 import Arrow from './components/Arrow'
 
-import one from './assets/one.jpg'
-import two from './assets/two.jpg'
-import three from './assets/three.jpg'
+import one from './assets/HomeImage1.jpg'
+import two from './assets/HomeImage2.jpg'
+import three from './assets/HomeImage3.png'
+import four from './assets/HomeImage4.jpeg'
+import five from './assets/HomeImage5.jpg'
+import nine from './assets/HomeImage9.jpg'
+import ten from './assets/HomeImage10.jpg'
 
 const HomePage = styled.div`
   width: 100%;
@@ -23,12 +27,11 @@ const ImgLayer = styled(motion.div)`
   width: 100%;
   height: 100vh;
   background-color: #00000000;
-  z-index: 0;
+  z-index: -1;
   img {
     width: 100%;
     object-fit: cover;
     object-position: 0% 0%;
-    z-index: -1;
     filter: brightness(65%);
   }
 `;
@@ -48,7 +51,7 @@ const HeaderSection = styled.section`
     padding: 9px;
     padding-left: 18px;
     padding-right: 18px;
-    font-size: 3em;
+    font-size: 3.1em;
     font-weight: 400;
     letter-spacing: 6px;
     color: #ffffff;
@@ -57,7 +60,7 @@ const HeaderSection = styled.section`
     margin-left: 82px;
     margin-right: 82px;
     padding: 19px;
-    font-size: 1em;
+    font-size: 1.5em;
     letter-spacing: 1.25px;
     color: #ffffff;
   }
@@ -82,7 +85,7 @@ const AboutBox = styled.section`
     flex-direction: column;
     h3 {
       margin: 10px;
-      font-size: 1.2em;
+      font-size: 1.3em;
       font-weight: 600;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -90,17 +93,9 @@ const AboutBox = styled.section`
     p {
       margin: 10px;
       padding-right: 35px;
-      font-size: .9em;
+      font-size: 1em;
       font-weight: 400;
       line-height: 23px;
-    }
-    ul {
-      margin-top: 13px;
-      display: flex;
-      li {
-        margin: 10px;
-        list-style: none;
-      }
     }
     button {
       align-self: end;
@@ -182,6 +177,7 @@ const ServiceBullets = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #cdfafc;
+  z-index: 1;
   ul {
     display: flex;
     flex-direction: column;
@@ -203,9 +199,10 @@ const ExplainBox = styled.section`
   z-index: 1;
   h3 {
     margin: 100px;
-    padding: 5px;
+    padding: 8px;
     color: #ffff00;
     border: solid 1px #ffff00;
+    font-size: 1.3em;
     cursor: pointer;
   }
   div {
@@ -236,7 +233,7 @@ const ButtonBox = styled.div`
   align-items: center;
   width: 100%;
   background-color: #cdfafc;
-
+  z-index: 3; 
   button {
     margin: 40px;
     margin-bottom: 70px;
@@ -256,17 +253,17 @@ const ButtonBox = styled.div`
 
 function App() {
   const { scrollYProgress } = useScroll();
-  const height = useTransform(scrollYProgress, [0, 0.6, 1], [1600, 0, 0]);
+  const height = useTransform(scrollYProgress, [0, 0.6, 1], [1600, 10, 0]);
   const y = useTransform(scrollYProgress, [0, 0.4, 1], [0, -400, -200]);
   const opacity = useTransform(scrollYProgress, [0, 0.4, 1], [0, 1, 1]);
 
   const [explainText, setExplainText] = useState(false);
 
   const CarouselText = {
-    head: ["Therapy", "Coaching", "Retreats"],
-    subhead: ["Therapy works on fixing or eliminating a problem, with a focus on healing. I also hold my clients accountable for their healing and growth.",
-  "The coach is seen as an equal, a partner who will support your growth.",
-"We invite you to come and enjoy these magnificent sentient beings in their own home"],
+    head: ["Services", "Dolphin Retreats", "Whale Retreats"],
+    subhead: ["You deserve to feel like this!",
+  "Transformational Retreats with Wild Dolphins!",
+"Inspirational Retreats with Wild Whales!"],
     button: ["Let's get started", "Click for more", "Ready to go?"],
   }
 
@@ -279,51 +276,47 @@ function App() {
         <ImgLayer style={{height, y}}>
           <Carousel imgs={[one, two, three]} counter={counter} />
         </ImgLayer>
-        <ImgLayer style={{opacity, zIndex: -1}}>
-          <img src={two} alt="" />
+        <ImgLayer style={{opacity, zIndex: 0}}>
+          <img src={five} alt="" />
         </ImgLayer>
         <HeaderSection style={{height: "89vh", marginTop: "150px"}}>
-          <h2>welcome</h2>
-          <p>We are glad you found your way here.</p>
+          <h2>Welcome! You Are One Step Closer to Your Healing and Wellness Path</h2>
+          <p>There's a hard way and an easier, faster, more fun way…</p>
           <CarouselButton innerText={CarouselText} counter={counter} />
           <Arrow />
         </HeaderSection>
         <AboutBox>
           <div>
-            <h3>relationships are the foundation of life.</h3>
-            <p>When we experience painful events and the trust in our relationships seem compromised, it can feel like the ground is taken from under our feet. From the bottom of the hill, the journey upward can feel steep and daunting. It takes courage to reach out and find a supportive and experienced therapist who can help you restore your life.</p>
-            <p>Our team is committed to walking alongside you or your family to overcome stressful experiences and gain a deeper understanding of yourself and others. We will work towards helping you build secure and fulfilling relationships so you do not need to journey alone.</p>
-            <p>-  Michelle Harwell, Owner</p>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-            </ul>
-            <motion.button whileHover={{ backgroundColor: "#444444" }}>learn more about dr.harwell</motion.button>
+            <h3>How Do You Want to Feel About Your Life?</h3>
+            <p>I believe we are all naturally creative, resourceful and whole, and the answers are already inside you.</p>
+            <p>I can help you find them again or maybe for the first time.  We will work to uncover your true potential and lead a life that is worth celebrating!</p>
+            <motion.button whileHover={{ backgroundColor: "#444444" }}>Learn more about who I am and what I do</motion.button>
           </div>
-          <img src={one} />
+          <img src={four} />
         </AboutBox>
         <HeaderSection>
-          <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >Services</h2>
-          <p>We offer Coaching, Therapy, Retreats, Supervision, and Speaches</p>
+          <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >I create a supportive and even fun atmosphere while providing highly personalized holistic counseling or coaching tailored to each of my client's individual needs and goals.  My retreats are opportunities for inspiration and transformation through respectful, meaningful interactions with wild dolphins and whales in amazing natural locations worldwide.  </h2>
+          <p>I work exclusively from a virtual office so you can meet with me from the comfort of your home, office or car!</p>
         </HeaderSection>
         <ServicesBox>
           <div >
             <img src={one} />
-            <h4>Therapy/Coaching</h4>
-            <p>We take lessons from the dolphins and work holistically with the breath, using yoga and other techniques to sharpen our awareness, relax, unwind and fill our bodies with a natural sense of wellbeing.</p>
+            <h4>Holistic Psychhotherapy and Life, Family and Wellness Coaching</h4>
+            <p>What lights you up? Personal Growth work doesn’t have to be hard!  We will elicit your own brilliance for healing and transformation.  I use the power of play because it is a Fundamental Universal Need (or F.U.N.) that helps us grow and invigorates our lives.    "Once I accept myself just as I am, THEN I can change."  Carl Rogers, Father of Modern Psychology</p>
           </div>
           <div>
-            <img src={one} />
-            <h4>Retreats</h4>
-            <p>We invite you to come and enjoy these magnificent sentient beings in their own home, on their own terms and to share the mutual joy of being together in the crystal clear, warm waters off the Bimini coast.</p>
+            <img src={nine} />
+            <h4>Wild Dolphin Insprational Wellness Retreats</h4>
+            <p>We use the lessons the dolphins show us both in and above the water in a retreat that can change your life.  The dolphins show us how to play and live life to the fullest.  Play is an essential aspect of life--as important as sleep or nutrition!</p>
           </div>
         </ServicesBox>
         <ServiceBullets>
           <ul>
-            <li>Focus is on the present</li>
-            <li>The coach is seen as an equal</li>
-            <li>Can be done from anywhere</li>
+            <li>Holistic (mind-Body-Spirit) Approach</li>
+            <li>Trauma informed, Exeriential and Unique Techniques</li>
+            <li>Non-Judgemental and Compassionate</li>
+            <li>Practical Feedback and Support Grounded in the Latest Research</li>
+            <li>Highly personalized Approach to Your Specific Situation</li>
           </ul>  
         </ServiceBullets>
         <ExplainBox>
@@ -355,9 +348,9 @@ function App() {
         </ExplainBox>
         <ServiceBox2>
           <div>
-            <img src={one} />
-            <h4>Educational Lectures</h4>
-            <p>We take lessons from the dolphins and work holistically with the breath, using yoga and other techniques to sharpen our awareness, relax, unwind and fill our bodies with a natural sense of wellbeing.</p>
+            <img src={ten} />
+            <h4>Transformational Wellness Retreats with Whales!</h4>
+            <p>Looking into the eye of one of the world's largest sentient beings, knowing they are choosing to be with you, can transform your relationship with life.  The whales show us the path to redemption and forgiveness.</p>
             <ul>
               <li>Focus is on the present</li>
               <li>The coach is seen as an equal</li>
@@ -366,8 +359,10 @@ function App() {
           </div>
           <div>
             <img src={one} />
-            <h4>Supervision</h4>
-            <p>We invite you to come and enjoy these magnificent sentient beings in their own home, on their own terms and to share the mutual joy of being together in the crystal clear, warm waters off the Bimini coast.</p>
+            <h4>Public Speaking and Consultation</h4>
+            <p>Topics included: Dolphin Assisted Therapy, Life Without Sweets Is Not Worth Living BUT It Shouldn't Kill You!, Powerful Parenting, Developing Youth Assets, Emotional Intelligence, Child Friendly Divorce/Collaborative Divorce, The Power of Tapping
+              , Finding Your Best Self (for adolescents and/or girls), Mindfulness and Stress Reduction for the Rest of Us (non-meditators), The Importance of Play for Children and Adults, Group and Family Play Therapy​
+            </p>
           </div>
         </ServiceBox2>
         <ButtonBox>

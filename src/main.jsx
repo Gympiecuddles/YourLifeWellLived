@@ -15,7 +15,7 @@ import ScrollToTop from './components/ScrollToTop'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-  <Navbar />
+    <Navbar />
     <ScrollToTop>
     <Routes>
       <Route path="/" element={<App />} />

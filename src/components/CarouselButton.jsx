@@ -11,20 +11,21 @@ const TextBox = styled(motion.div)`
   z-index: 3;
   h3 {
     margin: 20px;
-    font-size: 2em;
+    font-size: 2.2em;
   }
   h4 {
     margin: 20px;
     padding: 0;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 400;
   }
   button {
     margin: 20px;
-    padding: 10px;
+    padding: 15px;
     border: solid 2px #ffffff;
     background-color: #ffffff00;
     color: #ffffff;
+    font-size: 1em;
     z-index: 5;
     cursor: pointer;
   }

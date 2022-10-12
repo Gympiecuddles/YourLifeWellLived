@@ -54,17 +54,17 @@ export default function Navbar() {
         <LogoLink to="/" whileHover={{ color: "#dada00"}} >Your Life Well Lived</LogoLink>
         <span>
             <StyledLink to="/" whileHover={{ color: "#a8a8a8"}}>Home</StyledLink>
-            <StyledLink to="/retreats" whileHover={{ color: "#a8a8a8"}}>Retreats</StyledLink>
-            <StyledLink to="/faqs" whileHover={{ color: "#a8a8a8"}}>FAQs</StyledLink>
-            <StyledLink to="/resources" whileHover={{ color: "#a8a8a8"}}>Resources</StyledLink>
+            <StyledLink to="/retreats" whileHover={{ color: "#a8a8a8"}}>Dolphin and Whale Wellness Retreats</StyledLink>
             <StyledLink to="/about" whileHover={{ color: "#a8a8a8"}}>About me</StyledLink>
             <StyledLink to="/contact" whileHover={{ color: "#a8a8a8"}}>Contact</StyledLink>
+            <StyledLink to="/resources" whileHover={{ color: "#a8a8a8"}}>Links & Resources</StyledLink>
+            <StyledLink to="/faqs" whileHover={{ color: "#a8a8a8"}}>FAQ's</StyledLink>
             <StyledLink 
                 as="a" 
                 href="https://jteleia.wordpress.com/" 
                 target="_blank"
                 whileHover={{ color: "#a8a8a8"}}
-                >Blog</StyledLink>
+                >A Guide to Play-full Life (blog)</StyledLink>
         </span>
     </NavBox>
   )

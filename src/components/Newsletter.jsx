@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-import one from '../assets/one.jpg'
+import banner from '../assets/Banner1.jpg'
 
 const NewsBox = styled(motion.article)`
     position: fixed;
@@ -106,14 +106,14 @@ export default function Newsletter() {
             <h3>Newsletter</h3>
         </NewsButton>
         <NewsContent>
-            <img src={one} />
-            <h4>Sign up for our newsletter!</h4>
+            <img src={banner} />
+            <h4>Sign up for our FREE monthly newsletter with holistic wellness tips!</h4>
             <p>Every month we release our wellness newsletter to help people live better lives. Fake text to take up space. Fake text to take up space. Fake text to take up space. Fake text to take up space. Fake text to take up space.  Take a look at our most recent newsletter 
                 <motion.a whileHover={{ color: "#5f5f5f"}} href="/" > here</motion.a>.
             </p>
             <form>
                 <input placeholder="Email" type="email" required />
-                <motion.button whileHover={{ backgroundColor: '#5a5a5a' }} type='submit'>Submit</motion.button>
+                <motion.button whileHover={{ backgroundColor: '#5a5a5a' }} type='submit'>Join Now. No spam ever!</motion.button>
             </form>
         </NewsContent>
     </NewsBox>

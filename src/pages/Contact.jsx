@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-import one from '../assets/one.jpg'
+import banner from '../assets/Banner1.jpg'
 
 const ImgLayer = styled(motion.img)`
   position: fixed;
@@ -146,7 +146,7 @@ const ContactForm = styled.div`
 export default function Contact() {
   return (
     <>
-      <ImgLayer src={one} />
+      <ImgLayer src={banner} />
       <HeaderSection>
         <h2>Contact</h2>
         <p>We would love to hear from you.</p>

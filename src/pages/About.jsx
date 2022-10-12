@@ -2,10 +2,9 @@ import React from 'react'
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import one from '../assets/one.jpg'
-import three from '../assets/three.jpg'
-import four from '../assets/four.jpg'
-import five from '../assets/five.jpg'
+import two from '../assets/AboutImage2.png'
+import three from '../assets/AboutImage3.jpg'
+import banner from '../assets/Banner1.jpg'
 
 const ImgLayer = styled(motion.img)`
   position: fixed;
@@ -85,20 +84,18 @@ const AboutBox = styled.section`
 export default function () {
   return (
     <>
-      <ImgLayer src={one} />
+      <ImgLayer src={banner} />
       <HeaderSection>
-        <h2>About</h2>
+        <h2>I'm a Happiness Locator, Joy Finder, and Professor of Play</h2>
       </HeaderSection>
       <AboutBox>
-        <img src={three} alt="" />
+        <img src={two} alt="Jeanne Teleia" />
         <article>
-          <img src={four} alt="Jeanne Teleia" />
+          <img src={three} alt="Jeanne Teleia" />
           <div>
-            <h3>Michelle Harwell, PsyD, LMFT</h3>
-            <p>Michelle Harwell, PsyD, LMFT #50732 is an expert trainer, respected speaker, and licensed therapist in trauma, development, and attachment. She is a certified yoga instructor and seeks to help her clients better understand how the body is often the first speaker to life's experiences: joy, stress, or even trauma. She is noted for her specialization in areas of development, attachment, trauma, and neuroscience, and her ability to communicate complex topics with clarity and humor.</p>
-            <p>Michelle has worked extensively with adults and children with severe disruptions in early life-care. This includes foster and adoptive families, attachment issues, child development, and healthy parenting. She is an infant mental health consultant for a variety of non-profits and community mental health teams. She is the co-author of Floortime Strategies to Promote Development in Children and Teens: A User’s Guide to the DIR® Model, a curriculum for parents and professionals to help young people with social, emotional, and cognitive challenges.</p>
-            <p>Michelle completed her doctorate in Psychoanalysis from The Institute of Contemporary Psychoanalysis in Los Angeles. She received her BA in English Literature from University of Oklahoma, MA in Theology from Fuller Theological Seminary, and MS in Marriage and Family Therapy from the Fuller Graduate School of Psychology. </p>
-            <p>Visit drmichelleharwell.com for more information. </p>
+            <h3>Jeanne Teleia</h3>
+            <p>I create a supportive and even fun atmosphere while providing highly personalized holistic counseling or coaching tailored to each of my client's individual needs and goals.  My retreats are opportunities for personal growth, inspiration and transformation through respectful, meaningful interactions with wild dolphins and whales in amazing natural locations worldwide.</p>
+            <p>F.U.N. is a Fundamental Universal Need--not just fluff.  It's essential to our mind, body and spirit.  All beings must have FUN and play to THRIVE.</p>
           </div>
         </article>
         <article>
@@ -109,7 +106,7 @@ export default function () {
             <p>Michelle completed her doctorate in Psychoanalysis from The Institute of Contemporary Psychoanalysis in Los Angeles. She received her BA in English Literature from University of Oklahoma, MA in Theology from Fuller Theological Seminary, and MS in Marriage and Family Therapy from the Fuller Graduate School of Psychology. </p>
             <p>Visit drmichelleharwell.com for more information. </p>
           </div>
-          <img src={five} alt="Jeanne Teleia speaking" />
+          <img src={three} alt="Jeanne Teleia speaking" />
         </article>
       </AboutBox>
     </>

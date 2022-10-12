@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import one from '../assets/one.jpg'
+import banner from '../assets/Banner1.jpg'
 
 const ImgLayer = styled(motion.img)`
   position: fixed;
@@ -102,7 +102,7 @@ const LinkBox = styled.section`
 export default function Resources() {
   return (
     <>
-      <ImgLayer src={one} />
+      <ImgLayer src={banner} />
       <HeaderSection>
         <h2>Resources</h2>
         <p>Learn more about what to expect.</p>

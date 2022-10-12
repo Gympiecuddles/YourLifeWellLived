@@ -13,8 +13,10 @@ import two from './assets/HomeImage2.jpg'
 import three from './assets/HomeImage3.png'
 import four from './assets/HomeImage4.jpeg'
 import five from './assets/HomeImage5.jpg'
+import eight from './assets/HomeImage8.jpg'
 import nine from './assets/HomeImage9.jpg'
 import ten from './assets/HomeImage10.jpg'
+import eleven from './assets/HomeImage11.jpg'
 
 const HomePage = styled.div`
   width: 100%;
@@ -129,7 +131,7 @@ const ServicesBox = styled.section`
   div {
     margin: 110px;
     width: 17%;
-    height: 500px;
+    height: 520px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -150,14 +152,6 @@ const ServicesBox = styled.section`
       font-size: .9em;
       font-weight: 400;
       line-height: 30px;
-    }
-    ul {
-      align-self: start;
-      margin-top: 10px;
-      margin-left: 40px;
-      li {
-        margin: 10px;
-      }
     }
   }
 `;
@@ -280,8 +274,8 @@ function App() {
           <img src={five} alt="" />
         </ImgLayer>
         <HeaderSection style={{height: "89vh", marginTop: "150px"}}>
-          <h2>Welcome! You Are One Step Closer to Your Healing and Wellness Path</h2>
-          <p>There's a hard way and an easier, faster, more fun way…</p>
+          <h2>Welcome! You Are One Step Closer to Reclaiming your JOY!</h2>
+          <p>There's the hard way...or an easier, faster, more fun way to your best life…</p>
           <CarouselButton innerText={CarouselText} counter={counter} />
           <Arrow />
         </HeaderSection>
@@ -295,14 +289,15 @@ function App() {
           <img src={four} />
         </AboutBox>
         <HeaderSection>
-          <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >I create a supportive and even fun atmosphere while providing highly personalized holistic counseling or coaching tailored to each of my client's individual needs and goals.  My retreats are opportunities for inspiration and transformation through respectful, meaningful interactions with wild dolphins and whales in amazing natural locations worldwide.  </h2>
+          <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >Services</h2>
           <p>I work exclusively from a virtual office so you can meet with me from the comfort of your home, office or car!</p>
         </HeaderSection>
         <ServicesBox>
           <div >
-            <img src={one} />
+            <img src={eight} />
             <h4>Holistic Psychhotherapy and Life, Family and Wellness Coaching</h4>
-            <p>What lights you up? Personal Growth work doesn’t have to be hard!  We will elicit your own brilliance for healing and transformation.  I use the power of play because it is a Fundamental Universal Need (or F.U.N.) that helps us grow and invigorates our lives.    "Once I accept myself just as I am, THEN I can change."  Carl Rogers, Father of Modern Psychology</p>
+            <p>What lights you up? Personal Growth work doesn’t have to be hard!  We will elicit your own brilliance for healing and transformation.  I use the power of play because it is a Fundamental Universal Need (or F.U.N.) that helps us grow and invigorates our lives.</p>
+            <p>"Once I accept myself just as I am, THEN I can change."  -Carl Rogers, Father of Modern Psychology</p>
           </div>
           <div>
             <img src={nine} />
@@ -350,15 +345,10 @@ function App() {
           <div>
             <img src={ten} />
             <h4>Transformational Wellness Retreats with Whales!</h4>
-            <p>Looking into the eye of one of the world's largest sentient beings, knowing they are choosing to be with you, can transform your relationship with life.  The whales show us the path to redemption and forgiveness.</p>
-            <ul>
-              <li>Focus is on the present</li>
-              <li>The coach is seen as an equal</li>
-              <li>Can be done from anywhere</li>
-            </ul>
+            <p>Looking into the eye of one of the world's largest sentient beings, knowing they are choosing to be with you, can transform your relationship with life. What do you need to get over, get past, get through?  The whales can show us the way from their story of forgiveness and our story of redemption.</p>
           </div>
           <div>
-            <img src={one} />
+            <img src={eleven} />
             <h4>Public Speaking and Consultation</h4>
             <p>Topics included: Dolphin Assisted Therapy, Life Without Sweets Is Not Worth Living BUT It Shouldn't Kill You!, Powerful Parenting, Developing Youth Assets, Emotional Intelligence, Child Friendly Divorce/Collaborative Divorce, The Power of Tapping
               , Finding Your Best Self (for adolescents and/or girls), Mindfulness and Stress Reduction for the Rest of Us (non-meditators), The Importance of Play for Children and Adults, Group and Family Play Therapy​

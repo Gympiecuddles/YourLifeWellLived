@@ -6,7 +6,7 @@ import useTimer from '../hooks/useTimer';
 import Carousel from '../components/Carousel'
 import TextSwap from '../components/TextSwap'
 
-import one from '../assets/one.jpg'
+import one from '../assets/Banner1.jpg'
 import two from '../assets/two.jpg'
 import three from '../assets/three.jpg'
 import six from '../assets/six.jpg'

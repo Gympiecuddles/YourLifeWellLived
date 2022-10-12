@@ -2,15 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-import one from '../assets/one.jpg'
+import one from '../assets/FaqImage1.jpg'
+import banner from '../assets/Banner1.jpg'
 
 const ImgLayer = styled(motion.img)`
   position: fixed;
   width: 100%;
-  height: 30vh;
+  height: auto;
   background-color: #00000000;
   object-fit: cover;
-  object-position: 0% 0%;
+  object-position: 50% 50%;
   z-index: -1;
 `;
 
@@ -72,7 +73,7 @@ const FaqBox = styled.section`
     margin-top: 100px;
     width: 18%;
     height: 700px;
-    object-fit: cover;
+    object-fit: contain;
   }
 `;
 
@@ -99,7 +100,7 @@ const ButtonBox = styled.div`
 export default function Faqs() {
   return (
     <>
-      <ImgLayer src={one} />
+      <ImgLayer src={banner} />
       <HeaderSection>
         <h2>FAQ</h2>
         <p>Learn more about what to expect.</p>

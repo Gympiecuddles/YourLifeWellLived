@@ -14,10 +14,10 @@ const NavBox = styled(motion.nav)`
     background-color: #0a3a86;
     z-index: 3;
     span {
-        margin-right: 80px;
+        margin-right: 100px;
         display: flex;
         justify-content: space-between;
-        width: 820px;
+        width: 1150px;
         list-style: none;
     }
 `;
@@ -28,8 +28,9 @@ const StyledLink = styled(MotionLink)`
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-size: .9em;
+    font-size: 1em;
     letter-spacing: 3px;
+    text-align: center;
     color: #ffffff;
     text-decoration: none;
     outline: none;
@@ -53,12 +54,12 @@ export default function Navbar() {
     <NavBox>
         <LogoLink to="/" whileHover={{ color: "#dada00"}} >Your Life Well Lived</LogoLink>
         <span>
-            <StyledLink to="/" whileHover={{ color: "#a8a8a8"}}>Home</StyledLink>
-            <StyledLink to="/retreats" whileHover={{ color: "#a8a8a8"}}>Dolphin and Whale Wellness Retreats</StyledLink>
-            <StyledLink to="/about" whileHover={{ color: "#a8a8a8"}}>About me</StyledLink>
-            <StyledLink to="/contact" whileHover={{ color: "#a8a8a8"}}>Contact</StyledLink>
-            <StyledLink to="/resources" whileHover={{ color: "#a8a8a8"}}>Links & Resources</StyledLink>
-            <StyledLink to="/faqs" whileHover={{ color: "#a8a8a8"}}>FAQ's</StyledLink>
+            <StyledLink to="/" whileHover={{ color: "#cee0fc"}}>Home</StyledLink>
+            <StyledLink to="/retreats" whileHover={{ color: "#cee0fc"}}>Dolphin and Whale Wellness Retreats</StyledLink>
+            <StyledLink to="/about" whileHover={{ color: "#cee0fc"}}>About me</StyledLink>
+            <StyledLink to="/contact" whileHover={{ color: "#cee0fc"}}>Contact</StyledLink>
+            <StyledLink to="/resources" whileHover={{ color: "#cee0fc"}}>Links & Resources</StyledLink>
+            <StyledLink to="/faqs" whileHover={{ color: "#cee0fc"}}>FAQ's</StyledLink>
             <StyledLink 
                 as="a" 
                 href="https://jteleia.wordpress.com/" 

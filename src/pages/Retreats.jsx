@@ -59,6 +59,10 @@ const HeaderSection = styled.section`
     letter-spacing: 1.25px;
     color: #ffffff;
   }
+  img {
+    position: absolute;
+    z-index: -1;
+  }
 `;
 const CurrentRetreatTitle = styled.div`
   width: 100%;
@@ -68,7 +72,7 @@ const CurrentRetreatTitle = styled.div`
   align-items: center;
   font-size: .9em;
   background-color: #cdfafc;
-  z-index: 0;
+  z-index: 2;
   h3 {
     margin-top: 120px;
     font-size: 2.8em;
@@ -77,7 +81,7 @@ const CurrentRetreatTitle = styled.div`
 
 const CurrentRetreats1 = styled.section`
   width: 100%;
-  height: 45vh;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,7 +119,7 @@ const CurrentRetreats1 = styled.section`
 
 const CurrentRetreats2 = styled.section`
   width: 100%;
-  height: 52vh;
+  height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,6 +163,7 @@ const PastRetreats = styled.section`
   justify-content: center;
   height: 1800px;
   background-color: #cdfafc;
+  z-index: 1;
   article {
     display: flex;
     margin-bottom: 100px;
@@ -210,8 +215,8 @@ export default function Retreats() {
   const y = useTransform(scrollYProgress, [0, 0.4, 1], [0, -400, -200]);
 
   const carouselText = {
-    head: ["Nayera Springs", "Denver"],
-    subhead: ["Costa Rica", "Colorado"],
+    head: ["Bimini Island", "San Ignacio"],
+    subhead: ["The Bahamas", "Baja, Mexico"],
     head2: ["A SECLUDED PLACE OF UNDERSTATED LUXURY", "BEAUTIFUL AND RUSTIC"],
     subhead2: ["Arenal Volcano National Park, Costa Rica", "Someplace, Denver"],
     row1: ["Travel & leisure", "Sites & leisure"],
@@ -225,15 +230,15 @@ export default function Retreats() {
 
   const text = {
     dolphin: {
-      Head: "Swim with the dolphins",
-      Text1: "When we experience painful events and the trust in our relationships seem compromised, it can feel like the ground is taken from under our feet. From the bottom of the hill, the journey upward can feel steep and daunting. It takes courage to reach out and find a supportive and experienced therapist who can help you restore your life.",
-      Text2: "Our team is committed to walking alongside you or your family to overcome stressful experiences and gain a deeper understanding of yourself and others. We will work towards helping you build secure and fulfilling relationships so you do not need to journey alone.",
+      Head: "Why We're Doing This",
+      Text1: "We all need to have more of our F.U.N.!!  F.U.N. is a Fundamental Universal Need. Dolphins are master F.U.N. facilitators. Many people report experiences of bliss, ecstatic joy, easing of pain and suffering-physical, emotional and spiritual, an opening of their heart and an awakened consciousness. <br/>Every single human culture and even throughout the animal kingdom, PLAY and FUN are REQUIREMENTS of life. To develop our brain, to grow, to learn, to survive through the worst moments, we must play. Without our F.U.N., we are not living fully and cannot contribute as abundantly to our world, the ones we love and to our own highest good.",
+      Text2: "Experiences in the glories of nature are the fastest route back to our essence—our F.U.N. and to heal what has come before. These experiences become embedded in our cells (literally) and then can be called upon afterwards to bolster us through the storms of life. This retreat is also planned during the time of the FULL MOON.  Peoples all around the world consider the Full Moon a powerful time to connect with what we want to bring into manifestation and during the waning moon on the retreat will be a good time to consider what you need to let go of to live your life more fully. Do you need to manifest a fresh start, embark on life transitions, and/or want to have a nurturing, loving and healing experience? Through ritual and magical time with the dolphins, this is your opportunity to Rest, Recharge and Renew!",
       Img: one,
     },
     dining: {
-      Head: "Dine with 5 star chefs",
-      Text1: "A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
-      Text2: "Another productive way to use this tool to begin a daily writing routine. One way is to generate a random paragraph with the intention to try to rewrite it while still keeping the original meaning. The purpose here is to just get the writing started so that when the writer goes onto their day's writing projects, words are already flowing from their fingers.",
+      Head: "What YOU get out of it?",
+      Text1: "F.U.N. is the vital essence that many of us need to re-claim, along with our JOY and EASE. Do you need a break? Come for your own Rest, Renewal, and even Reawakening to your true F.U.N. essence. You will be improving, heightening, and inspiring your motivation, your ease, and the fullness of your heart's desire. When your mind, body and spirit are brimming with joy and in alignment, your goals, needs, and challenges can be met with more EASE. Let nature and the power of connecting with wild Cetaceans fill you, connect you back to your best self, if even for the first time. Nothing brings us into alignment with our true essence faster than peak experiences in nature—connecting with something larger than ourselves (literally), with majesty, magnificence and an awe-inspiring story.",
+      Text2: "This retreat is also a perfect opportunity for improving family bonding and connection through fun, joy and mutual support and help. I have seen families transform how they interact and feel about each other during and after nature based experiential retreats. It's a great way to kick start a new family dynamic. Group coaching/inspirational sessions and a personal/individual coaching session is included in the cost of the retreat, including follow up by email after we depart!",
       Img: two,
     },
     spa: {
@@ -268,16 +273,16 @@ export default function Retreats() {
         <Carousel imgs={[six, three]} counter={counter}  />
       </ImgLayer>
       <ImgLayer style={{zIndex: -1}}>
-        <Carousel imgs={[one, two, three]} counter={counter2} />
+       
       </ImgLayer>
       <TextSwap innerText={carouselText} counter={counter} />
       <CurrentRetreatTitle style={{height: "200px"}}>
-        <h3>Dolphin Retreat</h3>
+        <h3>Bimini Dolphin Wellness & Healing Retreat</h3>
       </CurrentRetreatTitle>
       <CurrentRetreats1>
         <div style={{ width: "100px" }}>
-          <motion.button onClick={() => setInfo(text.dolphin)} whileHover={{ color: "#a8a8a8"}}>Dolphins</motion.button>
-          <motion.button onClick={() => setInfo(text.dining)} whileHover={{ color: "#a8a8a8"}}>Dining</motion.button>
+          <motion.button onClick={() => setInfo(text.dolphin)} whileHover={{ color: "#a8a8a8"}}>Why</motion.button>
+          <motion.button onClick={() => setInfo(text.dining)} whileHover={{ color: "#a8a8a8"}}>What</motion.button>
           <motion.button onClick={() => setInfo(text.spa)} whileHover={{ color: "#a8a8a8"}}>Spa</motion.button>
           <motion.button onClick={() => setInfo(text.rooms)} whileHover={{ color: "#a8a8a8"}}>Rooms</motion.button>
           <motion.button onClick={() => setInfo(text.events)} whileHover={{ color: "#a8a8a8"}}>Events</motion.button>
@@ -286,14 +291,13 @@ export default function Retreats() {
           <h4>{Info.Head}</h4>
           <p>{Info.Text1}</p>
           <p>{Info.Text2}</p>
-          <p>- Michelle Harwell, Owner</p>
         </div>
         <div style={{width: "500px"}}>
           <img src={Info.Img} alt="" />
         </div>  
       </CurrentRetreats1>
       <CurrentRetreatTitle>
-        <h3>Whale Retreat</h3>
+        <h3>Baja Gray Whale Wellness Retreat</h3>
       </CurrentRetreatTitle>
       <CurrentRetreats2>
         <div style={{width: "500px"}}>
@@ -303,7 +307,6 @@ export default function Retreats() {
           <h4>{Info2.Head}</h4>
           <p>{Info2.Text1}</p>
           <p>{Info2.Text2}</p>
-          <p>- Michelle Harwell, Owner</p>
         </div>
         <div style={{ width: "100px" }}>
           <motion.button onClick={() => setInfo2(text.dolphin)} whileHover={{ color: "#a8a8a8"}}>Dolphins</motion.button>
@@ -316,6 +319,7 @@ export default function Retreats() {
       <HeaderSection>
         <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >Past Retreats</h2>
         <p>We offer psychotherapy, medication consultation and management, support groups, parent consultations, workshops, and developmental assessments.</p>
+        <Carousel imgs={[one, two, three]} counter={counter2} />
       </HeaderSection>
       <PastRetreats>
         <article>

@@ -10,8 +10,8 @@ const NewsBox = styled(motion.article)`
     right: 0%;
     display: flex;
     width: 400px;
-    height: 300px;
-    z-index: 2;
+    height: 325px;
+    z-index: 3;
 `;
 
 const NewsButton = styled(motion.div)`
@@ -32,7 +32,7 @@ const NewsButton = styled(motion.div)`
 
 const NewsContent = styled.div`
     width: 100%;
-    height: 430px;
+    height: 480px;
     background-color: #ffffff;
     border-radius: 5px;
     img {
@@ -80,14 +80,25 @@ const NewsContent = styled.div`
         button {
             display: block;
             margin-top: 10px;
-            width: 80px;
-            height: 24px;
+            width: 100px;
+            height: 40px;
             color: #ffffff;
             background-color: #000000;
             border: none;
             cursor: pointer;
         }
+        label {
+            margin-left: -70px;
+        }
     }
+`;
+
+const CheckBox = styled.input`
+    margin-top: 8px;
+    margin-left: -89px;
+    width: 10px;
+    height: 10px;
+    scale: .9;
 `;
 
 const collapseVariants = {
@@ -114,6 +125,8 @@ export default function Newsletter() {
             <form>
                 <input placeholder="Email" type="email" required />
                 <motion.button whileHover={{ backgroundColor: '#5a5a5a' }} type='submit'>Join Now. No spam ever!</motion.button>
+                <CheckBox type="checkbox" name="confirm" value="confirm" />
+                <label for="confirm">Check to confirm subscription</label>
             </form>
         </NewsContent>
     </NewsBox>

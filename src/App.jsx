@@ -5,7 +5,6 @@ import useTimer from './hooks/useTimer'
 
 import Carousel from './components/Carousel'
 import CarouselButton from './components/CarouselButton'
-import Newsletter from './components/Newsletter'
 import Arrow from './components/Arrow'
 
 import one from './assets/HomeImage1.jpg'
@@ -24,7 +23,7 @@ const HomePage = styled.div`
   flex-direction: column;
 `;
 
-const ImgLayer = styled(motion.div)`
+const ImgLayer1 = styled(motion.div)`
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -32,9 +31,26 @@ const ImgLayer = styled(motion.div)`
   z-index: -1;
   img {
     width: 100%;
+    height: 100vh;
     object-fit: cover;
     object-position: 0% 0%;
-    filter: brightness(65%);
+    filter: brightness(80%);
+  }
+`;
+
+const ImgLayer2 = styled(motion.div)`
+  position: relative;
+  
+  width: 100%;
+  height: 100vh;
+  background-color: #00000000;
+  z-index: 0;
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: 0% 0%;
+    filter: brightness(80%);
   }
 `;
 
@@ -66,6 +82,11 @@ const HeaderSection = styled.section`
     letter-spacing: 1.25px;
     color: #ffffff;
   }
+  img {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
   @media screen and (max-width: 1440px) {
     h2 {
       font-size: 2.5em;
@@ -80,7 +101,7 @@ const AboutBox = styled.section`
   justify-content: center;
   align-items: center;
   background-color: #cdfafc;
-  z-index: 1;
+  z-index: 2;
   div {
     width: 29%;
     display: flex;
@@ -247,9 +268,7 @@ const ButtonBox = styled.div`
 
 function App() {
   const { scrollYProgress } = useScroll();
-  const height = useTransform(scrollYProgress, [0, 0.6, 1], [1600, 10, 0]);
-  const y = useTransform(scrollYProgress, [0, 0.4, 1], [0, -400, -200]);
-  const opacity = useTransform(scrollYProgress, [0, 0.4, 1], [0, 1, 1]);
+  const y = useTransform(scrollYProgress, [0, 0.36, .37], [0, -650, -500]);
 
   const [explainText, setExplainText] = useState(false);
 
@@ -265,14 +284,10 @@ function App() {
 
   return (
     <>
-      <Newsletter />
       <HomePage>
-        <ImgLayer style={{height, y}}>
+        <ImgLayer1 style={{y}}>
           <Carousel imgs={[one, two, three]} counter={counter} />
-        </ImgLayer>
-        <ImgLayer style={{opacity, zIndex: 0}}>
-          <img src={five} alt="" />
-        </ImgLayer>
+        </ImgLayer1>
         <HeaderSection style={{height: "89vh", marginTop: "150px"}}>
           <h2>Welcome! You Are One Step Closer to Reclaiming your JOY!</h2>
           <p>There's the hard way...or an easier, faster, more fun way to your best life…</p>
@@ -291,6 +306,7 @@ function App() {
         <HeaderSection>
           <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >Services</h2>
           <p>I work exclusively from a virtual office so you can meet with me from the comfort of your home, office or car!</p>
+          <img src={five} alt=""/>
         </HeaderSection>
         <ServicesBox>
           <div >

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
@@ -48,14 +49,35 @@ const LogoLink = styled(StyledLink)`
     outline: none;
 `;
 
+const MotionHashLink = motion(HashLink);
+const StyledHashLink = styled(MotionHashLink)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1em;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    outline: none;
+`
 
 export default function Navbar() {
+    
+    const scrollWithOffset = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -80; 
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+    }
+
   return (
     <NavBox>
         <LogoLink to="/" whileHover={{ color: "#dada00"}} >Your Life Well Lived</LogoLink>
         <span>
             <StyledLink to="/" whileHover={{ color: "#cee0fc"}}>Home</StyledLink>
             <StyledLink to="/retreats" whileHover={{ color: "#cee0fc"}}>Dolphin and Whale Wellness Retreats</StyledLink>
+            <StyledHashLink smooth to="../#Services" scroll={el => scrollWithOffset(el)} >Counseling & Coaching</StyledHashLink>
             <StyledLink to="/about" whileHover={{ color: "#cee0fc"}}>About me</StyledLink>
             <StyledLink to="/contact" whileHover={{ color: "#cee0fc"}}>Contact</StyledLink>
             <StyledLink to="/resources" whileHover={{ color: "#cee0fc"}}>Links & Resources</StyledLink>

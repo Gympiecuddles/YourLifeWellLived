@@ -273,7 +273,7 @@ function App() {
   const [explainText, setExplainText] = useState(false);
 
   const CarouselText = {
-    head: ["Services", "Dolphin Retreats", "Whale Retreats"],
+    head: ["Holistic Counseling and Coaching", "Dolphin Retreats", "Whale Retreats"],
     subhead: ["You deserve to feel like this!",
   "Transformational Retreats with Wild Dolphins!",
 "Inspirational Retreats with Wild Whales!"],
@@ -281,6 +281,8 @@ function App() {
   }
 
   let counter = useTimer(3, 5);
+
+  const Location = ["/#Services", "/Retreats", "/Retreats"];
 
   return (
     <>
@@ -290,8 +292,8 @@ function App() {
         </ImgLayer1>
         <HeaderSection style={{height: "89vh", marginTop: "150px"}}>
           <h2>Welcome! You Are One Step Closer to Reclaiming your JOY!</h2>
-          <p>There's the hard way...or an easier, faster, more fun way to your best life…</p>
-          <CarouselButton innerText={CarouselText} counter={counter} />
+          <p>There's an easier, faster, more FUN way to your best life…</p>
+          <CarouselButton innerText={CarouselText} counter={counter} location={Location}/>
           <Arrow />
         </HeaderSection>
         <AboutBox>
@@ -303,7 +305,7 @@ function App() {
           </div>
           <img src={four} />
         </AboutBox>
-        <HeaderSection>
+        <HeaderSection id="Services">
           <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >Services</h2>
           <p>I work exclusively from a virtual office so you can meet with me from the comfort of your home, office or car!</p>
           <img src={five} alt=""/>

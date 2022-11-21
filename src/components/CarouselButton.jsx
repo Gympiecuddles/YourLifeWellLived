@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
+import { HashLink } from 'react-router-hash-link'
 
 const TextBox = styled(motion.div)`
   position: absolute;
@@ -15,21 +16,25 @@ const TextBox = styled(motion.div)`
   }
   h4 {
     margin: 20px;
+    margin-bottom: 40px;
     padding: 0;
     font-size: 1.2em;
     font-weight: 400;
   }
-  button {
+`;
+
+const MotionHashLink = motion(HashLink);
+const StyledHashLink = styled(MotionHashLink)`
     margin: 20px;
     padding: 15px;
     border: solid 2px #ffffff;
     background-color: #ffffff00;
     color: #ffffff;
     font-size: 1em;
+    text-decoration: none;
     z-index: 5;
     cursor: pointer;
-  }
-`;
+`; 
 
 const h3Motion = {
     init: { opacity: 0, x: 500 },
@@ -46,13 +51,20 @@ const h4Motion = {
 const buttonMotion = {
     init: { opacity: 0, x: 500 },
     start: { opacity: 1, x: 0, 
-        transition: { delay: 1.4, duration: .4 }},
+        transition: { delay: 1.4, duration: 1 }},
     hover: { border: "solid 2px #95e1f8", 
         transition: { delay: 0, duration: .2 }}
 }
 
-export default function Carousel({innerText, counter}) {
+export default function Carousel({innerText, counter, location}) {
     let view = counter + 1;
+
+    const scrollWithOffset = (el) => {
+      const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+      const yOffset = -80; 
+      window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+  }
+  
   return (
     <TextBox initial="init" animate="start" whileHover="hover">
       {view && <motion.h3
@@ -65,11 +77,14 @@ export default function Carousel({innerText, counter}) {
                     variants={h4Motion}
                     >{innerText.subhead[counter]}
                 </motion.h4>}
-      {view && <motion.button 
+      {view && <StyledHashLink 
+                    smooth
                     key={counter + 100} 
                     variants={buttonMotion}
+                    to={location[counter]}
+                    scroll={el => scrollWithOffset(el)}
                     >{innerText.button[counter]}
-                    </motion.button>}
+                    </StyledHashLink>}
     </TextBox>
   )
 }

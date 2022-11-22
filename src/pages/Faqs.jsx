@@ -107,20 +107,18 @@ export default function Faqs() {
       </HeaderSection>
       <FaqBox>
         <article>
-          <strong>1. What is the length and frequency of our sessions?</strong>
-          <p>Our standard sessions are 45 minutes and take place weekly. </p>
-          <strong>2. HOW MUCH IS THE SESSION FEE?</strong>
-          <p>The session fees vary according to experience of clinician.</p>
-          <strong>3. IS THERE A SLIDING SCALE?</strong>
-          <p>We offer a limited number of sliding scale appointments. We are happy to discuss more over the phone.</p>
-          <strong>4. DO YOU BILL INSURANCE?</strong>
-          <p>We do not bill insurance. However, we provide monthly superbills if you would like to submit them to your insurance carrier for reimbursement.</p>
-          <strong>5. Where Do I PARk?</strong>
-          <p>For our Eagle Rock location: There is metered parking along Colorado Blvd and free one-hour parking on Maywood.</p>
-          <strong>6. Where do I go when I arrive?</strong>
-          <p>For our Eagle Rock location: Our office is halfway down the outdoor hallway past the gate. Make yourself at home in our waiting room in Suite 2, and your therapist will greet you at your appointment time.</p>
-          <strong>7. WHAT ARE YOUR PRIVACY PRACTICES?</strong>
-          <p>You may review our privacy policy here.</p>
+          <strong>What is the length and frequency of our sessions?</strong>
+          <p>This will be determined by you and Jeanne Teleia but generally it's best to meet weekly for therapy and possibly less often for coaching.</p>
+          <strong>What are your rates?</strong>
+          <p>Rates are determined by the length of session, services provided and number of people involved.</p>
+          <strong>Do you take insurance?</strong>
+          <p>I am licensed for psychotherapy in Hawai'I and Colorado but I do not accept insurance.  I can provide receipts for you to submit to your insurance for 'out of network provider' reimbursement but this is not a guarantee of payment.  You will need to check the reimbursements with your insurance company.  Mental health care can be deducted on your taxes as a health expense in some cases.  Check with your tax professional.</p>
+          <strong>Do you have a sliding scale?</strong>
+          <p>I do provide a limited number of slots for persons in need.  Contact me for more information.</p>
+          <strong>Can I meet you in person?</strong>
+          <p>I generally work online exclusively but if you are in France or another location where I may be located physically, it may be possible to meet in person after we have established care and if privacy is guaranteed.</p>
+          <strong>How do I access online care?</strong>
+          <p>I use a simple, secure, vidoe chat link that I send to registered clients.</p>
         </article>
         <img src={one} />
       </FaqBox>

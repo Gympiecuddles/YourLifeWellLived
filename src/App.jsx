@@ -122,7 +122,7 @@ const AboutBox = styled.section`
     }
     button {
       align-self: end;
-      margin-top: 30px;
+      margin-top: 70px;
       margin-right: 15px;
       width: 350px;
       height: 60px;
@@ -130,7 +130,7 @@ const AboutBox = styled.section`
       font-weight: 600;
       border: none;
       color: #ffffff;
-      background-color: #000000;
+      background-color: #0a3a86;
       text-transform: uppercase;
     }
   }
@@ -185,7 +185,7 @@ const ServiceBox2 = styled(ServicesBox)`
 `;
 
 const ServiceBullets = styled.div`
-  padding-bottom: 40px;
+  padding: 40px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -301,13 +301,13 @@ function App() {
             <h3>How Do You Want to Feel About Your Life?</h3>
             <p>I believe we are all naturally creative, resourceful and whole, and the answers are already inside you.</p>
             <p>I can help you find them again or maybe for the first time.  We will work to uncover your true potential and lead a life that is worth celebrating!</p>
-            <motion.button whileHover={{ backgroundColor: "#444444" }}>Learn more about who I am and what I do</motion.button>
+            <motion.button whileHover={{ backgroundColor: "#1154be" }}>Learn more about who I am and what I do</motion.button>
           </div>
           <img src={four} />
         </AboutBox>
         <HeaderSection id="Services">
-          <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >Services</h2>
-          <p>I work exclusively from a virtual office so you can meet with me from the comfort of your home, office or car!</p>
+          <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >What I can do for you</h2>
+          <p>What lights you up? Personal Growth work doesn’t have to be difficult!  We will elicit your own brilliance for healing and transformation.  I use the power of play because it is a Fundamental Universal Need (or F.U.N.) that helps us grow and invigorates our lives.</p>
           <img src={five} alt=""/>
         </HeaderSection>
         <ServicesBox>
@@ -325,15 +325,16 @@ function App() {
         </ServicesBox>
         <ServiceBullets>
           <ul>
-            <li>Holistic (mind-Body-Spirit) Approach</li>
+            <li>Holistic mind-Body-Spirit Approach</li>
             <li>Trauma informed, Exeriential and Unique Techniques</li>
             <li>Non-Judgemental and Compassionate</li>
             <li>Practical Feedback and Support Grounded in the Latest Research</li>
             <li>Highly personalized Approach to Your Specific Situation</li>
+            <li>I work exclusively from a virtual office so you can meet with me from the comfort of your home, office or car!</li>
           </ul>  
         </ServiceBullets>
         <ExplainBox>
-          <h3 onClick={() => { setExplainText(!explainText) }} >COACHING OR THERAPY?  Which is right for me?</h3>
+          <h3 onClick={() => { setExplainText(!explainText) }} >Which is right for me--Therapy or Coaching?  CLICK HERE</h3>
           {explainText && 
             <div>
               <article>

@@ -7,7 +7,7 @@ import Carousel from '../components/Carousel'
 import TextSwap from '../components/TextSwap'
 
 import one from '../assets/Banner1.jpg'
-import two from '../assets/two.jpg'
+import two from '../assets/RetreatImage2.jpeg'
 import three from '../assets/three.jpg'
 import six from '../assets/six.jpg'
 
@@ -270,7 +270,7 @@ export default function Retreats() {
   return (
     <RetreatPage>
       <ImgLayer style={{height, y}}>
-        <Carousel imgs={[six, three]} counter={counter}  />
+        <Carousel imgs={[six, two]} counter={counter}  />
       </ImgLayer>
       <ImgLayer style={{zIndex: -1}}>
        

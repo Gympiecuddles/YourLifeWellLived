@@ -71,7 +71,13 @@ const AboutBox = styled.section`
         text-transform: uppercase;
       }
       p {
-        margin-top: 13px;
+        margin-top: 18px;
+        padding-right: 35px;
+        font-size: .9em;
+        font-weight: 400;
+        line-height: 22px;
+      }
+      q {
         padding-right: 35px;
         font-size: .9em;
         font-weight: 400;
@@ -95,16 +101,16 @@ export default function () {
           <div>
             <h3>Jeanne Teleia</h3>
             <p>I create a supportive and even fun atmosphere while providing highly personalized holistic counseling or coaching tailored to each of my client's individual needs and goals.  My retreats are opportunities for personal growth, inspiration and transformation through respectful, meaningful interactions with wild dolphins and whales in amazing natural locations worldwide.</p>
-            <p>F.U.N. is a Fundamental Universal Need--not just fluff.  It's essential to our mind, body and spirit.  All beings must have FUN and play to THRIVE.</p>
+            <q>F.U.N. is a Fundamental Universal Need.  It's essential to our mind, body and spirit.  All beings must have FUN and play to THRIVE.</q>
           </div>
         </article>
         <article>
           <div>
-            <h3>Abailable as a public speaker</h3>
-            <p>Michelle Harwell, PsyD, LMFT #50732 is an expert trainer, respected speaker, and licensed therapist in trauma, development, and attachment. She is a certified yoga instructor and seeks to help her clients better understand how the body is often the first speaker to life's experiences: joy, stress, or even trauma. She is noted for her specialization in areas of development, attachment, trauma, and neuroscience, and her ability to communicate complex topics with clarity and humor.</p>
-            <p>Michelle has worked extensively with adults and children with severe disruptions in early life-care. This includes foster and adoptive families, attachment issues, child development, and healthy parenting. She is an infant mental health consultant for a variety of non-profits and community mental health teams. She is the co-author of Floortime Strategies to Promote Development in Children and Teens: A User’s Guide to the DIR® Model, a curriculum for parents and professionals to help young people with social, emotional, and cognitive challenges.</p>
-            <p>Michelle completed her doctorate in Psychoanalysis from The Institute of Contemporary Psychoanalysis in Los Angeles. She received her BA in English Literature from University of Oklahoma, MA in Theology from Fuller Theological Seminary, and MS in Marriage and Family Therapy from the Fuller Graduate School of Psychology. </p>
-            <p>Visit drmichelleharwell.com for more information. </p>
+            <h3>I am a licensed Marriage and Family Therapist and Play Therapist specializing in EXPERIENTIAL and INSPIRATIONAL RETREATS with WILD DOLPHINS and WHALES.</h3>
+            <p>I have over 25 years' experience working with children, adults and families as an advocate, educator and therapist.  I am a graduate of the University of Maryland, University of Delaware and the Institute for Family and Play Therapy with a commitment to ongoing continuing education.</p>
+            <p>Specializing in experiential, play therapy and other expressive and brief therapies, I work with a broad spectrum of clients. Among my areas of expertise are trauma, depression, anxiety, ADHD/behavioral/emotional problems, child abuse-past or present, divorce or separation, grief and loss, substance abuse, family violence, stress and anger, post traumatic stress and trauma, self esteem and life, wellness and family coaching.</p>
+            <p>My other interests include my furry friends Violet, Suzie and Smudge and I usually have a menagerie of 4-footed rescue animals including dogs, cats and bunnies.</p>
+            <p>My very favorite moments are spent in nature swimming with or otherwise interacting with wild and free dolphins and whales. Now I'm taking others around the world on retreats to find inspiration and joy through their example. Contact me to find out more!</p>
           </div>
           <img src={three} alt="Jeanne Teleia speaking" />
         </article>

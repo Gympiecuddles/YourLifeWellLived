@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 import two from '../assets/AboutImage2.png'
 import three from '../assets/AboutImage3.jpg'
+import four from '../assets/AboutImage4.jpg'
 import banner from '../assets/Banner1.jpg'
 
 const ImgLayer = styled(motion.img)`
@@ -108,11 +109,11 @@ export default function () {
           <div>
             <h3>I am a licensed Marriage and Family Therapist and Play Therapist specializing in EXPERIENTIAL and INSPIRATIONAL RETREATS with WILD DOLPHINS and WHALES.</h3>
             <p>I have over 25 years' experience working with children, adults and families as an advocate, educator and therapist.  I am a graduate of the University of Maryland, University of Delaware and the Institute for Family and Play Therapy with a commitment to ongoing continuing education.</p>
-            <p>Specializing in experiential, play therapy and other expressive and brief therapies, I work with a broad spectrum of clients. Among my areas of expertise are trauma, depression, anxiety, ADHD/behavioral/emotional problems, child abuse-past or present, divorce or separation, grief and loss, substance abuse, family violence, stress and anger, post traumatic stress and trauma, self esteem and life, wellness and family coaching.</p>
+            <p>Specializing in experiential, play therapy and other expressive and brief therapies, I work with a broad spectrum of clients. Among my areas of expertise are <b>trauma, depression, anxiety, ADHD/behavioral/emotional problems, child abuse-past or present, divorce or separation, grief and loss, substance abuse, family violence, stress and anger, post traumatic stress and trauma, self esteem and life, wellness and family coaching.</b></p>
             <p>My other interests include my furry friends Violet, Suzie and Smudge and I usually have a menagerie of 4-footed rescue animals including dogs, cats and bunnies.</p>
             <p>My very favorite moments are spent in nature swimming with or otherwise interacting with wild and free dolphins and whales. Now I'm taking others around the world on retreats to find inspiration and joy through their example. Contact me to find out more!</p>
           </div>
-          <img src={three} alt="Jeanne Teleia speaking" />
+          <img src={four} alt="Jeanne Teleia speaking" />
         </article>
       </AboutBox>
     </>

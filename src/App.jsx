@@ -15,7 +15,7 @@ import five from './assets/HomeImage5.jpg'
 import eight from './assets/HomeImage8.jpg'
 import nine from './assets/HomeImage9.jpg'
 import ten from './assets/HomeImage10.jpg'
-import eleven from './assets/HomeImage11.jpg'
+import eleven from './assets/HomeImage11.gif'
 
 const HomePage = styled.div`
   width: 100%;
@@ -84,7 +84,9 @@ const HeaderSection = styled.section`
   }
   img {
     position: absolute;
+    top: 1500px;
     width: 100%;
+    object-fit: contain;
     z-index: -1;
   }
   @media screen and (max-width: 1440px) {
@@ -178,9 +180,14 @@ const ServicesBox = styled.section`
 `;
 
 const ServiceBox2 = styled(ServicesBox)`
-  height: 650px;
+  height: 700px;
   div {
-    height: 600px;
+    height: 650px;
+    ul {
+      li {
+        font-size: .9em;
+      }
+    }
   }
 `;
 
@@ -307,7 +314,7 @@ function App() {
         </AboutBox>
         <HeaderSection id="Services">
           <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >What I can do for you</h2>
-          <p>What lights you up? Personal Growth work doesn’t have to be difficult!  We will elicit your own brilliance for healing and transformation.  I use the power of play because it is a Fundamental Universal Need (or F.U.N.) that helps us grow and invigorates our lives.</p>
+          <p>What lights you up? Personal Growth work doesn’t have to be difficult!  We will elicit your own brilliance for healing and transformation. <br /><br />  I use the power of play because it is a Fundamental Universal Need (or F.U.N.) that helps us grow and invigorates our lives.</p>
           <img src={five} alt=""/>
         </HeaderSection>
         <ServicesBox>
@@ -369,9 +376,21 @@ function App() {
           <div>
             <img src={eleven} />
             <h4>Public Speaking and Consultation</h4>
-            <p>Topics included: Dolphin Assisted Therapy, Life Without Sweets Is Not Worth Living BUT It Shouldn't Kill You!, Powerful Parenting, Developing Youth Assets, Emotional Intelligence, Child Friendly Divorce/Collaborative Divorce, The Power of Tapping
-              , Finding Your Best Self (for adolescents and/or girls), Mindfulness and Stress Reduction for the Rest of Us (non-meditators), The Importance of Play for Children and Adults, Group and Family Play Therapy​
+            <p>Topics included:
             </p>
+            <ul>
+              <li>Dolphin Assisted Therapy</li>
+              <li>Life Without Sweets Is Not Worth Living BUT It Shouldn't Kill You!</li>
+              <li>Powerful Parenting</li>
+              <li>Developing Youth Assets</li>
+              <li>Emotional Intelligence</li>
+              <li>Child Friendly Divorce/Collaborative Divorce</li>
+              <li>The Power of Tapping</li>
+              <li>Finding Your Best Self (for adolescents and/or girls)</li>
+              <li>Mindfulness and Stress Reduction for the Rest of Us (non-meditators)</li>
+              <li>The Importance of Play for Children and Adults</li>
+              <li>Group and Family Play Therapy</li>
+            </ul>
           </div>
         </ServiceBox2>
         <ButtonBox>

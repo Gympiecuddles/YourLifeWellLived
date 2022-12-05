@@ -92,13 +92,13 @@ const CurrentRetreats1 = styled.section`
     flex-direction: column;
     width: 700px;
     h4 {
-      margin: 20px;
+      margin: 8px;
       font-size: 1.2em;
       text-transform: uppercase;
     }
     p {
-      margin: 20px;
-      font-size: 1.1em;
+      margin: 8px;
+      font-size: 1em;
       line-height: 25px;
     }
     button {
@@ -228,41 +228,134 @@ export default function Retreats() {
     call: ["start your nayara journey", "start your Denver journey"],
   }
 
-  const text = {
+  const dolphinText = {
     dolphin: {
       Head: "Why We're Doing This",
-      Text1: "We all need to have more of our F.U.N.!!  F.U.N. is a Fundamental Universal Need. Dolphins are master F.U.N. facilitators. Many people report experiences of bliss, ecstatic joy, easing of pain and suffering-physical, emotional and spiritual, an opening of their heart and an awakened consciousness. <br/>Every single human culture and even throughout the animal kingdom, PLAY and FUN are REQUIREMENTS of life. To develop our brain, to grow, to learn, to survive through the worst moments, we must play. Without our F.U.N., we are not living fully and cannot contribute as abundantly to our world, the ones we love and to our own highest good.",
-      Text2: "Experiences in the glories of nature are the fastest route back to our essence—our F.U.N. and to heal what has come before. These experiences become embedded in our cells (literally) and then can be called upon afterwards to bolster us through the storms of life. This retreat is also planned during the time of the FULL MOON.  Peoples all around the world consider the Full Moon a powerful time to connect with what we want to bring into manifestation and during the waning moon on the retreat will be a good time to consider what you need to let go of to live your life more fully. Do you need to manifest a fresh start, embark on life transitions, and/or want to have a nurturing, loving and healing experience? Through ritual and magical time with the dolphins, this is your opportunity to Rest, Recharge and Renew!",
+      Text1: "We all need to have more of our F.U.N.!!  F.U.N. is a Fundamental Universal Need. Dolphins are master F.U.N. facilitators. Many people report experiences of bliss, ecstatic joy, easing of pain and suffering-physical, emotional and spiritual, an opening of their heart and an awakened consciousness.",
+      Text2: "Every single human culture and even throughout the animal kingdom, PLAY and FUN are REQUIREMENTS of life. To develop our brain, to grow, to learn, to survive through the worst moments, we must play.",
+      Text3: "Without our F.U.N., we are not living fully and cannot contribute as abundantly to our world, the ones we love and to our own highest good.",
+      Text4: "Experiences in the glories of nature are the fastest route back to our essence—our F.U.N. and to heal what has come before. These experiences become embedded in our cells (literally) and then can be called upon afterwards to bolster us through the storms of life.",
+      Text5: "This retreat is also planned during the time of the FULL MOON.  Peoples all around the world consider the Full Moon a powerful time to connect with what we want to bring into manifestation and during the waning moon on the retreat will be a good time to consider what you need to let go of to live your life more fully.",
+      Text6: "Do you need to manifest a fresh start, embark on life transitions, and/or want to have a nurturing, loving and healing experience?",
+      Text7: "Through ritual and magical time with the dolphins, this is your opportunity to Rest, Recharge and Renew!",
+      Text8: "",
       Img: one,
     },
     dining: {
       Head: "What YOU get out of it?",
       Text1: "F.U.N. is the vital essence that many of us need to re-claim, along with our JOY and EASE. Do you need a break? Come for your own Rest, Renewal, and even Reawakening to your true F.U.N. essence. You will be improving, heightening, and inspiring your motivation, your ease, and the fullness of your heart's desire. When your mind, body and spirit are brimming with joy and in alignment, your goals, needs, and challenges can be met with more EASE. Let nature and the power of connecting with wild Cetaceans fill you, connect you back to your best self, if even for the first time. Nothing brings us into alignment with our true essence faster than peak experiences in nature—connecting with something larger than ourselves (literally), with majesty, magnificence and an awe-inspiring story.",
       Text2: "This retreat is also a perfect opportunity for improving family bonding and connection through fun, joy and mutual support and help. I have seen families transform how they interact and feel about each other during and after nature based experiential retreats. It's a great way to kick start a new family dynamic. Group coaching/inspirational sessions and a personal/individual coaching session is included in the cost of the retreat, including follow up by email after we depart!",
+      Text3: "",
+      Text4: "",
+      Text5: "",
+      Text6: "",
+      Text7: "",
+      Text8: "",
       Img: two,
     },
     spa: {
       Head: "Relax in our spas",
       Text1: "When we experience painful events and the trust in our relationships seem compromised, it can feel like the ground is taken from under our feet. From the bottom of the hill, the journey upward can feel steep and daunting. It takes courage to reach out and find a supportive and experienced therapist who can help you restore your life.",
       Text2: "Our team is committed to walking alongside you or your family to overcome stressful experiences and gain a deeper understanding of yourself and others. We will work towards helping you build secure and fulfilling relationships so you do not need to journey alone.",
+      Text3: "",
+      Text4: "",
+      Text5: "",
+      Text6: "",
+      Text7: "",
+      Text8: "",
       Img: three,
     },
     rooms: {
       Head: "Enjoy our top of the line hotels",
       Text1: "When we experience painful events and the trust in our relationships seem compromised, it can feel like the ground is taken from under our feet. From the bottom of the hill, the journey upward can feel steep and daunting. It takes courage to reach out and find a supportive and experienced therapist who can help you restore your life.",
       Text2: "Our team is committed to walking alongside you or your family to overcome stressful experiences and gain a deeper understanding of yourself and others. We will work towards helping you build secure and fulfilling relationships so you do not need to journey alone.",
+      Text3: "",
+      Text4: "",
+      Text5: "",
+      Text6: "",
+      Text7: "",
+      Text8: "",
       Img: two,
     },
     events: {
       Head: "Check out all of our events",
       Text1: "When we experience painful events and the trust in our relationships seem compromised, it can feel like the ground is taken from under our feet. From the bottom of the hill, the journey upward can feel steep and daunting. It takes courage to reach out and find a supportive and experienced therapist who can help you restore your life.",
       Text2: "Our team is committed to walking alongside you or your family to overcome stressful experiences and gain a deeper understanding of yourself and others. We will work towards helping you build secure and fulfilling relationships so you do not need to journey alone.",
+      Text3: "",
+      Text4: "",
+      Text5: "",
+      Text6: "",
+      Text7: "",
+      Text8: "",
       Img: two,
     },
   };
 
-  const [Info, setInfo] = useState(text.dolphin);
-  const [Info2, setInfo2] = useState(text.dolphin);
+  const whaleText = {
+    dolphin: {
+      Head: "Why We're Doing This",
+      Text1: "We all need to have more of our F.U.N.!!  F.U.N. is a Fundamental Universal Need. Dolphins are master F.U.N. facilitators. Many people report experiences of bliss, ecstatic joy, easing of pain and suffering-physical, emotional and spiritual, an opening of their heart and an awakened consciousness. Every single human culture and even throughout the animal kingdom, PLAY and FUN are REQUIREMENTS of life. To develop our brain, to grow, to learn, to survive through the worst moments, we must play. Without our F.U.N., we are not living fully and cannot contribute as abundantly to our world, the ones we love and to our own highest good.",
+      Text2: "Experiences in the glories of nature are the fastest route back to our essence—our F.U.N. and to heal what has come before. These experiences become embedded in our cells (literally) and then can be called upon afterwards to bolster us through the storms of life. Do you need to manifest a fresh start, embark on life transitions, and/or want to have a nurturing, loving and healing experience? Through ritual and magical time with the dolphins, this is your opportunity to Rest, Recharge and Renew!",
+      Text3: "",
+      Text4: "",
+      Text5: "",
+      Text6: "",
+      Text7: "",
+      Text8: "",
+      Img: one,
+    },
+    dining: {
+      Head: "What YOU get out of it?",
+      Text1: "F.U.N. is the vital essence that many of us need to re-claim, along with our JOY and EASE. Do you need a break? Come for your own Rest, Renewal, and even Reawakening to your true F.U.N. essence. You will be improving, heightening, and inspiring your motivation, your ease, and the fullness of your heart's desire. When your mind, body and spirit are brimming with joy and in alignment, your goals, needs, and challenges can be met with more EASE. Let nature and the power of connecting with wild Cetaceans fill you, connect you back to your best self, if even for the first time. Nothing brings us into alignment with our true essence faster than peak experiences in nature—connecting with something larger than ourselves (literally), with majesty, magnificence and an awe-inspiring story.",
+      Text2: "This retreat is also a perfect opportunity for improving family bonding and connection through fun, joy and mutual support and help. I have seen families transform how they interact and feel about each other during and after nature based experiential retreats. It's a great way to kick start a new family dynamic. Group coaching/inspirational sessions and a personal/individual coaching session is included in the cost of the retreat, including follow up by email after we depart!",
+      Text3: "",
+      Text4: "",
+      Text5: "",
+      Text6: "",
+      Text7: "",
+      Text8: "",
+      Img: two,
+    },
+    spa: {
+      Head: "Relax in our spas",
+      Text1: "When we experience painful events and the trust in our relationships seem compromised, it can feel like the ground is taken from under our feet. From the bottom of the hill, the journey upward can feel steep and daunting. It takes courage to reach out and find a supportive and experienced therapist who can help you restore your life.",
+      Text2: "Our team is committed to walking alongside you or your family to overcome stressful experiences and gain a deeper understanding of yourself and others. We will work towards helping you build secure and fulfilling relationships so you do not need to journey alone.",
+      Text3: "",
+      Text4: "",
+      Text5: "",
+      Text6: "",
+      Text7: "",
+      Text8: "",
+      Img: three,
+    },
+    rooms: {
+      Head: "Enjoy our top of the line hotels",
+      Text1: "When we experience painful events and the trust in our relationships seem compromised, it can feel like the ground is taken from under our feet. From the bottom of the hill, the journey upward can feel steep and daunting. It takes courage to reach out and find a supportive and experienced therapist who can help you restore your life.",
+      Text2: "Our team is committed to walking alongside you or your family to overcome stressful experiences and gain a deeper understanding of yourself and others. We will work towards helping you build secure and fulfilling relationships so you do not need to journey alone.",
+      Text3: "",
+      Text4: "",
+      Text5: "",
+      Text6: "",
+      Text7: "",
+      Text8: "",
+      Img: two,
+    },
+    events: {
+      Head: "Check out all of our events",
+      Text1: "When we experience painful events and the trust in our relationships seem compromised, it can feel like the ground is taken from under our feet. From the bottom of the hill, the journey upward can feel steep and daunting. It takes courage to reach out and find a supportive and experienced therapist who can help you restore your life.",
+      Text2: "Our team is committed to walking alongside you or your family to overcome stressful experiences and gain a deeper understanding of yourself and others. We will work towards helping you build secure and fulfilling relationships so you do not need to journey alone.",
+      Text3: "",
+      Text4: "",
+      Text5: "",
+      Text6: "",
+      Text7: "",
+      Text8: "",
+      Img: two,
+    },
+  };
+
+  const [Info, setInfo] = useState(dolphinText.dolphin);
+  const [Info2, setInfo2] = useState(whaleText.dolphin);
 
   const counter = useTimer(2, 5);
   const counter2 = useTimer(3, 5);
@@ -281,16 +374,22 @@ export default function Retreats() {
       </CurrentRetreatTitle>
       <CurrentRetreats1>
         <div style={{ width: "100px" }}>
-          <motion.button onClick={() => setInfo(text.dolphin)} whileHover={{ color: "#a8a8a8"}}>Why</motion.button>
-          <motion.button onClick={() => setInfo(text.dining)} whileHover={{ color: "#a8a8a8"}}>What</motion.button>
-          <motion.button onClick={() => setInfo(text.spa)} whileHover={{ color: "#a8a8a8"}}>Spa</motion.button>
-          <motion.button onClick={() => setInfo(text.rooms)} whileHover={{ color: "#a8a8a8"}}>Rooms</motion.button>
-          <motion.button onClick={() => setInfo(text.events)} whileHover={{ color: "#a8a8a8"}}>Events</motion.button>
+          <motion.button onClick={() => setInfo(dolphinText.dolphin)} whileHover={{ color: "#a8a8a8"}}>Why</motion.button>
+          <motion.button onClick={() => setInfo(dolphinText.dining)} whileHover={{ color: "#a8a8a8"}}>What</motion.button>
+          <motion.button onClick={() => setInfo(dolphinText.spa)} whileHover={{ color: "#a8a8a8"}}>Spa</motion.button>
+          <motion.button onClick={() => setInfo(dolphinText.rooms)} whileHover={{ color: "#a8a8a8"}}>Rooms</motion.button>
+          <motion.button onClick={() => setInfo(dolphinText.events)} whileHover={{ color: "#a8a8a8"}}>Events</motion.button>
         </div>
         <div>
           <h4>{Info.Head}</h4>
           <p>{Info.Text1}</p>
           <p>{Info.Text2}</p>
+          <p>{Info.Text3}</p>
+          <p>{Info.Text4}</p>
+          <p>{Info.Text5}</p>
+          <p>{Info.Text6}</p>
+          <p>{Info.Text7}</p>
+          <p>{Info.Text8}</p>
         </div>
         <div style={{width: "500px"}}>
           <img src={Info.Img} alt="" />
@@ -307,13 +406,19 @@ export default function Retreats() {
           <h4>{Info2.Head}</h4>
           <p>{Info2.Text1}</p>
           <p>{Info2.Text2}</p>
+          <p>{Info2.Text3}</p>
+          <p>{Info2.Text4}</p>
+          <p>{Info2.Text5}</p>
+          <p>{Info2.Text6}</p>
+          <p>{Info2.Text7}</p>
+          <p>{Info2.Text8}</p>
         </div>
         <div style={{ width: "100px" }}>
-          <motion.button onClick={() => setInfo2(text.dolphin)} whileHover={{ color: "#a8a8a8"}}>Dolphins</motion.button>
-          <motion.button onClick={() => setInfo2(text.dining)} whileHover={{ color: "#a8a8a8"}}>Dining</motion.button>
-          <motion.button onClick={() => setInfo2(text.spa)} whileHover={{ color: "#a8a8a8"}}>Spa</motion.button>
-          <motion.button onClick={() => setInfo2(text.rooms)} whileHover={{ color: "#a8a8a8"}}>Rooms</motion.button>
-          <motion.button onClick={() => setInfo2(text.events)} whileHover={{ color: "#a8a8a8"}}>Events</motion.button>
+          <motion.button onClick={() => setInfo2(whaleText.dolphin)} whileHover={{ color: "#a8a8a8"}}>Dolphins</motion.button>
+          <motion.button onClick={() => setInfo2(whaleText.dining)} whileHover={{ color: "#a8a8a8"}}>Dining</motion.button>
+          <motion.button onClick={() => setInfo2(whaleText.spa)} whileHover={{ color: "#a8a8a8"}}>Spa</motion.button>
+          <motion.button onClick={() => setInfo2(whaleText.rooms)} whileHover={{ color: "#a8a8a8"}}>Rooms</motion.button>
+          <motion.button onClick={() => setInfo2(whaleText.events)} whileHover={{ color: "#a8a8a8"}}>Events</motion.button>
         </div>
       </CurrentRetreats2>
       <HeaderSection>

@@ -87,7 +87,7 @@ export default function Navbar() {
                 href="https://jteleia.wordpress.com/" 
                 target="_blank"
                 whileHover={{ color: "#a8a8a8"}}
-                >A Guide to Play-full Life (blog)</StyledLink>
+                >A Guide to Play-full Life</StyledLink>
         </span>
     </NavBox>
   )

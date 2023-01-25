@@ -13,6 +13,7 @@ const HeaderSection = styled(motion.section)`
   width: 100%;
   height: 1100px;
   background-color: #00000000;
+  filter: drop-shadow(2px 2px 6px #000000);
   z-index: 1;
   h2 {
     margin-left: 82px;
@@ -67,7 +68,6 @@ const HeaderSection = styled(motion.section)`
           width: 130px;
           color: #ffffff;
           font-size: .9em;
-          text-transform: uppercase;
           text-align: center;
         }
         p {
@@ -75,7 +75,6 @@ const HeaderSection = styled(motion.section)`
           font-size: 1em;
           font-weight: 600;
           line-height: 25px;
-          text-transform: uppercase;
           text-align: center;
         }
       }
@@ -179,7 +178,7 @@ export default function Carousel({innerText, counter}) {
             variants={motionArgs}
             >{innerText.call[counter]}
           </motion.b>}
-        <Arrow position={"10%"} />
+        <Arrow position={"2%"} />
       </div>
     </HeaderSection>
   )

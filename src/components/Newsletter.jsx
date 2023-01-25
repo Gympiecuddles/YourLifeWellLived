@@ -44,7 +44,7 @@ const NewsContent = styled.div`
         margin-top: 5px;
         margin-left: 25px;
         font-size: 1em;
-        font-weight: 400;
+        font-weight: 600;
     }
     h4::after {
         content: "";
@@ -119,7 +119,7 @@ export default function Newsletter() {
         <NewsContent>
             <img src={one} />
             <h4>Sign up for our FREE monthly newsletter with holistic wellness tips!</h4>
-            <p>Every month we release our wellness newsletter to help people live better lives. Fake text to take up space. Fake text to take up space. Fake text to take up space. Fake text to take up space. Fake text to take up space.  Take a look at our most recent newsletter 
+            <p>Every month we send tips on building emotional intelligence and wellness in your life.  Take a look at our most recent newsletter
                 <motion.a whileHover={{ color: "#5f5f5f"}} href="/" > here</motion.a>.
             </p>
             <form>

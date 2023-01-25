@@ -6,7 +6,6 @@ const Img = styled(motion.img)`
    width: 100%;
    object-fit: cover;
    object-position: 0% 0%;
-   filter: brightness(65%);
 `;
 
 export default function Carousel({imgs, counter}) {

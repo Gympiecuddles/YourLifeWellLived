@@ -77,7 +77,8 @@ export default function Navbar() {
         <span>
             <StyledLink to="/" whileHover={{ color: "#cee0fc"}}>Home</StyledLink>
             <StyledLink to="/retreats" whileHover={{ color: "#cee0fc"}}>Dolphin and Whale Wellness Retreats</StyledLink>
-            <StyledHashLink smooth to="../#Services" scroll={el => scrollWithOffset(el)} >Counseling & Coaching</StyledHashLink>
+            <StyledHashLink smooth to="../#Services" scroll={el => scrollWithOffset(el)} whileHover={{ color: "#cee0fc"}} >Counseling & Coaching</StyledHashLink>
+            <StyledHashLink smooth to="../Retreats/#Gallery" scroll={el => scrollWithOffset(el)} whileHover={{ color: "#cee0fc"}} >Gallery</StyledHashLink>
             <StyledLink to="/about" whileHover={{ color: "#cee0fc"}}>About me</StyledLink>
             <StyledLink to="/contact" whileHover={{ color: "#cee0fc"}}>Contact</StyledLink>
             <StyledLink to="/resources" whileHover={{ color: "#cee0fc"}}>Links & Resources</StyledLink>

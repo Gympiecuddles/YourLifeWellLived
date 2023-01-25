@@ -11,11 +11,11 @@ import one from './assets/HomeImage1.jpg'
 import two from './assets/HomeImage2.jpg'
 import three from './assets/HomeImage3.png'
 import four from './assets/HomeImage4.jpeg'
-import five from './assets/HomeImage5.jpg'
+import five from './assets/Banner1.jpg'
 import eight from './assets/HomeImage8.jpg'
 import nine from './assets/HomeImage9.jpg'
 import ten from './assets/HomeImage10.jpg'
-import eleven from './assets/HomeImage11.gif'
+import eleven from './assets/HomeImage11.jpg'
 
 const HomePage = styled.div`
   width: 100%;
@@ -84,7 +84,7 @@ const HeaderSection = styled.section`
   }
   img {
     position: absolute;
-    top: 1500px;
+    top: 1650px;
     width: 100%;
     object-fit: contain;
     z-index: -1;
@@ -145,7 +145,7 @@ const AboutBox = styled.section`
 
 const ServicesBox = styled.section`
   width: 100%;
-  height: 650px;
+  height: 760px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,7 +154,7 @@ const ServicesBox = styled.section`
   div {
     margin: 110px;
     width: 17%;
-    height: 520px;
+    height: 760px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,6 +175,12 @@ const ServicesBox = styled.section`
       font-size: .9em;
       font-weight: 400;
       line-height: 30px;
+    }
+    ul {
+      li {
+        margin-bottom: 5px;
+        font-size: .9em;
+      }
     }
   }
 `;
@@ -314,32 +320,43 @@ function App() {
         </AboutBox>
         <HeaderSection id="Services">
           <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >What I can do for you</h2>
-          <p>What lights you up? Personal Growth work doesn’t have to be difficult!  We will elicit your own brilliance for healing and transformation. <br /><br />  I use the power of play because it is a Fundamental Universal Need (or F.U.N.) that helps us grow and invigorates our lives.</p>
+          <p>What lights you up? Personal Growth work doesn’t have to be difficult!<br />  We will elicit your own brilliance for healing and transformation. <br /><br />  I use the power of play because it is a Fundamental Universal Need<br /> (or F.U.N.) that helps us grow and invigorates our lives.</p>
           <img src={five} alt=""/>
         </HeaderSection>
         <ServicesBox>
           <div >
             <img src={eight} />
             <h4>Holistic Psychhotherapy and Life, Family and Wellness Coaching</h4>
-            <p>What lights you up? Personal Growth work doesn’t have to be hard!  We will elicit your own brilliance for healing and transformation.  I use the power of play because it is a Fundamental Universal Need (or F.U.N.) that helps us grow and invigorates our lives.</p>
             <p>"Once I accept myself just as I am, THEN I can change."  -Carl Rogers, Father of Modern Psychology</p>
+            <ul>
+              <li>Holistic mind-Body-Spirit Approach</li>
+              <li>Trauma informed, Exeriential and Unique Techniques</li>
+              <li>Non-Judgemental and Compassionate</li>
+              <li>Practical Feedback and Support Grounded in the Latest Research</li>
+              <li>Highly personalized Approach to Your Specific Situation</li>
+              <li>I work exclusively from a virtual office so you can meet with me from the comfort of your home, office or car!</li>
+            </ul>  
           </div>
           <div>
-            <img src={nine} />
-            <h4>Wild Dolphin Insprational Wellness Retreats</h4>
-            <p>We use the lessons the dolphins show us both in and above the water in a retreat that can change your life.  The dolphins show us how to play and live life to the fullest.  Play is an essential aspect of life--as important as sleep or nutrition!</p>
+            <img src={eleven} />
+            <h4>Public Speaking, Consultation, and Supervision</h4>
+            <p>Topics included:
+            </p>
+            <ul>
+              <li>Dolphin Assisted Therapy</li>
+              <li>Life Without Sweets Is Not Worth Living BUT It Shouldn't Kill You!</li>
+              <li>Powerful Parenting</li>
+              <li>Developing Youth Assets</li>
+              <li>Emotional Intelligence</li>
+              <li>Child Friendly Divorce/Collaborative Divorce</li>
+              <li>The Power of Tapping</li>
+              <li>Finding Your Best Self (for adolescents and/or girls)</li>
+              <li>Mindfulness and Stress Reduction for the Rest of Us (non-meditators)</li>
+              <li>The Importance of Play for Children and Adults</li>
+              <li>Group and Family Play Therapy</li>
+            </ul>
           </div>
         </ServicesBox>
-        <ServiceBullets>
-          <ul>
-            <li>Holistic mind-Body-Spirit Approach</li>
-            <li>Trauma informed, Exeriential and Unique Techniques</li>
-            <li>Non-Judgemental and Compassionate</li>
-            <li>Practical Feedback and Support Grounded in the Latest Research</li>
-            <li>Highly personalized Approach to Your Specific Situation</li>
-            <li>I work exclusively from a virtual office so you can meet with me from the comfort of your home, office or car!</li>
-          </ul>  
-        </ServiceBullets>
         <ExplainBox>
           <h3 onClick={() => { setExplainText(!explainText) }} >Which is right for me--Therapy or Coaching?  CLICK HERE</h3>
           {explainText && 
@@ -374,23 +391,9 @@ function App() {
             <p>Looking into the eye of one of the world's largest sentient beings, knowing they are choosing to be with you, can transform your relationship with life. What do you need to get over, get past, get through?  The whales can show us the way from their story of forgiveness and our story of redemption.</p>
           </div>
           <div>
-            <img src={eleven} />
-            <h4>Public Speaking and Consultation</h4>
-            <p>Topics included:
-            </p>
-            <ul>
-              <li>Dolphin Assisted Therapy</li>
-              <li>Life Without Sweets Is Not Worth Living BUT It Shouldn't Kill You!</li>
-              <li>Powerful Parenting</li>
-              <li>Developing Youth Assets</li>
-              <li>Emotional Intelligence</li>
-              <li>Child Friendly Divorce/Collaborative Divorce</li>
-              <li>The Power of Tapping</li>
-              <li>Finding Your Best Self (for adolescents and/or girls)</li>
-              <li>Mindfulness and Stress Reduction for the Rest of Us (non-meditators)</li>
-              <li>The Importance of Play for Children and Adults</li>
-              <li>Group and Family Play Therapy</li>
-            </ul>
+            <img src={nine} />
+            <h4>Wild Dolphin Insprational Wellness Retreats</h4>
+            <p>We use the lessons the dolphins show us both in and above the water in a retreat that can change your life.  The dolphins show us how to play and live life to the fullest.  Play is an essential aspect of life--as important as sleep or nutrition!</p>
           </div>
         </ServiceBox2>
         <ButtonBox>

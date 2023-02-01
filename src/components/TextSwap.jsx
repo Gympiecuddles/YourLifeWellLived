@@ -31,7 +31,7 @@ const HeaderSection = styled(motion.section)`
     margin-left: 82px;
     margin-right: 82px;
     padding: 19px;
-    font-size: 1em;
+    font-size: 1.2em;
     letter-spacing: 1.25px;
     color: #ffffff;
   }
@@ -53,7 +53,8 @@ const HeaderSection = styled(motion.section)`
     p {
       margin: 0;
       margin-bottom: 100px;
-      font-size: 1.1em;
+      font-size: 1.3em;
+      font-weight: 600;
       color: #ffffff;
       background-color: #00000000;
     }

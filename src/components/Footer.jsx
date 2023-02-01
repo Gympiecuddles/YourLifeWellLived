@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { AiOutlineInstagram } from 'react-icons/ai'
-import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
+import { FaFacebookF, FaLinkedinIn, FaTwitter, FaWordpressSimple } from 'react-icons/fa'
 
 import badge1 from '../assets/badge1.png'
 import badge2 from '../assets/badge2.png'
@@ -68,14 +68,17 @@ export default function Footer() {
             >Website developed by<br /> Richard Schembri</motion.a>
         <ContactBox>
             <div>
-                <p>561 000 0000</p>
+                <p>(719) 212-1254</p>
                 <span>
-                    <a><AiOutlineInstagram /></a>
-                    <a><FaFacebookF /></a>
-                    <a><FaLinkedinIn /></a>
+                    <a href='https://www.instagram.com/cetaceaninspirations/' target="_blank"><AiOutlineInstagram /></a>
+                    <a href='https://www.facebook.com/CetaceanInspirationWellnessCoachingandRetreats' target="_blank"><FaFacebookF /></a>
+                    <a href='https://www.facebook.com/groups/572114303159420' target="_blank"><FaFacebookF /></a>
+                    <a href='https://www.linkedin.com/in/jeanne-teleia-70299791/' target="_blank"><FaLinkedinIn /></a>
+                    <a href='https://twitter.com/jeanne_teleia' target="_blank"><FaTwitter /></a>
+                    <a href='https://jteleia.wordpress.com/' target="_blank"><FaWordpressSimple /></a>
                 </span>
             </div>
-            <p>1212 DueNorth St, <br />Delray Beach, FL 33435</p>
+            <a href='mailto: jteleia@gmail.com' target="_blank">jteleia@gmail.com</a>
         </ContactBox>
         <div>
             <a href='https://www.e-counseling.com/profile/Jeanne-Teleia' target="_blank">

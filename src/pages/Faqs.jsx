@@ -50,7 +50,7 @@ const FaqBox = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 1000px;
+  height: 1550px;
   background-color: #cdfafc;
   article {
     margin: 50px;
@@ -102,8 +102,8 @@ export default function Faqs() {
     <>
       <ImgLayer src={banner} />
       <HeaderSection>
-        <h2>FAQ</h2>
-        <p>Learn more about what to expect.</p>
+        <h2>What Questions Can I Answer Today?</h2>
+        <p>Feel free to contact me directly see the FAQs below</p>
       </HeaderSection>
       <FaqBox>
         <article>
@@ -112,13 +112,15 @@ export default function Faqs() {
           <strong>What are your rates?</strong>
           <p>Rates are determined by the length of session, services provided and number of people involved.</p>
           <strong>Do you take insurance?</strong>
-          <p>I am licensed for psychotherapy in Hawai'I and Colorado but I do not accept insurance.  I can provide receipts for you to submit to your insurance for 'out of network provider' reimbursement but this is not a guarantee of payment.  You will need to check the reimbursements with your insurance company.  Mental health care can be deducted on your taxes as a health expense in some cases.  Check with your tax professional.</p>
+          <p>I am licensed as an 'out of network provider' for psychotherapy in Hawai'I and Colorado.  I can provide receipts for you to submit to your insurance but this is not a guarantee of re-payment.  You will need to check the reimbursements with your insurance company.  Mental health care can be deducted on your taxes as a health expense in some cases.  Check with your tax professional.  Coaching is not covered by insurance but often I do a mix of coaching and psychotherapy.  You are investing in better lifelong health by investing in your personal growth and mental health now.</p>
           <strong>Do you have a sliding scale?</strong>
           <p>I do provide a limited number of slots for persons in need.  Contact me for more information.</p>
           <strong>Can I meet you in person?</strong>
           <p>I generally work online exclusively but if you are in France or another location where I may be located physically, it may be possible to meet in person after we have established care and if privacy is guaranteed.</p>
           <strong>How do I access online care?</strong>
           <p>I use a simple, secure, vidoe chat link that I send to registered clients.</p>
+          <strong>How can therapy, coaching or retreats help me? </strong>
+          <p>A number of benefits are available from participating in counseling, coaching or wellness and healing retreats. Therapists and coaches can provide support, problem-solving skills, and enhanced coping strategies for many issues and find a way that works best for you.  I focus on inspiring people so they find the answers that are within themselves, often brought out fastest by peak experiences and connecting with nature and beings such as dolphins and whales.  ++Many people also find that personal growth facilitators like me can be a tremendous asset to managing interpersonal relationships, family concerns, marriage issues, and the hassles of daily life. I can provide a fresh perspective on a difficult problem or point you in the direction of a solution. The benefits you and your family obtain from therapy, coaching or retreats depend on how well you use the process and put into practice what you learn.</p>
         </article>
         <img src={one} />
       </FaqBox>

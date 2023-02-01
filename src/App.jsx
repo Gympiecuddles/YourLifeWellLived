@@ -9,7 +9,7 @@ import Arrow from './components/Arrow'
 
 import one from './assets/HomeImage1.jpg'
 import two from './assets/HomeImage2.jpg'
-import three from './assets/HomeImage3.png'
+import three from './assets/HomeImage3.jpg'
 import four from './assets/HomeImage4.jpeg'
 import five from './assets/Banner1.jpg'
 import eight from './assets/HomeImage8.jpg'

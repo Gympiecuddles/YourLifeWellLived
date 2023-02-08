@@ -114,7 +114,7 @@ export default function Newsletter() {
         whileHover={{ backgroundColor: '#ececec' }} 
         onClick={() => setCollapsed(collapsed => !collapsed)}
         >
-            <h3>Newsletter</h3>
+            <h3>Freebies!!</h3>
         </NewsButton>
         <NewsContent>
             <img src={one} />

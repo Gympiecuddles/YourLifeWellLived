@@ -257,15 +257,15 @@ export default function Retreats() {
 
   const carouselText = {
     head: ["Bimini, The Bahamas", "San Ignacio Lagoon, Baja, Mexico"],
-    subhead: ["Next retreat: May 4-10, 2024, New Moon!", "Next retreat: 2025 Dates TBD"],
+    subhead: ["Next retreat: May 4-10, 2024, New Moon!", "Next retreat: March 2025 Dates TBD"],
     head2: ["WILD DOLPHIN WELLNESS and HEALING RETREATS", "WILD GRAY WHALES TRANSFORMATIONAL RETREATS"],
     subhead2: ["\"Profoundly humbling experiences are good for our SOUL.\"    David Neiwert, Of Orcas and Men", "\"For to witness majesty, to find yourself literally touched by it--isn\'t that what we\'ve all been waiting for?\"  David Sedaris, Humorist"],
     row1: ["Enter Their World", "Peak Experiences with Wild Gray Whales"],
     text1: ["24 hours a day are spent in the dolphin area!", "All inclusive, small, personalized retreats for 7 days and 6 nights"],
     row2: ["Embrace Joy, Bliss and Play", "Why Do These Whales Want Us to Touch Them?"],
-    text2: ["Awaken and remember who you truly are", "Scroll down for more on this miraculous phenonomen"],
+    text2: ["Awaken and remember who you truly are", "Scroll down for more on this miraculous phenomenon"],
     row3: ["Experience Healing and Transformation", "A Perfect Opportunity for Healing and Transformation"],
-    text3: ["Your goals and challenges can be met with more EASE", "Nature based, experiential retreats are a great way to transform or create a positive family dynamic!"],
+    text3: ["Your goals and challenges can be met with more EASE", "Nature based, experiential retreats to transform or create a positive family dynamic!"],
     call: ["Start the journey of your DREAMS", "Start the journey of your DREAMS"],
   }
 
@@ -306,13 +306,13 @@ export default function Retreats() {
       Head: "What's Included and Not Included",
       Text1: "Professional retreat facilitation by a licensed therapist and coach to help you process anything that comes up during our magical encounters with the dolphins (and the humans). Magical doesn't always mean without challenges but those are the richest moments of personal growth, including being afraid of being in deep water with wild animals. It is a moment of transformation just to get in the water!",
       Text2: "Play Activities and Rituals around the Full or New moon. We will use this inspiration throughout the week.  (Participation in any retreat activity always up to you.)",
-      Text3: "Hearty, healthy meals, and we can cater for most dietary needs. ",
+      Text3: "Hearty, healthy meals, and we can cater for most dietary needs.",
       Text4: "You will have help in and out of the water to make you feel comfortable at all times.",
       Text5: "Group meditation and/or yoga will be offered each day.",
       Text6: "Friendships you'll never forget and a relationship with yourself and/or others that might surprise you.",
-      Text7: "What's NOT included: Transporation to West Palm Beach, Florida, alcoholic drinks, snorkel gear, and staff tips.",
+      Text7: "What's NOT included: Transportation to West Palm Beach, Florida, alcoholic drinks, snorkel gear, and staff tips.",
       Text8: "Travel insurance.  We STRONGLY encourage you to purchase insurance upon paying your trip deposit.",
-      Text9: "The dolphins are wild animals and encounters cannot be guaranteed.  ",
+      Text9: "The dolphins are wild animals and encounters cannot be guaranteed.",
       Text10: "",
       Text11: "",
       Text12: "",
@@ -320,7 +320,7 @@ export default function Retreats() {
     },
     Button4: {
       Head: "Great Food and Comfortable Accommodations",
-      Text1: "Oustanding, freshly prepared, home-style cooking with refreshments always available. Most dietary restrictions can be accommodated.  Bunk bed cabins (one with double bed) and 2 bathrooms with showers.",
+      Text1: "Outstanding, freshly prepared, home-style cooking with refreshments always available. Most dietary restrictions can be accommodated.  Bunk bed cabins (one with double bed) and 2 bathrooms with showers.",
       Text2: "Air conditioning indoors.",
       Text3: "There’s plenty of indoor and outdoor spaces, multiple decks and places to be alone or with the group.",
       Text4: "Life onboard is relaxed, informal, comfortable and clean.",
@@ -336,13 +336,13 @@ export default function Retreats() {
     },
     Button5: {
       Head: "Pricing and Deposit Information",
-      Text1: "Base trip cost: $3495 (including taxes and fees) per person, double occupancy.",
+      Text1: "Base trip cost: $3500 (including taxes and fees) per person, double occupancy.",
       Text2: "$1000 deposit due upon registration (non-refundable unless the trip doesn't fill. 8 participants minimum).",
-      Text3: "Bonuses: ++$100 off to the first 4 registrations OR if you bring a friend.",
-      Text4: "Check out theother bonuses below. ",
-      Text5: "Register NOW, only 12 spots available.",
-      Text6: "",
-      Text7: "",
+      Text3: "Bonuses:",
+      Text4: "$100 off to the first 4 registrations OR if you bring a friend.",
+      Text5: "Bi-monthly payment plan for first 4 registrations.",
+      Text6: "Check out the other bonuses below.",
+      Text7: "Register NOW, only 12 spots available.",
       Text8: "",
       Text9: "",
       Text10: "",
@@ -368,12 +368,12 @@ export default function Retreats() {
     },
     Button7: {
       Head: "Planned Itinerary",
-      Text1: "One coaching and/or counseling session before or after the retreat to help you clarify and implement a healing or wellness goal (a $150 value) and additional sessions can be scheduled as desired.",
-      Text2: "Bi-monthly payment plan for the 1st 5 early bird adult registrations!",
-      Text3: "$100 discount for you if you bring one or more people along. ",
-      Text4: "",
-      Text5: "",
-      Text6: "",
+      Text1: "Day 1: Arrive in Miami, Ft. Lauderdale or West Palm Beach, FL and make your way to the harbor. Dinner onboard and cruise to the Bahamas overnight.",
+      Text2: "Day 2: Wake up in Bimini and our Captain will get all the customs sorted in time for an afternoon encounter with dolphins.",
+      Text3: "Day 3, 4, 5: After breakfast we go immediately to look for dolphins and spend the morning and early afternoon swimming with them if they are receptive.  Since the Spotted dolphins are nocturnal hunters the afternoon is their normal 'resting' time so we leave them be until the later afternoon or evening when they get ready to go hunting. Often we swim with them until sunset and if we are lucky, we may have a night time encounter--the stuff of dreams!",
+      Text4: "Day 6: Our last full day in the dolphin swim area and we must head back to Florida overnight. We will have our last evening playshop also. ",
+      Text5: "Day 7: Breakfast on board while we clear customs and you say goodbye to your new friends with memories to last a lifetime!",
+      Text6: "*Itinerary subject to change.*",
       Text7: "",
       Text8: "",
       Text9: "",
@@ -389,9 +389,9 @@ export default function Retreats() {
       Head: "Why Do these Gray Whales Approach Humans AND Bring Their Babies To Be Caressed?",
       Text1: "NOWHERE IN THE WORLD do whales deliberately, actively and determinedly approach humans and WANT to be petted, kissed, hugged and played with.",
       Text2: "They look us in the eye, bring their babies to us, and roll over for tummy rubs.  They blow in your face and you can almost hear them laughing while we holler, laugh and sometimes cry.  They WANT you to pet them all over.",
-      Text3: "San Ignacio may not be the biggest of the 3 Gray whale birthing lagooons but it is the best protected and regulated, and the most relaxed with and respectful of the whales.  There are amazing sunsets, sunrises and star filled night and crystal clear skies.",
+      Text3: "San Ignacio may not be the biggest of the 3 Gray whale birthing lagoons but it is the best protected and regulated, and the most relaxed with and respectful of the whales.  There are amazing sunsets, sunrises and star filled night and crystal clear skies.",
       Text4: "The 40 ton moms literally push their babies up to the small panga (fishing) boats and sometimes leave their babies with us to play while they go take a break.",
-      Text5: "There is a mysterious story here with the whales that can truly change lives.  We will be using this phenonmenon as we focus on our own goals during the retreat.",
+      Text5: "There is a mysterious story here with the whales that can truly change lives.  We will be using this phenomenon as we focus on our own goals during the retreat. ",
       Text6: "Nothing brings us into alignment with our true essence faster than peak experiences in nature—connecting with something larger than ourselves (literally), with majesty, magnificence.",
       Text7: "",
       Text8: "",
@@ -419,18 +419,18 @@ export default function Retreats() {
     },
     Button3: {
       Head: "What's Included and Not Included",
-      Text1: "What's Included:",
-      Text2: "7 days and 6 nights of F.U.N. and inspiration!  6 nights of shared accommodations at the hotel and camp (3 nights at camp and 3 nights at our Loreto hotel before and after the lagoon).",
-      Text3: "Transportation back and forth to the remote San Ignacio lagoon.",
-      Text4: "SIX whale watches with knowledgeable guides in pangas (small but stable fishing boats",
-      Text5: "3 lovely meals a day at the family owned camp (that has the best food of the several camps I've been to), happy hour and all drinks.",
-      Text6: "Professional retreat facilitation and a naturalist guide to help us understand the whales and their stories",
-      Text7: "Some days or evenings a 'play shop' will be offered as well as 'good morning stretch and connect' gatherings before breakfast (weather permitting).",
-      Text8: "Plenty of time to rest and connect with yourself.",
-      Text9: "Added BONUS Day includes taking a panga from Loreto to go see Blue Whales in the Sea of Cortez",
-      Text10: "What NOT Included:",
-      Text11: "Transportation to Loreto, Mexico",
-      Text12: "Meals in Loreto and upon leaving San Ignacio camp to travel back to Loreto.  Food in Mexico is very reasonably priced!",
+      Text1: "7 days and 6 nights of F.U.N. and inspiration!  6 nights of shared accommodations at the hotel and camp (3 nights at camp and 3 nights at our Loreto hotel before and after the lagoon). ",
+      Text2: "Transportation back and forth to the remote San Ignacio lagoon. ",
+      Text3: "SIX whale watches with knowledgeable guides in pangas (small but stable fishing boats)",
+      Text4: "3 lovely meals a day at the family owned camp (that has the best food of the several camps I've been to), happy hour and all drinks.",
+      Text5: "Professional retreat facilitation and a naturalist guide to help us understand the whales and their stories.",
+      Text6: "Some days or evenings a 'play shop' will be offered as well as 'good morning stretch and connect' gatherings before breakfast (weather permitting).",
+      Text7: "Added BONUS Day includes taking a panga from Loreto to go see Blue Whales in the Sea of Cortez",
+      Text8: "What's NOT Included:",
+      Text9: "Transportation to Loreto, Mexico",
+      Text10: "Meals in Loreto and upon leaving San Ignacio camp to travel back to Loreto (Food in Mexico is very reasonably priced!). Tips at the camp to the amazing staff.  We STRONGLY encourage you to purchase insurance upon paying your trip deposit.",
+      Text11: "The whales are wild animals and encounters cannot be guaranteed.",
+      Text12: "",
       Img: eleven,
     },
     Button4: {
@@ -439,9 +439,9 @@ export default function Retreats() {
       Text2: "The food is fresh cooked daily and most food restrictions or preferences can be accommodated.  Food is often locally sourced fish and vegetables made Mexican style!",
       Text3: "Our eco-camp has rustic, clean, comfortable cabins each with a sink and toilet (outside on the deck).  Showers are available near the cabins and shared among the camp guests.",
       Text4: "A beach house (sleeps 4-6) with kitchen, and bathroom may be available for a higher rate IF we reserve it really early.  The camps fill up a year in advance!",
-      Text5: "Stewardship of the desert environment is taken seriously while still being able to cater to a diverse international clientele.  Water is collected or de-salinated and then purified for use at the camp so convsering water use is appreciated.",
-      Text6: "Electrical outlet for small electronics is provided in the cabins.",
-      Text7: "The food is fabulous and fresh cooked daily by the camp family and most food restrictions or preferences can be accommodated",
+      Text5: "Stewardship of the desert environment is taken seriously while still being able to cater to a diverse international clientele.  Water is collected or de-salinated and then purified for use at the camp so conserving water use is appreciated.",
+      Text6: "Electrical outlet for small electronics is provided in the cabins. ",
+      Text7: "",
       Text8: "",
       Text9: "",
       Text10: "",
@@ -451,12 +451,12 @@ export default function Retreats() {
     },
     Button5: {
       Head: "Pricing, Bonuses and Other Information",
-      Text1: "7 days and 6 nights for $2400 all inclusive (see what's included and not included above).",
+      Text1: "7 days and 6 nights for $2400 all inclusive (see what's included and not included above). ",
       Text2: "Deposits of $750 are due upon registration and there are only 10-12 spots available (8 people minimum).  Deposits are non-refundable unless the trip doesn't fill.",
       Text3: "Camps fill up nearly a year in advance and they are holding our spaces so don't hesitate!!",
       Text4: "Bonuses:",
-      Text5: "$100 off to the first 4 registrations OR if you bring a friend.  Bi-montly payment plan for the first 4 registrations",
-      Text6: "Other Important Information:",
+      Text5: "$100 off to the first 4 registrations OR if you bring a friend.  Bi-monthly payment plan for the first 4 registrations",
+      Text6: "Other Important Information: ",
       Text7: "We can provide guidance and help for getting to Loreto from multiple locations in the US and Mexico.",
       Text8: "Dates are subject to slight changes as the trip gets closer depending on flight availability.",
       Text9: "All safety equipment on the boats is provided!",
@@ -483,11 +483,11 @@ export default function Retreats() {
     },
     Button7: {
       Head: "Planned Itinerary",
-      Text1: "Day 1  You arrive in Loreto and check in our lovely hotel on the water.  Dinner the first night is on your own but the group will meet around the pool at happy hour.",
-      Text2: "Day 2  We leave early and travel through the lovely countryside by private mini-van to San Ignacio lagoon in time for lunch and our first whale watch!",
-      Text3: "Days 3 and 4   2 whale watches a day plus all meals, a morning stretch and connect session outdoors (weather permitting), and evening playshops",
-      Text4: "Day 5  We have one more whale watch before leaving camp and having lunch at a lovely restaurant in San Ignacio town before checking back in at our hotel",
-      Text5: "Day 6   Our BLUE whale watch day in the Sea of Cortez to see the largest creature that ever walked the earth and explore the energy of these amazing sentient beings. (A boxed lunch from the hotel can be arranged or you can buy one on your own to take on our panga.)  Our last evening, dinner is on your own or with the group, perhaps a relaxing evening by the pool.",
+      Text1: "Day 1: You arrive in Loreto and check in our lovely hotel on the water.  Dinner the first night is on your own but the group will meet around the pool at happy hour.",
+      Text2: "Day 2:  We leave early and travel through the lovely countryside by private mini-van to San Ignacio lagoon in time for lunch and our first whale watch!",
+      Text3: "Days 3 and 4: Two whale watches a day plus all meals, a morning stretch and connect session outdoors (weather permitting), and evening playshops",
+      Text4: "Day 5:  We have one more whale watch before leaving camp and having lunch at a lovely restaurant in San Ignacio town before checking back in at our hotel",
+      Text5: "Day 6:  Our BLUE whale watch day in the Sea of Cortez to see the largest creature that ever walked the earth and explore the energy of these amazing sentient beings. (A boxed lunch from the hotel can be arranged or you can buy one on your own to take on our panga.)  Our last evening, dinner is on your own or with the group, perhaps a relaxing evening by the pool.",
       Text6: "Day 7 is up to you--to stay or say goodbye to friends and with memories to treasure for a lifetime.",
       Text7: "*Sample Itinerary subject to change*",
       Text8: "",
@@ -588,12 +588,12 @@ export default function Retreats() {
           <img src={eightteen} alt="Jeanne Teleia" />
           <div>
             <h3>Testimonials from past participants</h3>
-            <b>Having worked with wild dolphin assisted healing and seen profound changes in people with physical and emotional challenges and their families (I had to see it to believe it first!), I was ever changed by knowing there is something special about connecting with dolphins and whales that changes you profoundly.</b>
+            <b>My own experiences swimming with wild Cetaceans for more than 20 years taught me there is something special about connecting with dolphins and whales when they choose to interact with you in their world that changes you forever.  I worked with a wild dolphin assisted healing program and I saw profound changes in people and families with physical and emotional challenges.</b>
             <b>I am always humbled to see the magic that happens on retreats. Sometimes it’s more subtle and it will show up later, or in dreams, or in your approach to life anew, but it’s undeniable.  I'll be there for you before, during and after to process your experiences so you can best integrate them into your daily life..</b>
-            <p><q>I went with Jeanne on a wild dolphin encounter and as I swam with the dolphins for only a few minutes I could hear their clicks, whistles and chirps. I felt it throughout my body and immediately noticed the hard knot of anxiety that was often present in my chest just dissolve. Joy came in then and took up the space that was supposed to live there!</q>  D. A.</p>
+            <p><q>I went with Jeanne on a wild dolphin encounter and as I swam with the dolphins I could hear their clicks, whistles and chirps. I felt it throughout my body and immediately noticed the hard knot of anxiety that was often present in my chest just dissolve. Joy came in then and took up the space that was supposed to live there!</q>  D. A.</p>
             <p><q>It truly was a life changing experience.</q> Lisa O.</p>
             <p><q>I was able to reach clarity on certain issues that were holding me back.  The whales helped me by reminding me of forgiveness and how to work to achieve it.  They always inspire me and bring me to a feeling of peace and love.</q> Mary Jean M.</p>
-            <p><q>It was so much more than a vacation. I've been on agroup vacation (with people I didn't know) but never been on a retreat before. It's so much more magical than just vacationing with a group - such bonding.</q>  Debbie S.</p>
+            <p><q>It was so much more than a vacation. I've been on a group vacation (with people I didn't know) but never been on a retreat before. It's so much more magical than just vacationing with a group - such bonding.</q>  Debbie S.</p>
           </div>
         </article>
         <article>
@@ -603,7 +603,7 @@ export default function Retreats() {
             <p><q>The whales were amazing and made the event more than worthwhile!  I learned how calming it can be to just experience them and not focus on photography.</q> Sandy.B.</p>
             <p><q>Overall, a great experience.  The whales made me happy and inspired joy. You did a really good job and was prepared, organized and I appreciate that.</q> Cathy T</p>
             <p><q>I achieved my goals and found a deep seeded issue that has plagued me my whole life. If they can forgive and move forward then I can.</q>  Valerie M. </p>
-            <p><q>Wow! With Jeanne's help and attention, I was able to transform some very deep fear that was holding me back.  Everyone I met after the retreat asked where I'd been because I was absolutely glowing!  I can't wait to go with her on another retreat and bring my friends!</q> Cathy H.</p>
+            <p><q>Wow! With Jeanne's help and attention, I was able to transform some very deep fears that were holding me back.  Everyone I met after the retreat asked where I'd been because I was absolutely glowing!  I can't wait to go with her on another retreat and bring my friends!</q> Cathy H.</p>
             <p><q>Thank you so much for putting together this amazing trip--I know it was a tremendous amount of work and you did a fabulous job of putting together every detail for a very diverse group.  Your role of leader first and foremost is your group's well being, which I know you had as you priority.  The whales inspired love and optimism in me. I have nothing but wonderful memories and hope to stay in touch with everyone moving forward!</q> Casey B.</p>
             <p><q>You are an amazing woman who has compassion and respect for all.  I had a wonderful time and grateful to have been included. It was wonderful!  A great connection with nature. It truly was a life changing experience and I look forward to the next trip!  Thank you so much!</q> Jean M. </p>
           </div>
@@ -614,7 +614,7 @@ export default function Retreats() {
           <div>
             <h3>The Best Part of the Retreat Week was:</h3>
             <p><q>When we were in 'whale soup'.  It was amazing!</q> S.B.</p>
-            <p><q>The boat trips out.  Excitement, comaraderie, and our excellent guide in Jeanne.</q> D.S.</p>
+            <p><q>The boat trips out.  Excitement, camaraderie, and our excellent guide in Jeanne.</q> D.S.</p>
             <p><q>Touching the whale.  It's magical.</q> O.T. </p>
             <p><q>The first time I touched a whale and kissed it.</q> V.M.</p>
             <p><q>Hanging out with the other participants in camp.  We were like a pack, finding common goals.</q> M.T.</p>

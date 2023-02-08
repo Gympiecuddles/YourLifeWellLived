@@ -326,14 +326,14 @@ function App() {
         <ServicesBox>
           <div >
             <img src={eight} />
-            <h4>Holistic Psychhotherapy and Life, Family and Wellness Coaching</h4>
+            <h4>Holistic Psychotherapy and Life, Family and Wellness Coaching</h4>
             <p>"Once I accept myself just as I am, THEN I can change."  -Carl Rogers, Father of Modern Psychology</p>
             <ul>
-              <li>Holistic mind-Body-Spirit Approach</li>
-              <li>Trauma informed, Exeriential and Unique Techniques</li>
-              <li>Non-Judgemental and Compassionate</li>
+              <li>Holistic Mind-Body-Spirit Approach</li>
+              <li>Trauma Informed,  Experiential and Unique Techniques</li>
+              <li>Non-judgemental and Compassionate</li>
               <li>Practical Feedback and Support Grounded in the Latest Research</li>
-              <li>Highly personalized Approach to Your Specific Situation</li>
+              <li>Highly Personalized Approach to Your Specific Situation</li>
               <li>I work exclusively from a virtual office so you can meet with me from the comfort of your home, office or car!</li>
             </ul>  
           </div>

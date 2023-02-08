@@ -31,7 +31,7 @@ const HeaderSection = styled(motion.section)`
     margin-left: 82px;
     margin-right: 82px;
     padding: 19px;
-    font-size: 1.2em;
+    font-size: 1.4em;
     letter-spacing: 1.25px;
     color: #ffffff;
   }
@@ -43,7 +43,7 @@ const HeaderSection = styled(motion.section)`
     margin-top: 250px;
     h3 {
       width: 500px;
-      font-size: 1.8em;
+      font-size: 1.9em;
       font-weight: 600;
       line-height: 50px;
       letter-spacing: 5px;
@@ -53,27 +53,27 @@ const HeaderSection = styled(motion.section)`
     p {
       margin: 0;
       margin-bottom: 100px;
-      font-size: 1.3em;
+      font-size: 1.5em;
       font-weight: 600;
       color: #ffffff;
       background-color: #00000000;
     }
     span {
-      width: 800px;
+      width: 900px;
       display: flex;
       justify-content: center;
       div {
         margin: 10px;
         height: 200px;
         h4 {
-          width: 130px;
+          width: 190px;
           color: #ffffff;
-          font-size: .9em;
+          font-size: 1.2em;
           text-align: center;
         }
         p {
           width: 160px;
-          font-size: 1em;
+          font-size: .9em;
           font-weight: 600;
           line-height: 25px;
           text-align: center;
@@ -81,7 +81,7 @@ const HeaderSection = styled(motion.section)`
       }
     }
     b {
-      margin-top: 100px; 
+      margin-top: 80px; 
       font-size: .9em;
       color: #ffffff;
       text-transform: uppercase;

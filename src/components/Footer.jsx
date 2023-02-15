@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaWordpressSimple } from 'react-icons/fa'
 
-import badge1 from '../assets/badge1.png'
-import badge2 from '../assets/badge2.png'
+import badge1 from '../assets/badge1.webp'
+import badge2 from '../assets/badge2.webp'
 
 const FooterBox = styled.div`
     width: 100%;

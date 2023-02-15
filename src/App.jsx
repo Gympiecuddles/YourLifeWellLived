@@ -1,21 +1,22 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { motion, useTransform, useScroll } from 'framer-motion'
+import { HashLink } from 'react-router-hash-link'
 import useTimer from './hooks/useTimer'
 
 import Carousel from './components/Carousel'
 import CarouselButton from './components/CarouselButton'
 import Arrow from './components/Arrow'
 
-import one from './assets/HomeImage1.jpg'
-import two from './assets/HomeImage2.jpg'
-import three from './assets/HomeImage3.jpg'
-import four from './assets/HomeImage4.jpeg'
-import five from './assets/Banner1.jpg'
-import eight from './assets/HomeImage8.jpg'
-import nine from './assets/HomeImage9.jpg'
-import ten from './assets/HomeImage10.jpg'
-import eleven from './assets/HomeImage11.jpg'
+import one from './assets/HomeImage1.webp'
+import two from './assets/HomeImage2.webp'
+import three from './assets/HomeImage3.webp'
+import four from './assets/HomeImage4.webp'
+import five from './assets/One.webp'
+import eight from './assets/HomeImage8.webp'
+import nine from './assets/HomeImage9.webp'
+import ten from './assets/HomeImage10.webp'
+import eleven from './assets/HomeImage11.webp'
 
 const HomePage = styled.div`
   width: 100%;
@@ -122,19 +123,6 @@ const AboutBox = styled.section`
       font-weight: 400;
       line-height: 23px;
     }
-    button {
-      align-self: end;
-      margin-top: 70px;
-      margin-right: 15px;
-      width: 350px;
-      height: 60px;
-      font-size: .9em;
-      font-weight: 600;
-      border: none;
-      color: #ffffff;
-      background-color: #0a3a86;
-      text-transform: uppercase;
-    }
   }
   img {
     align-self: flex-start;
@@ -142,6 +130,25 @@ const AboutBox = styled.section`
     width: 400px;
   }
 `;
+
+const MotionButton = motion(HashLink);
+const AboutButton = styled(MotionButton)`
+  display: flex;
+  justify-content: center;
+  align-self: end;
+  margin-top: 70px;
+  margin-right: 15px;
+  padding: 15px;
+  width: 350px;
+  font-size: .9em;
+  font-weight: 600;
+  border: none;
+  color: #ffffff;
+  background-color: #0a3a86;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+`
 
 const ServicesBox = styled.section`
   width: 100%;
@@ -262,18 +269,21 @@ const ButtonBox = styled.div`
   width: 100%;
   background-color: #cdfafc;
   z-index: 3; 
-  button {
-    margin: 40px;
-    margin-bottom: 70px;
-    width: 350px;
-    height: 60px;
-    font-size: .9em;
-    font-weight: 600;
-    border: none;
-    color: #ffffff;
-    background-color: #000000;
-    text-transform: uppercase;
-  }
+`
+
+const BottomButton = styled(MotionButton)`
+  margin: 40px;
+  margin-bottom: 70px;
+  padding: 23px;
+  width: 250px;
+  font-size: .9em;
+  font-weight: 600;
+  border: none;
+  color: #ffffff;
+  background-color: #000000;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 `
 
 
@@ -314,7 +324,7 @@ function App() {
             <h3>How Do You Want to Feel About Your Life?</h3>
             <p>I believe we are all naturally creative, resourceful and whole, and the answers are already inside you.</p>
             <p>I can help you find them again or maybe for the first time.  We will work to uncover your true potential and lead a life that is worth celebrating!</p>
-            <motion.button whileHover={{ backgroundColor: "#1154be" }}>Learn more about who I am and what I do</motion.button>
+            <AboutButton whileHover={{ backgroundColor: "#1154be" }} to="/Retreats">Learn more about who I am and what I do</AboutButton>
           </div>
           <img src={four} />
         </AboutBox>
@@ -370,15 +380,15 @@ function App() {
                 <p>Can be done from anywhere—via phone, internet, or in person. Clients and coaches don’t even need to live in the same country or state.</p>
                 <p>Not covered by insurance because there is no diagnosable emotional or mental condition. Coaching is not regulated or licensed by federal or state governments.</p>
                 <p>Many people are happy to tell others they have a coach vs. a therapist.</p>
-                <p>All people can benefit from coaching at any time in the life to help them discover where they are going in order to achieve their goals, dreams and vision.</p>
+                <p>All people can benefit from coaching at any time in the life to help them discover where they are going to achieve their goals, dreams, and vision.</p>
               </article>
               <article>
                 <h4>Therapy</h4>
                 <p>Focus is often on the past, as well as the present difficulties to help discover what is holding the client back. The client or their loved ones are having significant challenges with emotions and behavior.</p>
-                <p>The therapist provides advice, education, emotional support and feedback and is often seen as having expertise that the client is seeking. </p>
+                <p>The therapist provides advice, education, emotional support, and feedback and is often seen as having expertise that the client is seeking. </p>
                 <p>Therapy works on fixing or eliminating a problem, with a focus on healing. I also hold my clients accountable for their healing and growth.</p>
                 <p>Usually done in person or online. Clients and therapists generally live in the same state where the therapist is licensed.  Counseling/Psychoeducation and Coaching can be done worldwide.</p>
-                <p>Usually covered by insurance due to a diagnosable emotional, behavioral or mental condition (from very minor to major). Includes strong, legal, privacy protections and is regulated by legal and ethical guidelines nationally and in the state where the therapist is licensed.</p>
+                <p>Usually covered by insurance due to a diagnosable emotional, behavioral, or mental condition (from very minor to major). Includes strong, legal, privacy protections and is regulated by legal and ethical guidelines nationally and in the state where the therapist is licensed.</p>
                 <p>Most people can benefit from therapy at some point in their lives to understand how they got to where they are now.</p>       
               </article>
             </div>
@@ -392,12 +402,12 @@ function App() {
           </div>
           <div>
             <img src={nine} />
-            <h4>Wild Dolphin Insprational Wellness Retreats</h4>
+            <h4>Wild Dolphin Inspirational Wellness Retreats</h4>
             <p>We use the lessons the dolphins show us both in and above the water in a retreat that can change your life.  The dolphins show us how to play and live life to the fullest.  Play is an essential aspect of life--as important as sleep or nutrition!</p>
           </div>
         </ServiceBox2>
         <ButtonBox>
-          <motion.button whileHover={{ backgroundColor: "#444444" }}>Let's get started</motion.button>
+          <BottomButton whileHover={{ backgroundColor: "#444444" }} to="/Contact">Let's get started</BottomButton>
         </ButtonBox>
       </HomePage>
     </>

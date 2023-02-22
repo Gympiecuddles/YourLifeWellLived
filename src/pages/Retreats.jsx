@@ -28,6 +28,7 @@ import seventeen from '../assets/RetreatImage17.webp'
 import eightteen from '../assets/RetreatImage18.webp'
 import nineteen from '../assets/RetreatImage19.webp'
 import twenty from '../assets/RetreatImage20.webp'
+import { HashLink } from 'react-router-hash-link';
 
 const RetreatPage = styled.div`
   width: 100%;
@@ -97,17 +98,21 @@ const CurrentRetreatTitle = styled.div`
   h3 {
     font-size: 2.8em;
   }
-  button {
-      width: 280px;
-      height: 50px;
-      font-size: .9em;
-      font-weight: 600;
-      border: none;
-      color: #ffffff;
-      background-color: #000000;
-      text-transform: uppercase;
-    }
 `;
+
+const MotionButton = motion(HashLink);
+const StyledButton = styled(MotionButton)`
+  padding: 19px;
+  width: 250px;
+  font-size: .9em;
+  font-weight: 600;
+  border: none;
+  color: #ffffff;
+  background-color: #000000;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+`
 
 const CurrentRetreats1 = styled.section`
   width: 100%;
@@ -514,7 +519,7 @@ export default function Retreats() {
       </ImgLayer>
       <TextSwap innerText={carouselText} counter={counter} />
       <CurrentRetreatTitle style={{height: "200px"}}>
-      <motion.button whileHover={{ backgroundColor: "#444444" }}>Click here to register now</motion.button>
+      <StyledButton whileHover={{ backgroundColor: "#444444" }} to="/Contact">Click here to register now</StyledButton>
         <h3>Dolphin Wellness & Healing Retreat</h3>
       </CurrentRetreatTitle>
       <CurrentRetreats1>
@@ -626,7 +631,7 @@ export default function Retreats() {
             <p><q>I got everything I wanted and expected, plus much more in the way of animal and human interaction and the feeling of love and care.</q> Lisa H.</p>
           </div>
         </article>
-        <motion.button whileHover={{ backgroundColor: "#444444" }}>Click here to register now</motion.button>
+        <StyledButton whileHover={{ backgroundColor: "#444444" }} to="/Contact">Click here to register now</StyledButton>
       </PastRetreats>
     </RetreatPage>
   )

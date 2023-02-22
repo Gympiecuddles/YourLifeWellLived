@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { HashLink } from 'react-router-hash-link'
 
 import one from '../assets/FaqImage1.webp'
 import banner from '../assets/One.webp'
@@ -85,17 +86,21 @@ const ButtonBox = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #cdfafc;
-  button {
-    width: 350px;
-    height: 60px;
-    font-size: .9em;
-    font-weight: 600;
-    border: none;
-    color: #ffffff;
-    background-color: #000000;
-    text-transform: uppercase;
-  }
 `;
+
+const MotionButton = motion(HashLink);
+const StyledButton = styled(MotionButton)`
+  padding: 19px;
+  width: 250px;
+  font-size: .9em;
+  font-weight: 600;
+  border: none;
+  color: #ffffff;
+  background-color: #000000;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+`
 
 export default function Faqs() {
   return (
@@ -125,7 +130,7 @@ export default function Faqs() {
         <img src={one} />
       </FaqBox>
       <ButtonBox>
-        <motion.button whileHover={{ backgroundColor: "#444444" }}>Let's book an appointment</motion.button>
+        <StyledButton whileHover={{ backgroundColor: "#444444" }} to="/Contact">Let's book an appointment</StyledButton>
       </ButtonBox>
     </>
   )

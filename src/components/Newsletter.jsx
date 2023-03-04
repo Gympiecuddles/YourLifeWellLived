@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import MailchimpSubscribe from 'react-mailchimp-subscribe'
 
 import one from '../assets/NewsImage1.webp'
 
@@ -93,17 +94,69 @@ const NewsContent = styled.div`
     }
 `;
 
-const CheckBox = styled.input`
-    margin-top: 8px;
-    margin-left: -89px;
-    width: 10px;
-    height: 10px;
-    scale: .9;
-`;
-
 const collapseVariants = {
     closed: { x: 365 },
     open: { x: 0 },
+}
+
+const CustomForm = ({ status, message, onValidated }) => {
+
+    const [email, setEmail] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        email &&
+        email.indexOf("@") > -1 &&
+        onValidated({ EMAIL: email });
+    }
+console.log(email)
+    return (
+        <form onSubmit={(e) => handleSubmit(e)}>
+            {status === "sending" && (
+                <div>
+                    sending
+                </div>
+            )}
+            {status === "error" && (
+                <div dangerouslySetInnerHTML={{__html: message}} />
+            )}
+            {status === "success" && (
+                <div dangerouslySetInnerHTML={{__html: message}} />
+            )}
+            {status !== "success" ? (
+                <>            
+                    <input 
+                        onChange={(e) => setEmail(e.target.value)}
+                        type="email" 
+                        placeholder="Email" 
+                        value={email}
+                        required
+                    />
+                    <motion.button whileHover={{ backgroundColor: '#5a5a5a' }} type='submit'>Join Now. No spam ever!</motion.button>
+                </>    
+                ) : null}
+        </form>
+    );
+}
+
+const MailchimpFormComtainer = props => {
+
+    const postUrl = `https://gmail.us21.list-manage.com/subscribe/post?u=1a9ef22e62a52e1abf715e6df&id=c0ab2f0911`;
+
+    return (
+        <div>
+            <MailchimpSubscribe 
+                url={postUrl}
+                render={({ subscribe, status, message}) => (
+                    <CustomForm
+                        status={status}
+                        message={message}
+                        onValidated={formData => subscribe(formData)}
+                    />    
+                )}
+            />
+        </div>
+    )
 }
 
 export default function Newsletter() {
@@ -122,12 +175,7 @@ export default function Newsletter() {
             <p>Every month we send tips on building emotional intelligence and wellness in your life.  Take a look at our most recent newsletter
                 <motion.a whileHover={{ color: "#5f5f5f"}} href="/" > here</motion.a>.
             </p>
-            <form>
-                <input placeholder="Email" type="email" required />
-                <motion.button whileHover={{ backgroundColor: '#5a5a5a' }} type='submit'>Join Now. No spam ever!</motion.button>
-                <CheckBox type="checkbox" name="confirm" value="confirm" />
-                <label for="confirm">Check to confirm subscription</label>
-            </form>
+            <MailchimpFormComtainer />
         </NewsContent>
     </NewsBox>
   )

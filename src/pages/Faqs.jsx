@@ -45,6 +45,40 @@ const HeaderSection = styled.div`
     letter-spacing: 1.25px;
     color: #ffffff;
   }
+  @media screen and (max-width: 1650px) {
+    height: 280px;
+    h2 {
+      margin-top: 120px;
+      margin-bottom: 0px;
+      margin-left: 40px;
+      font-size: 1.8em;
+    }
+    p {
+      margin-left: 40px;
+      margin-right: 82px;
+      padding: 19px;
+      font-size: 1em;
+      letter-spacing: 1.25px;
+      color: #ffffff;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    height: 260px;
+    h2 {
+      margin-top: 120px;
+      margin-bottom: 0px;
+      margin-left: 40px;
+      font-size: 1.6em;
+    }
+    p {
+      margin-left: 40px;
+      margin-right: 82px;
+      padding: 19px;
+      font-size: 1em;
+      letter-spacing: 1.25px;
+      color: #ffffff;
+    }
+  }
 `;
 
 const FaqBox = styled.section`
@@ -75,6 +109,36 @@ const FaqBox = styled.section`
     width: 18%;
     height: 700px;
     object-fit: contain;
+  }
+  @media screen and (max-width: 2000px) {
+    height: 1200px;
+    article {
+      width: 40%;
+    }
+  }
+  @media screen and (max-width: 1500px) {
+    height: 1200px;
+    article {
+      width: 50%;
+    }
+    img {
+    width: 28%;
+    height: 700px;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 1400px;
+    article {
+      margin-top: 50px;
+      width: 90%;
+    }
+    img {
+      margin-top: 50px;
+      width: 50%;
+      height: auto;
+    }
   }
 `;
 

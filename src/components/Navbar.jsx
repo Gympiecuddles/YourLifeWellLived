@@ -21,6 +21,11 @@ const NavBox = styled(motion.nav)`
         width: 1150px;
         list-style: none;
     }
+    @media screen and (max-width: 1366px) {
+       span {
+        margin-right: 40px;
+       } 
+    }
 `;
 
 const MotionLink = motion(Link);
@@ -35,6 +40,9 @@ const StyledLink = styled(MotionLink)`
     color: #ffffff;
     text-decoration: none;
     outline: none;
+    @media screen and (max-width: 1366px) {
+       font-size: .8em; 
+    }
 `;
 
 const LogoLink = styled(StyledLink)`
@@ -47,6 +55,10 @@ const LogoLink = styled(StyledLink)`
     letter-spacing: 8px;
     color: #ffff00;
     outline: none;
+    @media screen and (max-width: 1366px) {
+        margin-left: 20px;
+        font-size: 1.4em; 
+    }
 `;
 
 const MotionHashLink = motion(HashLink);
@@ -61,6 +73,9 @@ const StyledHashLink = styled(MotionHashLink)`
     color: #ffffff;
     text-decoration: none;
     outline: none;
+    @media screen and (max-width: 1366px) {
+       font-size: .8em; 
+    }
 `
 
 export default function Navbar() {

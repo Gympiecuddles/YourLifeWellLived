@@ -35,17 +35,17 @@ const RetreatPage = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 const ImgLayer = styled(motion.div)`
   position: fixed;
   width: 100%;
-  height: 100vh;
   background-color: #00000000;
   z-index: 0;
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0% 0%;
+    object-position: center;
     filter: brightness(85%);
   }
 `;
@@ -60,12 +60,13 @@ const HeaderSection = styled.section`
   background-color: #00000000;
   z-index: 1;
   h2 {
+    margin-top: 80px;
     margin-left: 82px;
     margin-bottom: 25px;
     padding: 9px;
     padding-left: 18px;
     padding-right: 18px;
-    font-size: 3em;
+    font-size: 2.3em;
     font-weight: 400;
     letter-spacing: 6px;
     color: #ffffff;
@@ -82,7 +83,32 @@ const HeaderSection = styled.section`
   }
   img {
     position: absolute;
+    height: 100%;
     z-index: -1;
+  }
+  @media screen and (max-width: 2220px) {
+    height: 950px;
+    h2 {
+      font-size: 2em;
+    }
+  }
+  @media screen and (max-width: 1700px) {
+    height: 780px;
+    h2 {
+      font-size: 1.9em;
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    height: 750px;
+    h2 {
+      font-size: 1.7em;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    height: 750px;
+    h2 {
+      font-size: 1.7em;
+    }
   }
 `;
 const CurrentRetreatTitle = styled.div`
@@ -97,6 +123,12 @@ const CurrentRetreatTitle = styled.div`
   z-index: 2;
   h3 {
     font-size: 2.8em;
+  }
+  @media screen and (max-width: 900px) {
+    height: 120px;
+    h3 {
+      font-size: 2.5em;
+    }
   }
 `;
 
@@ -122,27 +154,76 @@ const CurrentRetreats1 = styled.section`
   align-items: center;
   background-color: #cdfafc;
   z-index: 1;
-  div {
+  span {
     display: flex;
-    flex-direction: column;
-    width: 800px;
-    h4 {
-      margin: 8px;
-      font-size: 1.2em;
-      text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    div {
+      display: flex;
+      flex-direction: column;
+      width: 800px;
+      h4 {
+        margin: 8px;
+        font-size: 1.2em;
+        text-transform: uppercase;
+      }
+      p {
+        margin: 8px;
+        font-size: 1em;
+        line-height: 25px;
+      }
     }
-    p {
-      margin: 8px;
-      font-size: 1em;
-      line-height: 25px;
+    img {
+      margin: 5px;
+      margin-top: 10px;
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
     }
   }
-  img {
-    margin: 5px;
-    margin-top: 10px;
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
+  @media screen and (max-width: 1400px) {
+    padding-left: 20px;
+    height: 600px;
+    span {
+      div {
+        width: 600px;
+        h4 {
+          font-size: 1.1em;
+        }
+        p{
+          font-size: .9em;
+          line-height: 20px;
+        }
+        img {
+          width: 400px;
+          height: 400px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    height: 900px;
+    span {
+      display: flex;
+      flex-direction: column-reverse;
+      div {
+        display: flex; 
+        flex-direction: column;
+        width: 100%;
+        h4 {
+          font-size: 1.1em;
+        }
+        p {
+          padding-right: 40px;
+          font-size: .9em;
+          line-height: 18px;
+        }
+        img {
+          width: 350px;
+          height: 350px;
+        }
+      }
+    }
   }
 `;
 
@@ -154,26 +235,74 @@ const CurrentRetreats2 = styled.section`
   align-items: center;
   background-color: #cdfafc;
   z-index: 1;
-  img {
-    margin-top: 10px;
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-  }
-  div {
-    margin-left: 40px;
+  span {
     display: flex;
-    flex-direction: column;
-    width: 800px;
-    h4 {
-      margin: 8px;
-      font-size: 1.2em;
-      text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    width: 1100px;
+    img {
+      margin-top: 10px;
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
     }
-    p {
-      margin: 8px;
-      font-size: 1.1em;
-      line-height: 25px;
+    div {
+      margin-left: 40px;
+      display: flex;
+      flex-direction: column;
+      width: 800px;
+      h4 {
+        margin: 8px;
+        font-size: 1.2em;
+        text-transform: uppercase;
+      }
+      p {
+        margin: 8px;
+        font-size: 1.1em;
+        line-height: 25px;
+      }
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    height: 700px;
+    span {
+      img {
+          width: 400px;
+          height: 400px;
+      }
+      div {
+        width: 650px;
+        h4 {
+          font-size: 1.1em;
+        }
+        p{
+          font-size: .9em;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    height: 1050px;
+    span {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      img {
+        width: 350px;
+        height: 350px;
+      }
+      div {
+        margin-left: 25px;
+        width: 630px;
+        h4 {
+          font-size: 1.1em;
+        }
+        p {
+          font-size: .9em;
+          line-height: 20px;
+        }
+      }
     }
   }
 `;
@@ -195,6 +324,21 @@ const ButtonBox = styled.span`
     border-radius: 5px;
     background-color: #00000004;
     text-align: center;
+  }
+  @media screen and (max-width: 1300px) {
+    margin-left: 20px;
+    margin-right: 20px;
+    button {
+      width: 140px;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    margin-left: 5px;
+    margin-right: 20px;
+    width: 120px;
+    button {
+      width: 140px;
+    }
   }
 `;
 
@@ -253,11 +397,29 @@ const PastRetreats = styled.section`
       background-color: #000000;
       text-transform: uppercase;
     }
+  @media screen and (max-width: 900px) {
+    height: 2400px;
+    article {
+      align-items: center;
+      margin-bottom: 60px;
+      width: 95%;
+      div {
+        b {
+          font-size: .9em;
+          line-height: 20px;
+        }
+        p {
+          font-size: .9em;
+         line-height: 20px;
+        }
+      }
+    }  
+  }
 `;
 
 export default function Retreats() {
   const { scrollYProgress } = useScroll();
-  const height = useTransform(scrollYProgress, [0, 0.5, 1], [1600, 0, 0]);
+  const height = useTransform(scrollYProgress, [0, 0.3, 0.4, 1], [1600, 1600, 0, 0]);
   const y = useTransform(scrollYProgress, [0, 0.4, 1], [0, -400, -200]);
 
   const carouselText = {
@@ -514,9 +676,6 @@ export default function Retreats() {
       <ImgLayer style={{height, y}}>
         <Carousel imgs={[one, two]} counter={counter}  />
       </ImgLayer>
-      <ImgLayer style={{zIndex: -1}}>
-       
-      </ImgLayer>
       <TextSwap innerText={carouselText} counter={counter} />
       <CurrentRetreatTitle style={{height: "200px"}}>
       <StyledButton whileHover={{ backgroundColor: "#444444" }} to="/Contact">Click here to register now</StyledButton>
@@ -532,47 +691,51 @@ export default function Retreats() {
           <motion.button onClick={() => setInfo(dolphinText.Button6)} whileHover={{ x: 4}}>Free Bonuses!!</motion.button>
           <motion.button onClick={() => setInfo(dolphinText.Button7)} whileHover={{ x: 4}}>Itinerary</motion.button>
         </ButtonBox>
-        <div>
-          <h4>{Info.Head}</h4>
-          <p>{Info.Text1}</p>
-          <p>{Info.Text2}</p>
-          <p>{Info.Text3}</p>
-          <p>{Info.Text4}</p>
-          <p>{Info.Text5}</p>
-          <p>{Info.Text6}</p>
-          <p>{Info.Text7}</p>
-          <p>{Info.Text8}</p>
-          <p>{Info.Text9}</p>
-          <p>{Info.Text10}</p>
-          <p>{Info.Text11}</p>
-          <p>{Info.Text12}</p>
-        </div>
-        <div style={{width: "500px"}}>
-          <img src={Info.Img} alt="" />
-        </div>  
+        <span>
+          <div>
+            <h4>{Info.Head}</h4>
+            <p>{Info.Text1}</p>
+            <p>{Info.Text2}</p>
+            <p>{Info.Text3}</p>
+            <p>{Info.Text4}</p>
+            <p>{Info.Text5}</p>
+            <p>{Info.Text6}</p>
+            <p>{Info.Text7}</p>
+            <p>{Info.Text8}</p>
+            <p>{Info.Text9}</p>
+            <p>{Info.Text10}</p>
+            <p>{Info.Text11}</p>
+            <p>{Info.Text12}</p>
+          </div>
+          <div style={{width: "500px"}}>
+            <img src={Info.Img} alt="" />
+          </div>  
+        </span>
       </CurrentRetreats1>
       <CurrentRetreatTitle>
         <h3>Baja Gray Whale Wellness Retreat</h3>
       </CurrentRetreatTitle>
       <CurrentRetreats2>
-        <div style={{width: "500px"}}>
-          <img src={Info2.Img} alt="" />
-        </div>  
-        <div>
-          <h4>{Info2.Head}</h4>
-          <p>{Info2.Text1}</p>
-          <p>{Info2.Text2}</p>
-          <p>{Info2.Text3}</p>
-          <p>{Info2.Text4}</p>
-          <p>{Info2.Text5}</p>
-          <p>{Info2.Text6}</p>
-          <p>{Info2.Text7}</p>
-          <p>{Info2.Text8}</p>
-          <p>{Info2.Text9}</p>
-          <p>{Info2.Text10}</p>
-          <p>{Info2.Text11}</p>
-          <p>{Info2.Text12}</p>
-        </div>
+        <span>
+          <div style={{width: "500px"}}>
+            <img src={Info2.Img} alt="" />
+          </div>  
+          <div>
+            <h4>{Info2.Head}</h4>
+            <p>{Info2.Text1}</p>
+            <p>{Info2.Text2}</p>
+            <p>{Info2.Text3}</p>
+            <p>{Info2.Text4}</p>
+            <p>{Info2.Text5}</p>
+            <p>{Info2.Text6}</p>
+            <p>{Info2.Text7}</p>
+            <p>{Info2.Text8}</p>
+            <p>{Info2.Text9}</p>
+            <p>{Info2.Text10}</p>
+            <p>{Info2.Text11}</p>
+            <p>{Info2.Text12}</p>
+          </div>
+        </span>  
         <ButtonBox>
           <motion.button onClick={() => setInfo2(whaleText.Button1)} whileHover={{ x: -4}}>Why We Do This</motion.button>
           <motion.button onClick={() => setInfo2(whaleText.Button2)} whileHover={{ x: -4}}>What You Get Out of It</motion.button>
@@ -584,7 +747,7 @@ export default function Retreats() {
         </ButtonBox>
       </CurrentRetreats2>
       <HeaderSection id="Gallery">
-        <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >Past Retreats in Hawaii, USA; Baja, Mexico; and Bimini, The Bahamas;</h2>
+        <h2>Past Retreats in Hawaii, USA; Baja, Mexico; and Bimini, The Bahamas;</h2>
         <p>More locations world wide to come!</p>
         <Carousel imgs={[fifteen, sixteen, seventeen]} counter={counter2} />
       </HeaderSection>

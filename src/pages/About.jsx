@@ -10,11 +10,17 @@ import banner from '../assets/One.webp'
 const ImgLayer = styled(motion.img)`
   position: fixed;
   width: 100%;
-  height: 30vh;
+  height: 320px;
   background-color: #00000000;
   object-fit: cover;
   object-position: 0% 0%;
   z-index: -1;
+  @media screen and (max-width: 1650px) {
+    height: 280px;
+  }
+  @media screen and (max-width: 850px) {
+    height: 250px;
+  }
 `;
 
 const HeaderSection = styled.div`
@@ -37,6 +43,24 @@ const HeaderSection = styled.div`
     font-weight: 400;
     letter-spacing: 6px;
     color: #ffffff;
+  }
+  @media screen and (max-width: 1650px) {
+    height: 280px;
+    h2 {
+      height: 280px;
+      margin-top: 150px;
+      margin-left: 40px;
+      font-size: 1.8em;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    height: 250px;
+    h2 {
+      height: 250px;
+      margin-top: 130px;
+      margin-left: 20px;
+      font-size: 1.5em;
+    }
   }
 `;
 
@@ -93,6 +117,54 @@ const AboutBox = styled.section`
         list-style-type: square;
         li {
           font-size: .9em;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 850px) {
+    img {
+    margin-top: 70px;
+    margin-bottom: 50px;
+    width: 1050px;
+    height: 650px;
+    }
+    article {
+      margin-bottom: 100px;
+      width: 95%;
+      img {
+        margin: 0;
+        width: 360px;
+        height: 400px;
+        object-position: 80% 50%;
+      }
+      div {
+        margin-left: 30px;
+        width: 80%;
+        h3 {
+          margin-bottom: 18px;
+          font-size: 1.3em;
+          font-weight: 800;
+          letter-spacing: 1px;
+        }
+        p {
+          margin-top: 18px;
+          padding-right: 35px;
+          font-size: .9em;
+          font-weight: 400;
+          line-height: 22px;
+        }
+        q {
+          padding-right: 35px;
+          font-size: .9em;
+          font-weight: 600;
+          line-height: 22px;
+        }
+        ol {
+          margin-top: 10px;
+          padding-left: 20px;
+          li {
+            font-size: .9em;
+          }
         }
       }
     }

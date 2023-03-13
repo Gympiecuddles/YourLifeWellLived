@@ -39,22 +39,6 @@ const ImgLayer1 = styled(motion.div)`
   }
 `;
 
-const ImgLayer2 = styled(motion.div)`
-  position: relative;
-  
-  width: 100%;
-  height: 100vh;
-  background-color: #00000000;
-  z-index: 0;
-  img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    object-position: 0% 0%;
-    filter: brightness(80%);
-  }
-`;
-
 const HeaderSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -84,50 +68,180 @@ const HeaderSection = styled.section`
     color: #ffffff;
   }
   img {
-    position: absolute;
-    top: 1650px;
+   
     width: 100%;
     object-fit: contain;
     z-index: -1;
   }
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 2240px) {
     h2 {
-      font-size: 2.5em;
-    } 
+      font-size: 2.4em;
+    }
+    p {
+      font-size: 1.3em;
+    }
+  }
+  @media screen and (max-width: 1600px) {
+    h2 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.2em;
+    }
+  }
+  @media screen and (max-width: 1366px) {
+    h2 {
+      margin-left: 10px;
+      font-size: 1.5em;
+    }
+    p {
+      margin-left: 10px;
+      font-size: 1em;
+    }
+  }
+`;
+
+const HeaderSection2 = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  width: 100%;
+  height: 900px;
+  background-image: url(${five});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  h2 {
+    margin-top: 80px;
+    margin-left: 82px;
+    margin-bottom: 25px;
+    padding: 9px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 2.3em;
+    font-weight: 400;
+    letter-spacing: 6px;
+    color: #ffffff;
+  }
+  p {
+    margin-left: 82px;
+    margin-right: 82px;
+    padding: 19px;
+    font-size: 1.5em;
+    letter-spacing: 1.25px;
+    color: #ffffff;
+  }
+  @media screen and (max-width: 1600px) {
+    h2 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.2em;
+    }
+  }
+  @media screen and (max-width: 1366px) {
+    h2 {
+      margin-left: 10px;
+      font-size: 1.5em;
+    }
+    p {
+      margin-left: 10px;
+      font-size: 1em;
+    }
   }
 `;
 
 const AboutBox = styled.section`
-  width: 100%;
-  height: 46vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 600px;
   background-color: #cdfafc;
   z-index: 2;
-  div {
-    width: 29%;
+  span {
     display: flex;
-    flex-direction: column;
-    h3 {
-      margin: 10px;
-      font-size: 1.3em;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    div {
+      width: 29%;
+      display: flex;
+      flex-direction: column;
+      h3 {
+        margin: 10px;
+        font-size: 1.3em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      p {
+        margin: 10px;
+        padding-right: 35px;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 23px;
+      }
     }
-    p {
-      margin: 10px;
-      padding-right: 35px;
-      font-size: 1em;
-      font-weight: 400;
-      line-height: 23px;
+    img {
+      align-self: flex-start;
+      margin-top: 109px;
+      width: 400px;
+    }
+  }  
+  @media screen and (max-width: 1920px) {
+    height: 530px;
+    span {
+      div {
+        h3 {
+          font-size: 1.2em;
+        }
+        p {
+          font-size: .9em;
+        }
+      }
+      img {
+          margin-top: 0px;
+          width: 320px;
+        }
     }
   }
-  img {
-    align-self: flex-start;
-    margin-top: 109px;
-    width: 400px;
+  @media screen and (max-width: 1600px) {
+    height: 500px;
+    span {
+      div {
+        h3 {
+          font-size: 1.2em;
+        }
+        p {
+          font-size: .9em;
+        }
+      }
+      img {
+          width: 320px;
+        }
+    }
+  }
+  @media screen and (max-width: 1366px) {
+    span {
+      div {
+        h3 {
+          font-size: 1em;
+        }
+      }
+      img {
+          margin-top: 10px;
+          width: 300px;
+        }
+    }
+  }
+  @media screen and (max-width: 850px) {
+    span {
+      div {
+        width: 50%;
+      }
+    }
   }
 `;
 
@@ -135,9 +249,8 @@ const MotionButton = motion(HashLink);
 const AboutButton = styled(MotionButton)`
   display: flex;
   justify-content: center;
-  align-self: end;
+  align-self: center;
   margin-top: 70px;
-  margin-right: 15px;
   padding: 15px;
   width: 350px;
   font-size: .9em;
@@ -148,6 +261,10 @@ const AboutButton = styled(MotionButton)`
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  @media screen and (max-width: 1600px) {
+    width: 270px;
+    font-size: .8em;
+  }
 `
 
 const ServicesBox = styled.section`
@@ -187,6 +304,26 @@ const ServicesBox = styled.section`
       li {
         margin-bottom: 5px;
         font-size: .9em;
+      }
+    }
+  }
+  @media screen and (max-width: 1822px) {
+    div {
+      width: 350px;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    div {
+      margin: 35px;
+      width: 40%;
+      img {
+        width: 280px;
+      }
+      h4 {
+        
+      }
+      p {
+
       }
     }
   }
@@ -241,7 +378,7 @@ const ExplainBox = styled.section`
     cursor: pointer;
   }
   div {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -259,6 +396,29 @@ const ExplainBox = styled.section`
         line-height: 30px;
       }
     }  
+  }
+  @media screen and (max-width: 1822px) {
+    h3 {
+      margin: 50px;
+      font-size: 1.2em;
+    }
+    div {
+      width: 70%;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    h3 {
+      margin: 50px;
+      font-size: 1.2em;
+    }
+    div {
+      width: 100%;
+      article {
+        p {
+          line-height: 25px;
+        }
+      }
+    }
   }
 `;
 
@@ -320,19 +480,20 @@ function App() {
           <Arrow />
         </HeaderSection>
         <AboutBox>
-          <div>
-            <h3>How Do You Want to Feel About Your Life?</h3>
-            <p>I believe we are all naturally creative, resourceful and whole, and the answers are already inside you.</p>
-            <p>I can help you find them again or maybe for the first time.  We will work to uncover your true potential and lead a life that is worth celebrating!</p>
-            <AboutButton whileHover={{ backgroundColor: "#1154be" }} to="/Retreats">Learn more about who I am and what I do</AboutButton>
-          </div>
-          <img src={four} />
+          <span>
+            <div>
+              <h3>How Do You Want to Feel About Your Life?</h3>
+              <p>I believe we are all naturally creative, resourceful and whole, and the answers are already inside you.</p>
+              <p>I can help you find them again or maybe for the first time.  We will work to uncover your true potential and lead a life that is worth celebrating!</p>
+            </div>
+            <img src={four} />
+          </span>  
+          <AboutButton whileHover={{ backgroundColor: "#1154be" }} to="/Retreats">Learn more about who I am and what I do</AboutButton>
         </AboutBox>
-        <HeaderSection id="Services">
-          <h2 style={{marginTop: "80px", fontSize: "2.3em"}} >What I can do for you</h2>
+        <HeaderSection2 id="Services">
+          <h2>What I can do for you</h2>
           <p>What lights you up? Personal Growth work doesn’t have to be difficult!<br />  We will elicit your own brilliance for healing and transformation. <br /><br />  I use the power of play because it is a Fundamental Universal Need<br /> (or F.U.N.) that helps us grow and invigorates our lives.</p>
-          <img src={five} alt=""/>
-        </HeaderSection>
+        </HeaderSection2>
         <ServicesBox>
           <div >
             <img src={eight} />

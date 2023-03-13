@@ -87,6 +87,136 @@ const HeaderSection = styled(motion.section)`
       text-transform: uppercase;
     }
   }
+  @media screen and (max-width: 1950px) {
+    height: 900px;
+    h2 {
+      margin-left: 50px;
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+    p {
+      margin-left: 50px;
+      margin-right: 82px;
+      font-size: 1.2em;
+    }
+    div {
+      margin-top: 100px;
+      h3 {
+        width: 550px;
+        font-size: 1.5em;
+      }
+      p {
+        font-size: 1em;
+      }
+      span {
+        div {
+          margin: 10px;
+          height: 200px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1600px) {
+    height: 700px;
+    h2 {
+      margin-left: 10px;
+      margin-bottom: 0px;
+      padding: 0px;
+      padding-left: 18px;
+      padding-right: 18px;
+      font-size: 1.8em;
+    }
+    p {
+      margin-left: 10px;
+      font-size: 1.1em;
+    }
+    div {
+      margin-top: 50px;
+      h3 {
+        width: 550px;
+        font-size: 1.4em;
+        line-height: 40px;
+      }
+      p {
+        margin-bottom: 10px;
+        font-size: .9em;
+      }
+      span {
+        div {
+          margin-top: 50px;
+          height: 100px;
+          h4 {
+            width: 200px;
+            font-size: 1.2em;
+          }
+          p {
+            width: 160px;
+            font-size: .9em;
+            line-height: 22px;
+          }
+        }
+      }
+      b {
+        margin-top: 150px; 
+        font-size: .9em;
+      }
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    height: 600px;
+    h2 {
+      font-size: 1.6em;
+    }
+    p {
+      font-size: 1em;
+    }
+    div {
+      margin-top: 30px;
+      h3 {
+        font-size: 1.2em;
+        line-height: 38px;
+      }
+      p {
+        margin-bottom: 0px;
+        font-size: .8em;
+      }
+      span {
+        div {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    height: 850px;
+    h2 {
+      font-size: 1.6em;
+    }
+    p {
+      font-size: 1em;
+    }
+    div {
+      margin-top: 120px;
+      h3 {
+        font-size: 1.2em;
+        line-height: 38px;
+      }
+      p {
+        margin-bottom: 0px;
+        width: 700px;
+        font-size: .8em;
+        text-align: center;
+      }
+      span {
+        div {
+          margin-top: 50px;
+        }
+      }
+      b {
+        margin-top: 200px;
+      }
+    }
+  }
 `;
 
 const motionArgs = {

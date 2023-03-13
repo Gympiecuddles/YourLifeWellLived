@@ -7,7 +7,7 @@ import banner from '../assets/One.webp'
 const ImgLayer = styled(motion.img)`
   position: fixed;
   width: 100%;
-  height: 30vh;
+  height: 405px;
   background-color: #00000000;
   object-fit: cover;
   object-position: 0% 0%;
@@ -43,11 +43,45 @@ const HeaderSection = styled.div`
     letter-spacing: 1.25px;
     color: #ffffff;
   }
+  @media screen and (max-width: 1650px) {
+    height: 280px;
+    h2 {
+      margin-top: 120px;
+      margin-bottom: 0px;
+      margin-left: 40px;
+      font-size: 1.8em;
+    }
+    p {
+      margin-left: 40px;
+      margin-right: 82px;
+      padding: 19px;
+      font-size: 1em;
+      letter-spacing: 1.25px;
+      color: #ffffff;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    height: 260px;
+    h2 {
+      margin-top: 120px;
+      margin-bottom: 0px;
+      margin-left: 40px;
+      font-size: 1.8em;
+    }
+    p {
+      margin-left: 40px;
+      margin-right: 82px;
+      padding: 19px;
+      font-size: 1em;
+      letter-spacing: 1.25px;
+      color: #ffffff;
+    }
+  }
 `;
 
 const LinkBox = styled.section`
   width: 100%;
-  height: 170vh;
+  height: 2300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,7 +105,7 @@ const LinkBox = styled.section`
   div {
     margin: 100px;
     width: 50%;
-    height: 140vh;
+    height: 1900px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -95,6 +129,22 @@ const LinkBox = styled.section`
         font-weight: 400;
         line-height: 20px;
       }
+    }
+  }
+  @media screen and (max-width: 1700px) {
+    div {
+      width: 80%;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    height: 2400px;
+    p {
+      width: 60%;
+    }
+    div {
+      height: 2000px;
+      width: 90%;
+      text-align: center;
     }
   }
 `

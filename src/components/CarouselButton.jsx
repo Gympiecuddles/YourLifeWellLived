@@ -21,6 +21,15 @@ const TextBox = styled(motion.div)`
     font-size: 1.2em;
     font-weight: 400;
   }
+  @media screen and (max-width: 1600px) {
+    top: 60%;
+    left: 35%;
+  }
+  @media screen and (max-width: 850px) {
+    top: 55%;
+    left: 12%;
+    width: 350px;
+  }
 `;
 
 const MotionHashLink = motion(HashLink);

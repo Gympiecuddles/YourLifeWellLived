@@ -19,9 +19,9 @@ const FooterBox = styled.div`
     a {
         align-self: flex-end;
         margin: 10px;
-        margin-left: 20px;
-        margin-right: 20px;
-        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 11px;
         color: #ffffff;
         text-decoration: none;
         cursor: pointer;
@@ -42,6 +42,21 @@ const FooterBox = styled.div`
             }
         }
     }
+    @media screen and (max-width: 1200px) {   
+        position: relative;
+        div {
+            flex-direction: column;
+            margin-right: 20px;
+            a {
+                align-self: end;
+                font-size: 15px;
+                img {
+                    display: none;
+                    width: 100px;
+                }
+            }
+        }
+    }
 `;
 
 const ContactBox = styled(motion.div)`
@@ -56,6 +71,24 @@ const ContactBox = styled(motion.div)`
             margin-bottom: 10px;
         } 
     }
+    @media screen and (max-width: 1200px) {  
+        order: 3;
+        div {
+            align-items: end;
+            margin-right: 0px;
+            margin-left: 0px;
+            span {
+                margin-top: 12px;
+                margin-bottom: 12px;
+                a {
+                    margin-left: 13px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 550px) {  
+        justify-self: end;
+    }
 `;
 
 export default function Footer() {
@@ -65,7 +98,7 @@ export default function Footer() {
             whileHover={{ color: "#bee5f8"}}
             href='https://www.linkedin.com/in/richard-schembri/' 
             target="_blank"
-            >Website developed by<br /> Richard Schembri</motion.a>
+        >Website developed by<br /> Richard Schembri</motion.a>
         <ContactBox>
             <div>
                 <p>(719) 212-1254</p>
@@ -85,7 +118,7 @@ export default function Footer() {
                 <img src={badge1} />
             </a>
             <a href='https://www.psychologytoday.com/profile/123454' target="_blank">
-                <img style={{ width: "200px" }} src={badge2} />
+                <img  src={badge2} />
             </a>
         </div>
     </FooterBox>

@@ -48,6 +48,11 @@ const ImgLayer = styled(motion.div)`
     object-position: center;
     filter: brightness(85%);
   }
+  @media screen and (max-width: 1000px) {
+      img {
+        height: 1000px;
+      }
+   }
 `;
 
 const HeaderSection = styled.section`
@@ -104,10 +109,18 @@ const HeaderSection = styled.section`
       font-size: 1.7em;
     }
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 827px) {
     height: 750px;
     h2 {
-      font-size: 1.7em;
+      margin-top: 60px;
+      margin-left: 20px;
+      margin-bottom: 18px;
+    }
+    p {
+      margin-left: 20px;
+    }
+    img {
+      object-position: 40% 0%;
     }
   }
 `;
@@ -128,6 +141,14 @@ const CurrentRetreatTitle = styled.div`
     height: 120px;
     h3 {
       font-size: 2.5em;
+    }
+  }
+  @media screen and (max-width: 657px) {
+    height: 120px;
+    h3 {
+      width: 90%;
+      font-size: 2em;
+      text-align: center;
     }
   }
 `;
@@ -181,8 +202,14 @@ const CurrentRetreats1 = styled.section`
       object-fit: cover;
     }
   }
+  @media screen and (max-width: 1568px) {
+    span {
+      div {
+        width: 650px;
+    }
+  }
+}
   @media screen and (max-width: 1400px) {
-    padding-left: 20px;
     height: 600px;
     span {
       div {
@@ -194,14 +221,15 @@ const CurrentRetreats1 = styled.section`
           font-size: .9em;
           line-height: 20px;
         }
-        img {
+      }
+      img {
           width: 400px;
           height: 400px;
         }
-      }
     }
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1259px) {
+    align-items: flex-start;
     height: 900px;
     span {
       display: flex;
@@ -218,10 +246,76 @@ const CurrentRetreats1 = styled.section`
           font-size: .9em;
           line-height: 18px;
         }
-        img {
+      }
+      img {
           width: 350px;
           height: 350px;
         }
+    }
+  }
+  @media screen and (max-width: 903px) {
+    height: 900px;
+    span {
+      div {
+        margin-right: 10px;
+        width: 95%;
+      }
+    }
+  }
+  @media screen and (max-width: 783px) {
+    height: 1000px;
+  }
+  @media screen and (max-width: 651px) {
+    height: 1000px;
+    span {
+      align-items: center;
+      div {
+        justify-content: flex-end;
+        width: 90%;
+      }
+    }
+  }
+  @media screen and (max-width: 596px) {
+    span {
+      div {
+        h4 {
+          font-size: 1em;
+        }
+        p {
+          line-height: 16px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 564px) {
+    height: 1100px;
+    span {
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+  @media screen and (max-width: 430px) {
+    height: 1100px;
+    span {
+      div {
+        p {
+          margin: 5px;
+          padding: 0;
+        }
+      }
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+  @media screen and (max-width: 384px) {
+    span {
+      img {
+        width: 230px;
+        height: 230px;
       }
     }
   }
@@ -229,7 +323,7 @@ const CurrentRetreats1 = styled.section`
 
 const CurrentRetreats2 = styled.section`
   width: 100%;
-  height: 800px;
+  height: 950px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,26 +369,28 @@ const CurrentRetreats2 = styled.section`
         h4 {
           font-size: 1.1em;
         }
-        p{
+        p {
           font-size: .9em;
           line-height: 20px;
         }
       }
     }
   }
-  @media screen and (max-width: 900px) {
-    height: 1050px;
+  @media screen and (max-width: 1259px) {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    height: 950px;
     span {
       display: flex;
       flex-direction: column;
-      align-items: end;
+      align-items: center;
       img {
         width: 350px;
         height: 350px;
       }
       div {
-        margin-left: 25px;
-        width: 630px;
+        margin-left: 0px;
+        width: 100%;
         h4 {
           font-size: 1.1em;
         }
@@ -305,9 +401,72 @@ const CurrentRetreats2 = styled.section`
       }
     }
   }
+  @media screen and (max-width: 903px) {
+    height: 1000px;
+    span {
+      div {
+        margin-right: 10px;
+        width: 95%;
+      }
+    }
+  }
+  @media screen and (max-width: 783px) {
+    height: 1100px;
+  }
+  @media screen and (max-width: 651px) {
+    padding-left: 0px;
+    height: 1150px;
+    span {
+      div {
+        width: 90%;
+      }
+    }
+  }
+  @media screen and (max-width: 596px) {
+    span {
+      div {
+        h4 {
+          font-size: 1em;
+        }
+        p {
+          line-height: 16px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 564px) {
+    span {
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+  @media screen and (max-width: 430px) {
+    span {
+      div {
+        p {
+          margin: 5px;
+        }
+      }
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+  @media screen and (max-width: 384px) {
+    height: 1200px;
+    span {
+      img {
+        width: 230px;
+        height: 230px;
+      }
+    }
+  }
 `;
  
-const ButtonBox = styled.span`
+const ButtonBox = styled.div`
   margin-left: 40px;
   margin-right: 40px;
   display: flex;
@@ -332,12 +491,26 @@ const ButtonBox = styled.span`
       width: 140px;
     }
   }
+  @media screen and (max-width: 1259px) {
+    margin-top: 200px;
+    button {
+      width: 140px;
+    }
+  }
   @media screen and (max-width: 900px) {
     margin-left: 5px;
     margin-right: 20px;
     width: 120px;
     button {
-      width: 140px;
+      width: 120px;
+    }
+  }
+  @media screen and (max-width: 651px) {
+    margin-left: 5px;
+    margin-right: 0px;
+    width: 103px;
+    button {
+      width: 104px;
     }
   }
 `;
@@ -414,6 +587,68 @@ const PastRetreats = styled.section`
         }
       }
     }  
+  }
+  @media screen and (max-width: 770px) {
+    height: 3100px;
+    article {
+      flex-direction: column;
+      width: 95%;
+      img {
+        order: 1;
+        margin: 0;
+        margin-bottom: 30px;
+        height: 300px;
+        width: 95%;
+        border-radius: 5px;
+      }
+      div {
+        order: 2;
+      }
+    }  
+  }
+  @media screen and (max-width: 707px) {
+    article {
+      div {
+        width: 95%;
+      }
+    }  
+  }
+  @media screen and (max-width: 603px) {
+    article {
+      div {
+        b {
+          line-height: 18px;
+        }
+        p {
+         line-height: 18px;
+        }
+      }
+    }  
+  }
+  @media screen and (max-width: 561px) {
+    article {
+      div {
+        width: 100%;
+        b {
+          line-height: 16px;
+        }
+        p {
+         line-height: 16px;
+        }
+      }
+    }  
+  }
+  @media screen and (max-width: 461px) {
+    height: 3200px;
+  }
+  @media screen and (max-width: 438px) {
+    height: 3300px;
+  }
+  @media screen and (max-width: 418px) {
+    height: 3450px;
+  }
+  @media screen and (max-width: 384px) {
+    height: 3550px;
   }
 `;
 
@@ -707,9 +942,7 @@ export default function Retreats() {
             <p>{Info.Text11}</p>
             <p>{Info.Text12}</p>
           </div>
-          <div style={{width: "500px"}}>
-            <img src={Info.Img} alt="" />
-          </div>  
+            <img src={Info.Img} alt="" />   
         </span>
       </CurrentRetreats1>
       <CurrentRetreatTitle>
@@ -717,9 +950,7 @@ export default function Retreats() {
       </CurrentRetreatTitle>
       <CurrentRetreats2>
         <span>
-          <div style={{width: "500px"}}>
             <img src={Info2.Img} alt="" />
-          </div>  
           <div>
             <h4>{Info2.Head}</h4>
             <p>{Info2.Text1}</p>

@@ -208,12 +208,115 @@ const HeaderSection = styled(motion.section)`
         text-align: center;
       }
       span {
+        width: 100%;
         div {
           margin-top: 50px;
         }
       }
       b {
         margin-top: 200px;
+      }
+    }
+  }
+  @media screen and (max-width: 710px) {
+    div {
+      h3 {
+        width: 70%;
+        font-size: 1em;
+      }
+      p {
+        width: 88%;
+      }
+      span {
+        div {
+          h4 {
+            width: 100%;
+          }
+          p {
+            padding: 0px;
+            padding-top: 10px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    height: 850px;
+    h2 {
+      font-size: 1.6em;
+    }
+    p {
+      font-size: 1em;
+    }
+    div {
+      margin-top: 120px;
+      h3 {
+        width: 70%;
+        font-size: 1em;
+        line-height: 30px;
+      }
+      p {
+        margin-bottom: 0px;
+        width: 88%;
+        font-size: .8em;
+        text-align: center;
+      }
+      span {
+        width: 100%;
+        div {
+          h4 {
+            width: 100%;
+            font-size: 1em;
+          }
+          p {
+            width: 100%;
+            font-size: .8em;
+          }
+        }
+      }
+      b {
+        margin-top: 190px;
+      }
+    }
+  }
+  @media screen and (max-width: 444px) {
+    height: 850px;
+    h2 {
+      font-size: 1.6em;
+    }
+    p {
+      font-size: 1em;
+    }
+    div {
+      margin-top: 80px;
+      h3 {
+        width: 70%;
+        font-size: 1em;
+        line-height: 30px;
+      }
+      p {
+        margin-bottom: 0px;
+        width: 88%;
+        font-size: .8em;
+        text-align: center;
+      }
+      span {
+        width: 90%;
+        div {
+          h4 {
+            width: 100%;
+            font-size: .8em;
+          }
+          p {
+            padding: 8px;
+            width: 100%;
+            font-size: .7em;
+          }
+        }
+      }
+      b {
+        margin-top: 170px;
       }
     }
   }

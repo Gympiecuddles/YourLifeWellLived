@@ -62,6 +62,23 @@ const HeaderSection = styled.div`
       font-size: 1.5em;
     }
   }
+  @media screen and (max-width: 570px) {
+    height: 230px;
+    h2 {
+      height: 230px;
+      margin-left: 5px;
+      font-size: 1.2em;
+    }
+  }
+  @media screen and (max-width: 488px) {
+    h2 {
+      height: 230px;
+      margin-top: 120px;
+      margin-left: 5px;
+      padding-right: 35px;
+      font-size: 1.1em;
+    }
+  }
 `;
 
 const AboutBox = styled.section`
@@ -121,7 +138,7 @@ const AboutBox = styled.section`
       }
     }
   }
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 1070px) {
     img {
     margin-top: 70px;
     margin-bottom: 50px;
@@ -157,6 +174,91 @@ const AboutBox = styled.section`
           padding-right: 35px;
           font-size: .9em;
           font-weight: 600;
+          line-height: 22px;
+        }
+        ol {
+          margin-top: 10px;
+          padding-left: 20px;
+          li {
+            font-size: .9em;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 698px) {
+    article {
+      img {
+        width: 260px;
+        height: 300px;
+      }
+    }
+  }
+  @media screen and (max-width: 580px) {
+    img {
+    width: 90%;
+    height: 100%;
+    }
+    article {
+      img {
+        margin: 0;
+        width: 200px;
+        height: 240px;
+      }
+      div {
+        margin-left: 10px;
+
+        h3 {
+          margin-bottom: 18px;
+          font-size: 1.3em;
+        }
+        p {
+          margin-top: 15px;
+          padding-right: 10px;
+          line-height: 20px;
+        }
+        q {
+          padding-right: 10px;
+          line-height: 22px;
+        }
+        ol {
+          margin-top: 10px;
+          padding-left: 20px;
+          li {
+            font-size: .9em;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 462px) {
+    img {
+    width: 90%;
+    height: 100%;
+    }
+    article {
+      flex-direction: column;
+      align-items: center;
+      img {
+        order: 1;
+        margin: 0;
+        width: 300px;
+        height: 280px;
+      }
+      div {
+        order: 2;
+        width: 90%;
+        h3 {
+          margin-bottom: 18px;
+          font-size: 1.3em;
+        }
+        p {
+          margin-top: 15px;
+          padding-right: 10px;
+          line-height: 20px;
+        }
+        q {
+          padding-right: 10px;
           line-height: 22px;
         }
         ol {

@@ -30,6 +30,27 @@ const TextBox = styled(motion.div)`
     left: 12%;
     width: 350px;
   }
+  @media screen and (max-width: 850px) {
+    top: 55%;
+    left: 12%;
+    width: 350px;
+  }
+  @media screen and (max-width: 528px) {
+    top: 55%;
+    left: 0%;
+    width: 300px;
+    h3 {
+      margin: 20px;
+      font-size: 1.7em;
+    }
+    h4 {
+      margin: 20px;
+      margin-bottom: 40px;
+      padding: 0;
+      font-size: 1em;
+      font-weight: 400;
+    }
+  }
 `;
 
 const MotionHashLink = motion(HashLink);
@@ -46,19 +67,19 @@ const StyledHashLink = styled(MotionHashLink)`
 `; 
 
 const h3Motion = {
-    init: { opacity: 0, x: 500 },
+    init: { opacity: 0, x: 50 },
     start: { opacity: 1, x: 0, 
         transition: { delay: 1, duration: .4 }},
 }
 
 const h4Motion = {
-    init: { opacity: 0, x: 500 },
+    init: { opacity: 0, x: 50 },
     start: { opacity: 1, x: 0, 
         transition: { delay: 1.2, duration: .4 }},
 }
 
 const buttonMotion = {
-    init: { opacity: 0, x: 500 },
+    init: { opacity: 0, x: 50 },
     start: { opacity: 1, x: 0, 
         transition: { delay: 1.4, duration: 1 }},
     hover: { border: "solid 2px #95e1f8", 

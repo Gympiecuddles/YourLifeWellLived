@@ -37,6 +37,11 @@ const ImgLayer1 = styled(motion.div)`
     object-position: 0% 0%;
     filter: brightness(80%);
   }
+  @media screen and (max-width: 928px) {
+    img {
+      object-position: 85% 0%;
+    }
+  }
 `;
 
 const HeaderSection = styled.section`
@@ -92,10 +97,23 @@ const HeaderSection = styled.section`
   @media screen and (max-width: 1366px) {
     h2 {
       margin-left: 10px;
+      width: 90%;
       font-size: 1.5em;
     }
     p {
       margin-left: 10px;
+      font-size: 1em;
+    }
+  }
+  @media screen and (max-width: 528px) {
+    h2 {
+      margin-left: 5px;
+      margin-bottom: 0px;
+      width: 82%;
+      font-size: 1.4em;
+    }
+    p {
+      margin-left: 5px;
       font-size: 1em;
     }
   }
@@ -149,6 +167,19 @@ const HeaderSection2 = styled.section`
     p {
       margin-left: 10px;
       font-size: 1em;
+    }
+  }
+  @media screen and (max-width: 474px) {
+    height: 700px;
+    h2 {
+      margin-top: 40px;
+      margin-left: 10px;
+      font-size: 1.4em;
+    }
+    p {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: .9em;
     }
   }
 `;
@@ -243,6 +274,39 @@ const AboutBox = styled.section`
       }
     }
   }
+  @media screen and (max-width: 772px){
+    height: 700px;
+    span {
+      flex-direction: column;
+      div {
+        width: 60%;
+        h3 {
+          font-size: 1.2em;
+        }
+      }
+      img {
+        align-self: center;
+        margin-top: 10px;
+        width: 60%;
+      }
+    }  
+  }
+  @media screen and (max-width: 404px){
+    height: 700px;
+    span {
+      div {
+        width: 80%;
+        h3 {
+          font-size: 1.2em;
+        }
+      }
+      img {
+        align-self: center;
+        margin-top: 10px;
+        width: 80%;
+      }
+    }  
+  }
 `;
 
 const MotionButton = motion(HashLink);
@@ -264,6 +328,11 @@ const AboutButton = styled(MotionButton)`
   @media screen and (max-width: 1600px) {
     width: 270px;
     font-size: .8em;
+  }
+  @media screen and (max-width: 470px) {
+    margin-top: 50px;
+    width: 230px;
+    font-size: .7em;
   }
 `
 
@@ -319,13 +388,38 @@ const ServicesBox = styled.section`
       img {
         width: 280px;
       }
+    }
+  }
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+    height: 1700px;
+    div {
+      width: 90%;
+      height: 50%;
+      img {
+        width: 90%;
+      }
       h4 {
-        
+        width: 90%;
+        font-size: 1.2em;
       }
       p {
-
+        margin: 10px;
+        width: 84%;
+        padding-right: 35px;
+        font-size: .9em;
+      }
+      ul {
+        width: 75%;
+        li {
+          margin-bottom: 5px;
+          font-size: .9em;
+        }
       }
     }
+  }
+  @media screen and (max-width: 500px) {
+    height: 1600px;
   }
 `;
 
@@ -339,27 +433,11 @@ const ServiceBox2 = styled(ServicesBox)`
       }
     }
   }
-`;
-
-const ServiceBullets = styled.div`
-  padding: 40px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #cdfafc;
-  z-index: 1;
-  ul {
-    display: flex;
+  @media screen and (max-width: 650px) {
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    li {
-      margin-top: 10px;
-    }
+    height: 1400px;
   }
-`
+`;
 
 const ExplainBox = styled.section`
   width: 100%;
@@ -420,6 +498,39 @@ const ExplainBox = styled.section`
       }
     }
   }
+  @media screen and (max-width: 674px) {
+    h3 {
+      margin: 45px;
+      font-size: 1.1em;
+    }
+    div {
+      article {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 45%;
+        p {
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 446px) {
+    h3 {
+      margin: 30px;
+      font-size: 1em;
+    }
+    div {
+      flex-direction: column;
+      article {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 95%;
+        p {
+          line-height: 18px;
+        }
+      }
+    }
+  }
 `;
 
 const ButtonBox = styled.div`
@@ -428,7 +539,7 @@ const ButtonBox = styled.div`
   align-items: center;
   width: 100%;
   background-color: #cdfafc;
-  z-index: 3; 
+  z-index: 1; 
 `
 
 const BottomButton = styled(MotionButton)`

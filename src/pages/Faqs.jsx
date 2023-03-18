@@ -9,10 +9,10 @@ import banner from '../assets/One.webp'
 const ImgLayer = styled(motion.img)`
   position: fixed;
   width: 100%;
-  height: auto;
+  height: 405px;
   background-color: #00000000;
   object-fit: cover;
-  object-position: 50% 50%;
+  object-position: 30% 0%;
   z-index: -1;
 `;
 
@@ -68,6 +68,7 @@ const HeaderSection = styled.div`
       margin-top: 120px;
       margin-bottom: 0px;
       margin-left: 40px;
+      margin-right: 40px;
       font-size: 1.6em;
     }
     p {
@@ -76,6 +77,24 @@ const HeaderSection = styled.div`
       padding: 19px;
       font-size: 1em;
       letter-spacing: 1.25px;
+      color: #ffffff;
+    }
+  }
+  @media screen and (max-width: 628px) {
+    height: 300px;
+    h2 {
+      margin-top: 120px;
+      margin-bottom: 0px;
+      margin-left: 5px;
+      margin-right: 20px;
+      font-size: 1.4em;
+    }
+    p {
+      margin-left: 5px;
+      margin-right: 20px;
+      padding: 19px;
+      font-size: 1em;
+      letter-spacing: 1px;
       color: #ffffff;
     }
   }
@@ -140,6 +159,48 @@ const FaqBox = styled.section`
       height: auto;
     }
   }
+  @media screen and (max-width: 774px) {
+    height: 1500px;
+    article {
+      margin-top: 50px;
+      width: 90%;
+      p {
+        line-height: 20px;
+      }
+    }
+    img {
+      margin-top: 50px;
+      width: auto;
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 622px) {
+    height: 1500px;
+    article {
+      margin-top: 50px;
+      width: 90%;
+      strong {
+        margin: 5px;
+        margin-top: 13px;
+      }
+      p {
+        margin: 5px;
+        line-height: 18px;
+      }
+    }
+    img {
+      margin-top: 50px;
+      width: 80%;
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 520px) {
+    justify-content: flex-end;
+    height: 1700px;
+    img {
+      margin-top: 50px;
+    }
+  }
 `;
 
 const ButtonBox = styled.div`
@@ -150,6 +211,9 @@ const ButtonBox = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #cdfafc;
+  @media screen and (max-width: 850px) {
+    padding-bottom: 10px;
+  }
 `;
 
 const MotionButton = motion(HashLink);

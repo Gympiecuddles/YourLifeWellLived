@@ -10,7 +10,7 @@ const ImgLayer = styled(motion.img)`
   height: 405px;
   background-color: #00000000;
   object-fit: cover;
-  object-position: 0% 0%;
+  object-position: 30% 0%;
   z-index: -1;
 `;
 
@@ -122,12 +122,14 @@ const LinkBox = styled.section`
         font-size: 1.2em;
         font-weight: 600;
         letter-spacing: 1px;
+        text-align: center;
       }
       a {
         margin: 2px;
         font-size: .9em;
         font-weight: 400;
         line-height: 20px;
+        text-align: center;
       }
     }
   }
@@ -136,15 +138,27 @@ const LinkBox = styled.section`
       width: 80%;
     }
   }
-  @media screen and (max-width: 850px) {
-    height: 2400px;
+  @media screen and (max-width: 1026px) {
+    height: 100%;
     p {
-      width: 60%;
+      width: 80%;
     }
     div {
-      height: 2000px;
-      width: 90%;
-      text-align: center;
+      article {
+        a {
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 786px) {
+    height: 100%;
+    div {
+      flex-wrap: none;
+      height: 100%;
+      article {
+        width: 100%;
+      }
     }
   }
 `

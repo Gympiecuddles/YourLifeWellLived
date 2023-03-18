@@ -194,6 +194,17 @@ const ContactForm = styled.div`
       width: 95%;
     }
   }
+  @media screen and (max-width: 598px) {
+    div {
+      margin: 30px;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 410px) {
+    div {
+      margin: 20px;
+    }
+  }
 `
 
 export default function Contact() {

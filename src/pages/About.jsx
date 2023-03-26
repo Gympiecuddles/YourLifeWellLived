@@ -89,8 +89,8 @@ const AboutBox = styled.section`
   img {
     margin-top: 90px;
     margin-bottom: 50px;
-    width: 1050px;
-    height: 650px;
+    width: 950px;
+    height: 550px;
     object-fit: contain;
   }
   article {
@@ -99,8 +99,8 @@ const AboutBox = styled.section`
     width: 1050px;
     img {
       margin: 0;
-      width: 360px;
-      height: 400px;
+      width: 320px;
+      height: 360px;
       object-fit: cover;
       object-position: 80% 50%;
     }
@@ -142,16 +142,16 @@ const AboutBox = styled.section`
     img {
     margin-top: 70px;
     margin-bottom: 50px;
-    width: 1050px;
-    height: 650px;
+    width: 900px;
+    height: 500px;
     }
     article {
       margin-bottom: 100px;
       width: 95%;
       img {
         margin: 0;
-        width: 360px;
-        height: 400px;
+        width: 300px;
+        height: 340px;
         object-position: 80% 50%;
       }
       div {
@@ -189,8 +189,8 @@ const AboutBox = styled.section`
   @media screen and (max-width: 698px) {
     article {
       img {
-        width: 260px;
-        height: 300px;
+        width: 250px;
+        height: 290px;
       }
     }
   }
@@ -283,7 +283,7 @@ export default function () {
       <AboutBox>
         <img src={one} alt="Jeanne Teleia" />
         <article>
-          <img src={two} alt="Jeanne Teleia" />
+          <img src={two} alt="Jeanne Teleia" loading="lazy" />
           <div>
             <h3>Jeanne Teleia, LMFT, CSAC</h3>
             <q>F.U.N. is a Fundamental Universal Need.  It's essential to our mind, body and spirit.  All beings must have FUN and play to THRIVE.</q>
@@ -314,7 +314,7 @@ export default function () {
             <p>My other interests include my furry friends Violet, Suzie and Smudge and I usually have a menagerie of 4-footed rescue animals including dogs, cats and bunnies.</p>
             <p>My very favorite moments are spent in nature swimming with or otherwise interacting with wild and free dolphins and whales. Now I'm taking others around the world on retreats to find inspiration and joy through their example. Contact me to find out more!</p>
           </div>
-          <img src={three} alt="Jeanne Teleia speaking" />
+          <img src={three} alt="Jeanne Teleia speaking" loading="lazy" />
         </article>
       </AboutBox>
     </>

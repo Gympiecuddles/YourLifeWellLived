@@ -48,9 +48,20 @@ const ImgLayer = styled(motion.div)`
     object-position: center;
     filter: brightness(85%);
   }
+  @media screen and (max-width: 2000px) {
+      img {
+        height: 90%;
+        object-fit: fill;
+      }
+   }
   @media screen and (max-width: 1000px) {
       img {
         height: 1000px;
+      }
+   }
+   @media screen and (max-width: 750px) {
+      img {
+        object-fit: cover;
       }
    }
 `;
@@ -942,7 +953,7 @@ export default function Retreats() {
             <p>{Info.Text11}</p>
             <p>{Info.Text12}</p>
           </div>
-            <img src={Info.Img} alt="" />   
+            <img src={Info.Img} alt="" loading="lazy" />   
         </span>
       </CurrentRetreats1>
       <CurrentRetreatTitle>
@@ -950,7 +961,7 @@ export default function Retreats() {
       </CurrentRetreatTitle>
       <CurrentRetreats2>
         <span>
-            <img src={Info2.Img} alt="" />
+            <img src={Info2.Img} alt="" loading="lazy" />
           <div>
             <h4>{Info2.Head}</h4>
             <p>{Info2.Text1}</p>
@@ -984,7 +995,7 @@ export default function Retreats() {
       </HeaderSection>
       <PastRetreats>
         <article>
-          <img src={eightteen} alt="Jeanne Teleia" />
+          <img src={eightteen} alt="Jeanne Teleia" loading="lazy" />
           <div>
             <h3>Testimonials from past participants</h3>
             <b>My own experiences swimming with wild Cetaceans for more than 20 years taught me there is something special about connecting with dolphins and whales when they choose to interact with you in their world that changes you forever.  I worked with a wild dolphin assisted healing program and I saw profound changes in people and families with physical and emotional challenges.</b>
@@ -1006,10 +1017,10 @@ export default function Retreats() {
             <p><q>Thank you so much for putting together this amazing trip--I know it was a tremendous amount of work and you did a fabulous job of putting together every detail for a very diverse group.  Your role of leader first and foremost is your group's well being, which I know you had as you priority.  The whales inspired love and optimism in me. I have nothing but wonderful memories and hope to stay in touch with everyone moving forward!</q> Casey B.</p>
             <p><q>You are an amazing woman who has compassion and respect for all.  I had a wonderful time and grateful to have been included. It was wonderful!  A great connection with nature. It truly was a life changing experience and I look forward to the next trip!  Thank you so much!</q> Jean M. </p>
           </div>
-          <img src={nineteen} alt="Jeanne Teleia speaking" />
+          <img src={nineteen} alt="Jeanne Teleia speaking" loading="lazy" />
         </article>
         <article>
-          <img src={twenty} alt="Jeanne Teleia speaking" />
+          <img src={twenty} alt="Jeanne Teleia speaking" loading="lazy" />
           <div>
             <h3>The Best Part of the Retreat Week was:</h3>
             <p><q>When we were in 'whale soup'.  It was amazing!</q> S.B.</p>

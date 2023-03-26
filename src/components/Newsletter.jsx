@@ -33,7 +33,7 @@ const NewsButton = styled(motion.div)`
 
 const NewsContent = styled.div`
     width: 100%;
-    height: 410px;
+    height: 420px;
     background-color: #ffffff;
     border: 1px solid #000000;
     border-radius: 5px;
@@ -142,7 +142,7 @@ const CustomForm = ({ status, message, onValidated }) => {
 
 const MailchimpFormComtainer = props => {
 
-    const postUrl = `https://gmail.us21.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`;
+    const postUrl = `https://gmail.us21.list-manage.com/subscribe/post?u=${import.meta.env.VITE_MAILCHIMP_U}&id=${import.meta.env.VITE_MAILCHIMP_ID}`;
 
     return (
         <div>
@@ -171,7 +171,7 @@ export default function Newsletter() {
             <h3>Freebies!!</h3>
         </NewsButton>
         <NewsContent>
-            <img src={one} />
+            <img src={one} loading="lazy" />
             <h4>Sign up for our FREE monthly newsletter with holistic wellness tips!</h4>
             <p>Every month we send tips on building emotional intelligence and wellness in your life.  Take a look at our most recent newsletter
                 <motion.a whileHover={{ color: "#5f5f5f"}} href="https://jteleia.wordpress.com/" > here</motion.a>.

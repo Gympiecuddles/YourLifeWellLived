@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import kwesforms from 'kwesforms';
@@ -209,7 +209,10 @@ const ContactForm = styled.div`
 
 export default function Contact() {
 
-  kwesforms.init(); 
+  useEffect(() => {
+    kwesforms.init(); 
+  }, [])
+  
 
   return (
     <>
@@ -221,7 +224,7 @@ export default function Contact() {
       <ContactForm>
         <div>
           <h3>Introduce yourself! Our team would be happy to answer any questions you may have and schedule a free phone consultation. Please complete the form below and someone will be in touch with you shortly. </h3>
-          <form mode="test" className="kwes-form" action="https://kwesforms.com/api/foreign/forms/UPFMNdYlbjQUOikT06hy" > 
+          <form className="kwes-form" action="https://kwesforms.com/api/foreign/forms/UPFMNdYlbjQUOikT06hy"> 
             <label htmlFor='name'>Name</label>
             <span>
               <input style={{ marginRight: "20px" }}  type="text" name="firstName" required/>

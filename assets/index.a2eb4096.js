@@ -1090,7 +1090,7 @@ Error generating stack: `+rt.message+`
       }
     }
   }
-`,motionArgs={init:{opacity:0},start:{opacity:1,transition:{delay:.8,duration:.5}}};function Carousel({innerText:i,counter:o}){let et=o+1;return jsxs(HeaderSection$5,{style:{marginTop:"150px"},initial:"init",animate:"start",children:[et&&jsx(motion.h2,{variants:motionArgs,children:i.head[o]},o),et&&jsx(motion.p,{variants:motionArgs,children:i.subhead[o]},et),jsxs("div",{children:[et&&jsx(motion.h3,{variants:motionArgs,children:i.head2[o]},o+1),et&&jsx(motion.p,{variants:motionArgs,children:i.subhead2[o]},et+1),jsxs("span",{children:[jsxs("div",{children:[et&&jsx(motion.h4,{variants:motionArgs,children:i.row1[o]},o+2),et&&jsx(motion.p,{variants:motionArgs,children:i.text1[o]},et+2)]}),jsxs("div",{children:[et&&jsx(motion.h4,{variants:motionArgs,children:i.row2[o]},o+3),et&&jsx(motion.p,{variants:motionArgs,children:i.text2[o]},et+3)]}),jsxs("div",{children:[et&&jsx(motion.h4,{variants:motionArgs,children:i.row3[o]},o+4),et&&jsx(motion.p,{variants:motionArgs,children:i.text3[o]},et+4)]})]}),et&&jsx(motion.b,{variants:motionArgs,children:i.call[o]},et+5),jsx(Arrow,{position:"2%"})]})]})}const one$3="/assets/RetreatImage1.b14de3b2.webp",two$1="/assets/RetreatImage2.8b89fff5.webp",three$1="/assets/RetreatImage3.19cdcb23.webp",four="/assets/RetreatImage4.54dbe8c0.webp",five="/assets/RetreatImage5.f98615c2.webp",six="/assets/RetreatImage6.1b574c90.webp",six2="/assets/RetreatImage6.5.7267b861.webp",seven="/assets/RetreatImage7.11f14eeb.webp",eight="/assets/RetreatImage8.a00ce338.webp",nine="/assets/RetreatImage9.97ce7ad3.webp",ten="/assets/RetreatImage10.8c540324.webp",eleven="/assets/RetreatImage11.0bfa7020.webp",twelve="/assets/RetreatImage12.137fb07c.webp",thirteen="/assets/RetreatImage13.c88e2fa6.webp",thirteen2="/assets/RetreatImage13.5.2fc1020e.webp",fourteen="/assets/RetreatImage14.bb00b846.webp",fifteen="/assets/RetreatImage15.0f2a6f7f.webp",sixteen="/assets/RetreatImage16.0c1c0ced.webp",seventeen="/assets/RetreatImage17.0efff4c7.webp",eightteen="/assets/RetreatImage18.d973f1e2.webp",nineteen="/assets/RetreatImage19.df886777.webp",twenty="/assets/RetreatImage20.a3ba8ad1.webp",RetreatPage=styled.div`
+`,motionArgs={init:{opacity:0},start:{opacity:1,transition:{delay:.8,duration:.5}}};function Carousel({innerText:i,counter:o}){let et=o+1;return jsxs(HeaderSection$5,{style:{marginTop:"150px"},initial:"init",animate:"start",children:[et&&jsx(motion.h2,{variants:motionArgs,children:i.head[o]},o),et&&jsx(motion.p,{variants:motionArgs,children:i.subhead[o]},et),jsxs("div",{children:[et&&jsx(motion.h3,{variants:motionArgs,children:i.head2[o]},o+1),et&&jsx(motion.p,{variants:motionArgs,children:i.subhead2[o]},et+1),jsxs("span",{children:[jsxs("div",{children:[et&&jsx(motion.h4,{variants:motionArgs,children:i.row1[o]},o+2),et&&jsx(motion.p,{variants:motionArgs,children:i.text1[o]},et+2)]}),jsxs("div",{children:[et&&jsx(motion.h4,{variants:motionArgs,children:i.row2[o]},o+3),et&&jsx(motion.p,{variants:motionArgs,children:i.text2[o]},et+3)]}),jsxs("div",{children:[et&&jsx(motion.h4,{variants:motionArgs,children:i.row3[o]},o+4),et&&jsx(motion.p,{variants:motionArgs,children:i.text3[o]},et+4)]})]}),et&&jsx(motion.b,{variants:motionArgs,children:i.call[o]},et+5),jsx(Arrow,{position:"2%"})]})]})}const one$3="/assets/RetreatImage1.579859fb.webp",two$1="/assets/RetreatImage2.4bce6220.webp",three$1="/assets/RetreatImage3.19cdcb23.webp",four="/assets/RetreatImage4.54dbe8c0.webp",five="/assets/RetreatImage5.f98615c2.webp",six="/assets/RetreatImage6.1b574c90.webp",six2="/assets/RetreatImage6.5.7267b861.webp",seven="/assets/RetreatImage7.11f14eeb.webp",eight="/assets/RetreatImage8.a00ce338.webp",nine="/assets/RetreatImage9.97ce7ad3.webp",ten="/assets/RetreatImage10.8c540324.webp",eleven="/assets/RetreatImage11.0bfa7020.webp",twelve="/assets/RetreatImage12.137fb07c.webp",thirteen="/assets/RetreatImage13.c88e2fa6.webp",thirteen2="/assets/RetreatImage13.5.2fc1020e.webp",fourteen="/assets/RetreatImage14.bb00b846.webp",fifteen="/assets/RetreatImage15.0f2a6f7f.webp",sixteen="/assets/RetreatImage16.0c1c0ced.webp",seventeen="/assets/RetreatImage17.0efff4c7.webp",eightteen="/assets/RetreatImage18.d973f1e2.webp",nineteen="/assets/RetreatImage19.df886777.webp",twenty="/assets/RetreatImage20.a3ba8ad1.webp",RetreatPage=styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1101,25 +1101,33 @@ Error generating stack: `+rt.message+`
   z-index: 0;
   img {
     width: 100%;
-    height: 100%;
+    height: 90%;
     object-fit: cover;
-    object-position: center;
+    object-position: 0% 100%;
     filter: brightness(85%);
   }
   @media screen and (max-width: 2000px) {
       img {
-        height: 90%;
+        height: 68%;
         object-fit: fill;
       }
    }
-  @media screen and (max-width: 1000px) {
+   @media screen and (max-width: 1600px) {
       img {
-        height: 1000px;
+        height: 55%;
+        object-fit: fill;
       }
    }
-   @media screen and (max-width: 750px) {
+   @media screen and (max-width: 1400px) {
       img {
-        object-fit: cover;
+        height: 48%;
+        object-fit: fill;
+      }
+   }
+   @media screen and (max-width: 900px) {
+      img {
+        height: 64%;
+        object-fit: fill;
       }
    }
 `,HeaderSection$4=styled.section`

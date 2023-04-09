@@ -43,25 +43,33 @@ const ImgLayer = styled(motion.div)`
   z-index: 0;
   img {
     width: 100%;
-    height: 100%;
+    height: 90%;
     object-fit: cover;
-    object-position: center;
+    object-position: 0% 100%;
     filter: brightness(85%);
   }
   @media screen and (max-width: 2000px) {
       img {
-        height: 90%;
+        height: 68%;
         object-fit: fill;
       }
    }
-  @media screen and (max-width: 1000px) {
+   @media screen and (max-width: 1600px) {
       img {
-        height: 1000px;
+        height: 55%;
+        object-fit: fill;
       }
    }
-   @media screen and (max-width: 750px) {
+   @media screen and (max-width: 1400px) {
       img {
-        object-fit: cover;
+        height: 48%;
+        object-fit: fill;
+      }
+   }
+   @media screen and (max-width: 900px) {
+      img {
+        height: 64%;
+        object-fit: fill;
       }
    }
 `;
@@ -920,7 +928,7 @@ export default function Retreats() {
   return (
     <RetreatPage>
       <ImgLayer style={{height, y}}>
-        <Carousel imgs={[one, two]} counter={counter}  />
+        <Carousel imgs={[one, two]} counter={counter} />
       </ImgLayer>
       <TextSwap innerText={carouselText} counter={counter} />
       <CurrentRetreatTitle style={{height: "200px"}}>

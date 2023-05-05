@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import one from '../assets/AboutImage3.webp'
 import two from '../assets/AboutImage2.webp'
 import three from '../assets/AboutImage4.webp'
-import banner from '../assets/One.webp'
+import banner from '../assets/one.webp'
 
 const ImgLayer = styled(motion.img)`
   position: fixed;
@@ -272,7 +272,7 @@ const AboutBox = styled.section`
     }
   }
 `
-/**/
+
 export default function () {
   return (
     <>

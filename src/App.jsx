@@ -15,7 +15,7 @@ import four from './assets/HomeImage4.webp'
 import five from './assets/One.webp'
 import eight from './assets/HomeImage8.webp'
 import nine from './assets/HomeImage9.webp'
-import ten from './assets/HomeImage10.webp'
+import ten from './assets/homeimage10.webp'
 import eleven from './assets/HomeImage11.webp'
 
 const HomePage = styled.div`

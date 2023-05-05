@@ -272,7 +272,7 @@ const AboutBox = styled.section`
     }
   }
 `
-
+/**/
 export default function () {
   return (
     <>

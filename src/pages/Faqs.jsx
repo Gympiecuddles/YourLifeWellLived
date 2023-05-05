@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { HashLink } from 'react-router-hash-link'
 
 import one from '../assets/FaqImage1.webp'
-import banner from '../assets/One.webp'
+import banner from '../assets/one.webp'
 
 const ImgLayer = styled(motion.img)`
   position: fixed;

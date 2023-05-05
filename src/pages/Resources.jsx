@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import banner from '../assets/One.webp'
+import banner from '../assets/one.webp'
 
 const ImgLayer = styled(motion.img)`
   position: fixed;

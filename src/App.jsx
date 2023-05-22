@@ -599,7 +599,7 @@ function App() {
             </div>
             <img src={four} loading="lazy" />
           </span>  
-          <AboutButton whileHover={{ backgroundColor: "#1154be" }} to="/Retreats">Learn more about who I am and what I do</AboutButton>
+          <AboutButton whileHover={{ backgroundColor: "#1154be" }} to="/about">Learn more about who I am and what I do</AboutButton>
         </AboutBox>
         <HeaderSection2 id="Services">
           <h2>What I can do for you</h2>

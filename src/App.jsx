@@ -597,7 +597,7 @@ function App() {
               <p>I believe we are all naturally creative, resourceful and whole, and the answers are already inside you.</p>
               <p>I can help you find them again or maybe for the first time.  We will work to uncover your true potential and lead a life that is worth celebrating!</p>
             </div>
-            <img src={four} loading="lazy" />
+            <img src={four} loading="lazy" alt='Be the best you'/>
           </span>  
           <AboutButton whileHover={{ backgroundColor: "#1154be" }} to="/about">Learn more about who I am and what I do</AboutButton>
         </AboutBox>
@@ -607,7 +607,7 @@ function App() {
         </HeaderSection2>
         <ServicesBox>
           <div >
-            <img src={eight} loading="lazy" />
+            <img src={eight} loading="lazy" alt='Person in therapy'/>
             <h4>Holistic Psychotherapy and Life, Family and Wellness Coaching</h4>
             <p>"Once I accept myself just as I am, THEN I can change."  -Carl Rogers, Father of Modern Psychology</p>
             <ul>
@@ -620,7 +620,7 @@ function App() {
             </ul>  
           </div>
           <div>
-            <img src={eleven} loading="lazy" />
+            <img src={eleven} loading="lazy" alt='Find help this way'/>
             <h4>Public Speaking, Consultation, and Supervision</h4>
             <p>Topics included:
             </p>
@@ -668,12 +668,12 @@ function App() {
         </ExplainBox>
         <ServiceBox2>
           <div>
-            <img src={ten} loading="lazy" />
+            <img src={ten} loading="lazy" alt='Kissing whale'/>
             <h4>Transformational Wellness Retreats with Whales!</h4>
             <p>Looking into the eye of one of the world's largest sentient beings, knowing they are choosing to be with you, can transform your relationship with life. What do you need to get over, get past, get through?  The whales can show us the way from their story of forgiveness and our story of redemption.</p>
           </div>
           <div>
-            <img src={nine} loading="lazy" />
+            <img src={nine} loading="lazy" alt='Curious dolphin'/>
             <h4>Wild Dolphin Inspirational Wellness Retreats</h4>
             <p>We use the lessons the dolphins show us both in and above the water in a retreat that can change your life.  The dolphins show us how to play and live life to the fullest.  Play is an essential aspect of life--as important as sleep or nutrition!</p>
           </div>

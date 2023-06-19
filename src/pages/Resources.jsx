@@ -166,7 +166,7 @@ const LinkBox = styled.section`
 export default function Resources() {
   return (
     <>
-      <ImgLayer src={banner} />
+      <ImgLayer src={banner} alt='Banner'/>
       <HeaderSection>
         <h2>Resources</h2>
         <p>Learn more about what to expect.</p>

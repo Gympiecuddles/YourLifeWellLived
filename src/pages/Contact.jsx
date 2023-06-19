@@ -216,7 +216,7 @@ export default function Contact() {
 
   return (
     <>
-      <ImgLayer src={banner} />
+      <ImgLayer src={banner} alt='Banner'/>
       <HeaderSection>
         <h2>Contact</h2>
         <p>We would love to hear from you.</p>

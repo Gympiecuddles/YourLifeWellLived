@@ -19,6 +19,7 @@ export default function Carousel({imgs, counter}) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0}}
           transition={{ duration: .3 }}
+          alt='Hero images'
           />
     </AnimatePresence>
   )

@@ -276,7 +276,7 @@ const AboutBox = styled.section`
 export default function () {
   return (
     <>
-      <ImgLayer src={banner} />
+      <ImgLayer src={banner} alt='Banner'/>
       <HeaderSection>
         <h2>I'm a Happiness Locator, Joy Finder, and Professor of Play</h2>
       </HeaderSection>
@@ -314,7 +314,7 @@ export default function () {
             <p>My other interests include my furry friends Violet, Suzie and Smudge and I usually have a menagerie of 4-footed rescue animals including dogs, cats and bunnies.</p>
             <p>My very favorite moments are spent in nature swimming with or otherwise interacting with wild and free dolphins and whales. Now I'm taking others around the world on retreats to find inspiration and joy through their example. Contact me to find out more!</p>
           </div>
-          <img src={three} alt="Jeanne Teleia speaking" loading="lazy" />
+          <img src={three} alt="Jeanne Teleia with dogs" loading="lazy" />
         </article>
       </AboutBox>
     </>

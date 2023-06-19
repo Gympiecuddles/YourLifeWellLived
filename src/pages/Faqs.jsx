@@ -233,7 +233,7 @@ const StyledButton = styled(MotionButton)`
 export default function Faqs() {
   return (
     <>
-      <ImgLayer src={banner} />
+      <ImgLayer src={banner} alt='Banner'/>
       <HeaderSection>
         <h2>What Questions Can I Answer Today?</h2>
         <p>Feel free to contact me directly see the FAQs below</p>
@@ -256,7 +256,7 @@ export default function Faqs() {
           <p>A number of benefits are available from participating in counseling, coaching or wellness and healing retreats. Therapists and coaches can provide support, problem-solving skills, and enhanced coping strategies for many issues and find a way that works best for you.  I focus on inspiring people so they find the answers that are within themselves, often brought out fastest by peak experiences and connecting with nature and beings such as dolphins and whales.</p>
           <p>Many people also find that personal growth facilitators like me can be a tremendous asset to managing interpersonal relationships, family concerns, marriage issues, and the hassles of daily life. I can provide a fresh perspective on a difficult problem or point you in the direction of a solution. The benefits you and your family obtain from therapy, coaching or retreats depend on how well you use the process and put into practice what you learn.</p>
         </article>
-        <img src={one} loading="lazy" />
+        <img src={one} loading="lazy" alt='This too, shall pass'/>
       </FaqBox>
       <ButtonBox>
         <StyledButton whileHover={{ backgroundColor: "#444444" }} to="/Contact">Let's book an appointment</StyledButton>

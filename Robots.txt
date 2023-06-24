@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /Rates-insurance.html
+
+User-agent: *
+Disallow: /Therapist_and_Client_Contract.pdf
+
+User-agent: *
+Disallow: /Rates-insurance.html/index.html

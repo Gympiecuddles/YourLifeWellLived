@@ -872,7 +872,7 @@ export default function Retreats() {
     },
     Button5: {
       Head: "Pricing, Bonuses and Other Information",
-      Text1: "7 days and 6 nights for $2400 all inclusive (see what's included and not included above). ",
+      Text1: "7 days and 6 nights for $2500 (subject to change) all inclusive (see what's included and not included above). ",
       Text2: "Deposits of $750 are due upon registration and there are only 10-12 spots available (8 people minimum).  Deposits are non-refundable unless the trip doesn't fill.",
       Text3: "Camps fill up nearly a year in advance and they are holding our spaces so don't hesitate!!",
       Text4: "Bonuses:",

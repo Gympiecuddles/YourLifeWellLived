@@ -678,7 +678,7 @@ export default function Retreats() {
 
   const carouselText = {
     head: ["Bimini, The Bahamas", "San Ignacio Lagoon, Baja, Mexico"],
-    subhead: ["Next retreat: May 4-10, 2024, New Moon!", "Next retreat: March 2025 Dates TBD"],
+    subhead: ["Next retreat: May 4-10, 2024, New Moon!", "Next retreat: February 23-March 1, 2025"],
     head2: ["WILD DOLPHIN WELLNESS and HEALING RETREATS", "WILD GRAY WHALES TRANSFORMATIONAL RETREATS"],
     subhead2: ["\"Profoundly humbling experiences are good for our SOUL.\"    David Neiwert, Of Orcas and Men", "\"For to witness majesty, to find yourself literally touched by it--isn\'t that what we\'ve all been waiting for?\"  David Sedaris, Humorist"],
     row1: ["Enter Their World", "Peak Experiences with Wild Gray Whales"],
@@ -872,7 +872,7 @@ export default function Retreats() {
     },
     Button5: {
       Head: "Pricing, Bonuses and Other Information",
-      Text1: "7 days and 6 nights for $2500 (subject to change) all inclusive (see what's included and not included above). ",
+      Text1: "7 days and 6 nights for $2500 all inclusive (see what's included and not included above). ",
       Text2: "Deposits of $750 are due upon registration and there are only 10-12 spots available (8 people minimum).  Deposits are non-refundable unless the trip doesn't fill.",
       Text3: "Camps fill up nearly a year in advance and they are holding our spaces so don't hesitate!!",
       Text4: "Bonuses:",
